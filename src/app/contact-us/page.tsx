@@ -52,7 +52,7 @@ export default function ContactUs() {
                     <Card className="w-full">
                       <CardHeader className="text-2xl">
                         <CardTitle>Send us a Message</CardTitle>
-                        <CardDescription>We'll get back to you as soon as we can.</CardDescription>
+                        <CardDescription>We&apos;ll get back to you as soon as we can.</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <form>

@@ -34,7 +34,7 @@ export default function ContactUs() {
                           Natalia Mercado
                         </CardTitle>
                         <CardDescription>
-                            Short blurb on the instructor's qualifications, etc.
+                            Short blurb on the instructor&apos;s qualifications, etc.
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -52,7 +52,7 @@ export default function ContactUs() {
                           Aaron Zygala
                         </CardTitle>
                         <CardDescription>
-                            Short blurb on the instructor's qualifications, etc.
+                            Short blurb on the instructor&apos;s qualifications, etc.
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
