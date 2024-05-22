@@ -6,6 +6,8 @@ import Home from './page'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import AOSProvider from "@/components/aos-provider"
+import React from "react"
+import { TopNavBar } from "@/components/top-nav"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -13,7 +15,7 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
-export default function RootLayout({ }) {
+export default function RootLayout({children } :{ children:React.ReactNode}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <AOSProvider>
@@ -29,10 +31,10 @@ export default function RootLayout({ }) {
               enableSystem
               disableTransitionOnChange
             >
-            <div>
-              <Home/>
-            </div>
-            <Toaster />
+            <TopNavBar/>
+
+            {children}
+            {/* <Toaster /> */}
             </ThemeProvider>
         </body>
       </AOSProvider>

@@ -1,15 +1,3 @@
-import Image, { StaticImageData } from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import CustomLessonPlans from "@/assets/custom_lesson_plans.jpg"
-import GradedExams from "@/assets/graded_exams.jpg"
-import PrivateLessons from "@/assets/private_lessons.jpg"
 import { Button } from "@/components/ui/button";
 
 export function CTASection() {

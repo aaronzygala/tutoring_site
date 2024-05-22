@@ -2,19 +2,10 @@ import Image, { StaticImageData } from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import ExamIcon from "@/assets/exam-icon.png";
 import GrowthIcon from "@/assets/growth-icon.png";
 import TeachingIcon from "@/assets/teaching-icon.png";

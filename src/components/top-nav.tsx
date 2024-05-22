@@ -9,50 +9,60 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
 } from "@/components/ui/navigation-menu"
 import {
     Separator
 } from "@/components/ui/separator"
 
-export function NavigationMenuDemo() {
+export function TopNavBar() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    About Us
-                </NavigationMenuLink>
-            </Link>
-        </NavigationMenuItem>
-        <Separator orientation="vertical" className="h-6 bg-accent"/>
-        <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Pricing
-                </NavigationMenuLink>
-            </Link>
-        </NavigationMenuItem>
-        <Separator orientation="vertical" className="h-6 bg-accent"/>
-        <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Schedule a Consultation
-                </NavigationMenuLink>
-            </Link>
-        </NavigationMenuItem>
-        <Separator orientation="vertical" className="h-6 bg-accent"/>
-        <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact Us
-                </NavigationMenuLink>
-            </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div className="fixed top-0 px-44 pt-4 bg-black z-50 w-full">
+      <div className="max-w-8xl pb-3 items-center justify-between text-sm lg:flex">
+        <Link
+          className="text-white pointer-events-none flex place-items-center text-2xl lg:pointer-events-auto lg:p-0"
+          href="/"
+        >
+          Axiom Test Prep
+        </Link>
+        <NavigationMenu className="ml-auto">
+          <NavigationMenuList>
+            <NavigationMenuItem>
+                <Link href="/about-us" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        About Us
+                    </NavigationMenuLink>
+                </Link>
+            </NavigationMenuItem>
+            <Separator orientation="vertical" className="h-6 bg-accent"/>
+            <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        Programs
+                    </NavigationMenuLink>
+                </Link>
+            </NavigationMenuItem>
+            <Separator orientation="vertical" className="h-6 bg-accent"/>
+            <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      Schedule a Consultation
+                    </NavigationMenuLink>
+                </Link>
+            </NavigationMenuItem>
+            <Separator orientation="vertical" className="h-6 bg-accent"/>
+            <NavigationMenuItem>
+                <Link href="/contact-us" legacyBehavior>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      Contact Us
+                    </NavigationMenuLink>
+                </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    <Separator className=""/>
+  </div>
+
   )
 }
 

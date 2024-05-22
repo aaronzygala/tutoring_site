@@ -1,22 +1,5 @@
-import Image from "next/image";
-import { NavigationMenuDemo } from "@/components/top-nav";
-import {Separator} from "@/components/ui/separator"
-import Link from "next/link"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import {Label} from "@/components/ui/label"
 import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import booksImage from "@/assets/books.jpg"
-import { CookieToast } from "@/components/cookie-toast";
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Icons } from '@/components/icons';
 
 
 export function Footer() {
@@ -44,9 +27,9 @@ export function Footer() {
           </div>
 
           <div>
-              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Facebook size={18} /></Button>
-              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Twitter size={18} /></Button>
-              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Instagram size={18} /></Button>
+              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Icons.facebook size={18}/></Button>
+              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Icons.twitter size={18}/></Button>
+              <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost"><Icons.instagram size={18}/></Button>
           </div>
         </div>
 

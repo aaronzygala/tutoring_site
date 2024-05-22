@@ -23,6 +23,11 @@ import {
     Twitter,
     User,
     X,
+    Phone,
+    Mail,
+    MapPin,
+    Facebook,
+    Instagram,
     type Icon as LucideIcon,
   } from "lucide-react"
   
@@ -50,6 +55,11 @@ import {
     sun: SunMedium,
     moon: Moon,
     laptop: Laptop,
+    phone: Phone,
+    mail: Mail,
+    mapPin: MapPin,
+    facebook: Facebook,
+    instagram: Instagram,
     gitHub: ({ ...props }: LucideProps) => (
       <svg
         aria-hidden="true"
