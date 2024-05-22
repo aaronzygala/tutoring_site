@@ -21,7 +21,7 @@ export function CTASection() {
                 Ready to <span className="text-primary">learn</span>?
             </div>
             <div className="mt-6 text-xl text-background">
-                We know it's a big leap to take. The first one's on us.
+                We know it&apos;s a big leap to take. The first one&apos;s on us.
             </div>
             <div 
                 className="mt-6">

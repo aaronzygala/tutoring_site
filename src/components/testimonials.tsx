@@ -102,7 +102,7 @@ function TestimonialCard({name, image_src, review}: {name:string, image_src:stri
                 </div>
             </CardHeader>
             <CardContent>
-                "{review}"
+                &quot;{review}&quot;
             </CardContent>
         </Card>
     )

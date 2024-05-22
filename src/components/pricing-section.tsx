@@ -24,7 +24,7 @@ export function PricingSection() {
                 Simple, transparent <span className="text-primary">pricing</span>
             </div>
             <div className="mt-2 text-xl text-muted-foreground">
-                Whether its group tutoring or one-on-one, we're here to help.
+                Whether its group tutoring or one-on-one, we&apos;re here to help.
             </div>
         </div>
         <div className="mt-12 flex flex-row">
