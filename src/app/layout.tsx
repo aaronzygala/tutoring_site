@@ -7,7 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import AOSProvider from "@/components/aos-provider"
 import React from "react"
-import { TopNavBar } from "@/components/top-nav"
+import { DesktopNavbar } from "@/components/navigation/desktop-nav"
+import { MobileNavbar } from "@/components/navigation/mobile-nav"
+import { Footer } from "@/components/landing-page-sections/footer"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,9 +33,13 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
               enableSystem
               disableTransitionOnChange
             >
-            <TopNavBar/>
-
+            <DesktopNavbar/>
+            {/* <span className="md:hidden">
+              <MobileNavbar/>
+            </span> */}
             {children}
+            <Footer/>
+
             {/* <Toaster /> */}
             </ThemeProvider>
         </body>

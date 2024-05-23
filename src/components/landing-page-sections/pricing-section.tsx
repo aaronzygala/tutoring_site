@@ -13,7 +13,7 @@ export function PricingSection() {
   return (
     <main>
       <div className="min-w-screen bg-foreground text-background">
-        <div className="px-52 py-24">
+        <div className="px-12 lg:px-52 py-24">
         <div className="flex w-full flex-col">
             <div className="text-4xl font-extrabold">
                 Our tutoring <span className="text-primary">plans</span>

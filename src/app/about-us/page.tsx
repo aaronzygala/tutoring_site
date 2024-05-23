@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Card,
   CardContent,
@@ -15,7 +15,7 @@ import tempImage from "@/app/favicon.ico";
 export default function ContactUs() {
   return (
     <main className="overflow-clip">
-        <div className="backdrop-blur-0 bg-gradient-to-b from-gray-950 to-transparent min-h-screen">
+        <div className="min-h-screen">
 
         <div className="flex flex-col items-left z-10 px-44 pt-4">
           <div className="mt-24">
@@ -28,42 +28,21 @@ export default function ContactUs() {
                   <span className="text-lg text-foreground">We are a small team of dedicated math-enthusiasts.</span>                   
                 </CardHeader>
               <CardContent className="flex flex-row gap-12 w-full mt-6 justify-evenly">
-                    <Card className="">
-                      <CardHeader >
-                        <CardTitle>
-                          Natalia Mercado
-                        </CardTitle>
-                        <CardDescription>
-                            Short blurb on the instructor&apos;s qualifications, etc.
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <Image
-                            src={tempImage}
-                            alt="A Headshot of the instructor"
-                            className="h-[500px] w-[500px] ml-auto mr-auto py-6"
-                        />
-                        Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?
-                      </CardContent>
-                    </Card>
-                    <Card className="">
-                      <CardHeader >
-                        <CardTitle>
-                          Aaron Zygala
-                        </CardTitle>
-                        <CardDescription>
-                            Short blurb on the instructor&apos;s qualifications, etc.
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <Image
-                            src={tempImage}
-                            alt="A Headshot of the instructor"
-                            className="h-[500px] w-[500px] ml-auto mr-auto py-6"
-                        />
-                        Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?
-                      </CardContent>
-                    </Card>         
+                  <InstructorCard
+                    imageSrc={tempImage}
+                    imageAlt={"A headshot of the instructor"}
+                    instructorName={"Natalia Mercado"}
+                    instructorBlurb={"Short blurb on the instructor's qualifications, etc."}
+                    instructorDescription={"Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?"}
+                    />
+                <InstructorCard
+                    imageSrc={tempImage}
+                    imageAlt={"A headshot of the instructor"}
+                    instructorName={"Aaron Zygala"}
+                    instructorBlurb={"Short blurb on the instructor's qualifications, etc."}
+                    instructorDescription={"Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?"}
+                    />
+       
                   </CardContent>
               <CardFooter>
               </CardFooter>
@@ -74,4 +53,30 @@ export default function ContactUs() {
         </div>
     </main>
   );
+}
+
+
+function InstructorCard ({imageSrc, imageAlt, instructorName, instructorBlurb, instructorDescription} : {imageSrc:StaticImageData, imageAlt: string, instructorName:string, instructorBlurb: string, instructorDescription: string}) {
+    return(
+        <Card className="">
+            <CardHeader>
+                <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="h-[400px] w-[400px] ml-auto mr-auto py-6"
+                />
+            <CardTitle>
+                {instructorName}
+            </CardTitle>
+            <CardDescription>
+                {instructorBlurb}
+            </CardDescription>
+            </CardHeader>
+            <CardContent>
+
+            {instructorDescription}
+            </CardContent>
+        </Card>  
+
+    )
 }

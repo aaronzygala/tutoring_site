@@ -9,7 +9,7 @@ export function Testimonials() {
   return (
     <main>
         <div className="min-w-screen bg-black">
-            <div className="px-52 py-24">
+            <div className="px-12 lg:px-52 py-24">
                 <div className="text-4xl font-extrabold text-foreground">
                     What <span className="text-primary">everyone</span> is saying
                 </div>

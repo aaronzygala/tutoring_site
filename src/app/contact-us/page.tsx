@@ -16,7 +16,7 @@ import { Textarea } from "@/components/ui/textarea"
 export default function ContactUs() {
   return (
     <main className="overflow-clip">
-        <div className="backdrop-blur-0 bg-gradient-to-b from-gray-950 to-transparent min-h-screen">
+        <div className="min-h-screen">
 
         <div className="flex flex-col items-left z-10 px-44 pt-4">
           <div className="mt-24">
@@ -37,14 +37,23 @@ export default function ContactUs() {
                       </CardHeader>
                       <CardContent>
                         <ul>
-                          <li className="flex items-center space-y-1.5">
-                            <Icons.phone className="w-6 h-6 mr-2"/><span className="w-96">+1 (555)-555-5555</span>
+                          <li className="flex my-4">
+                            <span className="bg-yellow-400 p-3 rounded-full"><Icons.phone className="text-black"/></span>
+                            <span className="w-96 mt-auto mb-auto ml-4">
+                              +1 (555)-555-5555
+                            </span>
                           </li>
-                          <li className="flex items-center space-y-1.5">
-                            <Icons.mail className="w-6 h-6 mr-2"/><span className="w-96">emailaddress@company.com</span>
-                          </li>
-                          <li className="flex items-center space-y-1.5">
-                            <Icons.mapPin className="w-6 h-6 mr-2"/><span className="w-96">1234 Address Lane, City Name, State, Zip Code, United States</span>
+                        <li className="flex my-4">
+                          <span className="bg-yellow-400 p-3 rounded-full"><Icons.mail className="text-black"/></span>
+                            <span className="w-96 mt-auto mb-auto ml-4">
+                              contact@axiom.com
+                            </span>                          
+                        </li>
+                          <li className="flex my-4">
+                          <span className="bg-yellow-400 p-3 rounded-full"><Icons.mapPin className="text-black"/></span>
+                            <span className="w-96 mt-auto mb-auto ml-4">
+                              1234, Address Lane, City, State United States, Zip Code
+                            </span>                          
                           </li>
                         </ul>
                       </CardContent>

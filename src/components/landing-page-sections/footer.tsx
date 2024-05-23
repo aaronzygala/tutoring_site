@@ -14,15 +14,15 @@ export function Footer() {
             <Button className="hover:bg-transparent hover:text-muted-foreground" variant="ghost">Responsible Disclosure</Button>
         </div>
         <div className="text-xs text-muted-foreground mt-auto mb-auto">
-            &copy;2024 COMPANY NAME. All rights reserved.
+            &copy;2024 Axiom Test Prep. All rights reserved.
         </div>
         <div className="ml-auto flex flex-row">
-          <div className="mr-12 text-center">
-            <div className="text-xs text-muted-foreground">
+          <div className="flex gap-6 mt-auto mb-auto mr-12 text-center text-xs text-muted-foreground">
+            <div className="">
                 +1 (555)-555-5555
             </div>
-            <div className="text-xs text-muted-foreground">
-                COMPANY@EMAIL.COM
+            <div className="">
+                contact@axiom.com
             </div>
           </div>
 

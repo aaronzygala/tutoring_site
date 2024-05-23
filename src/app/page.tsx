@@ -5,15 +5,16 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardTitle,
+  CardDescription
 } from "@/components/ui/card"
 import {Button} from "@/components/ui/button"
-import booksImage from "@/assets/books.jpg"
-import {Footer} from "@/components/footer";
-import { IncentiveSection } from "@/components/company-incentives";
-import  {HowItWorks}  from "@/components/how-it-works";
-import { Testimonials } from "@/components/testimonials";
-import { CTASection } from "@/components/cta-section";
-import { PricingSection } from "@/components/pricing-section";
+import booksImage from "@/assets/books.jpg";
+import { IncentiveSection } from "@/components/landing-page-sections/company-incentives";
+import  {HowItWorks}  from "@/components/landing-page-sections/how-it-works";
+import { Testimonials } from "@/components/landing-page-sections/testimonials";
+import { CTASection } from "@/components/landing-page-sections/cta-section";
+import { PricingSection } from "@/components/landing-page-sections/pricing-section";
 
 export default function Home() {
   return (
@@ -23,22 +24,28 @@ export default function Home() {
           alt="Bookcase Image"
           className="z-0 absolute w-full h-full inset-0 object-cover"
         />
-        <div className="backdrop-blur-0 bg-gradient-to-b from-gray-950 to-transparent min-h-screen overflow-hidden">
-          <div className="flex flex-col items-left z-10 px-44 pt-4">
+        <div className="backdrop-blur bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
+          <div className="flex flex-col items-left z-10 lg:px-44 pt-4">
             <div className="mt-80">
               <Card className="border-none bg-transparent shadow-none">
                   <div className="flex flex-col items-left">
                   <CardHeader>
-                      <div className="text-7xl text-white font-extrabold font-sans mb-12">
+                      <CardTitle className="text-3xl lg:text-7xl">
                         <span className="text-primary hover:italic">SAT</span>, 
-                        <span className="text-primary hover:italic"> ACT </span>& <span className="text-primary hover:italic"> CLT</span> Prep
-                      
-                      </div>
-                      <div className="text-4xl text-white font-thin font-sans">Prepare for your future.</div>
+                        <span className="text-primary hover:italic"> ACT </span>
+                        & <span className="text-primary hover:italic"> CLT</span> Prep
+                      </CardTitle>
+                      <CardDescription className="text-xl lg:text-4xl">
+                        Prepare for your future.
+                      </CardDescription>
                   </CardHeader>
                   <CardContent>
-                        <Button className="bg-primary text-md py-4 animate-button-pulse">Get started today</Button>
-                        <Button className="text-foreground hover:text-foreground hover:bg-transparent hover:underline" variant="ghost">See more details</Button>
+                        <Button className="bg-primary text-md py-4 animate-button-pulse">
+                          Get started today
+                        </Button>
+                        <Button className="text-foreground hover:text-foreground hover:bg-transparent hover:underline" variant="ghost">
+                          See more details
+                        </Button>
                   </CardContent>
                 </div>
               </Card>
@@ -54,7 +61,6 @@ export default function Home() {
         <PricingSection/>
         <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto"/>
         <CTASection/>
-        <Footer/>
     </main>
   );
 }

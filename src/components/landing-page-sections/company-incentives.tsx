@@ -1,9 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -16,15 +14,14 @@ export function IncentiveSection() {
     <main>
       <div className="min-w-screen bg-foreground text-background">
         <div className="py-24">
-            <div className="px-52 text-4xl font-extrabold">
+            <div className="px-12 lg:px-52 text-4xl font-extrabold">
                 Why choose <span className="text-primary">Axiom Test Prep</span>?
             </div>
-            <div className="px-52 mt-2 text-lg text-muted-foreground">
+            <div className="px-12 lg:px-52 mt-2 text-lg text-muted-foreground">
               Check out the benefits of the education we offer.
             </div>
             <div 
-              className="px-24 mt-12 flex justify-evenly">
-              <div>
+              className="grid lg:grid-cols-2 lg:px-24 mt-12 justify-evenly">
                 <div
                       data-aos="fade-up"
                       data-aos-once="true"
@@ -51,8 +48,6 @@ export function IncentiveSection() {
                                   imageSrc={GradedExams}
                                   imageAltDescription={"An image showing a graded exam"} />
                   </div>
-              </div>
-              <div>
                 <div
                       data-aos="fade-up"
                       data-aos-once="true"
@@ -79,8 +74,6 @@ export function IncentiveSection() {
                                   imageSrc={CustomLessonPlans}
                                   imageAltDescription={"An image showing an agenda for a tutor's student."} />
                   </div>
-              </div>
-
             </div>
         </div>
       </div>
@@ -92,7 +85,7 @@ export function IncentiveSection() {
 
 function CardTest({title, description, imageAltDescription, imageSrc}: {title:string, description:string, imageAltDescription:string, imageSrc:StaticImageData}) {
     return(
-      <Card className="w-96 h-[300px] bg-transparent border-none rounded-none shadow-none">
+      <Card className="lg:w-96 lg:h-[300px] bg-transparent border-none rounded-none shadow-none">
         <CardHeader>
           <CardTitle className="text-lg text-background text-center">
             <div className="h-24 w-24 mb-6 ml-auto mr-auto ">

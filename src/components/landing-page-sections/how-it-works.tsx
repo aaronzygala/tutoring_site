@@ -28,9 +28,9 @@ export function HowItWorks() {
   return (
     <main>
       <div className="min-w-screen bg-foreground text-background">
-        <div className="px-52 py-24">
+        <div className="px-12 lg:px-52 py-24">
           <div className="text-4xl font-extrabold">
-            How it <span className="text-primary">works</span>
+            How it <span className="text-primary ">works</span>
           </div>
           <div className="mt-2 text-lg text-muted-foreground">
               Explore our four step system.
