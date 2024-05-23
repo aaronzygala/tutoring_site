@@ -103,7 +103,16 @@ function HowItWorksCard({
   index,
   animate,
   isMobile,
-}) {
+}:
+  {title: string,
+  content: string,
+  imageAltDescription: string,
+  imageSrc: StaticImageData,
+  index: number,
+  animate: boolean,
+  isMobile: boolean
+  }
+) {
   const iconBackground = iconBackgrounds[index - 1];
   const delay = index * 0.075;
 
