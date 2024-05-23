@@ -1,6 +1,8 @@
 import {
     AlertTriangle,
     ArrowRight,
+    AlignJustify,
+    CalendarDays,
     Check,
     ChevronLeft,
     ChevronRight,
@@ -15,10 +17,12 @@ import {
     LucideProps,
     Moon,
     MoreVertical,
+    Notebook,
     Pizza,
     Plus,
     Settings,
     SunMedium,
+    Send,
     Trash,
     Twitter,
     User,
@@ -26,6 +30,7 @@ import {
     Phone,
     Mail,
     MapPin,
+    UsersRound,
     Facebook,
     Instagram,
     type Icon as LucideIcon,
@@ -35,6 +40,7 @@ import {
   
   export const Icons = {
     logo: Command,
+    alignJustify: AlignJustify,
     close: X,
     spinner: Loader2,
     chevronLeft: ChevronLeft,
@@ -53,6 +59,7 @@ import {
     help: HelpCircle,
     pizza: Pizza,
     sun: SunMedium,
+    send: Send,
     moon: Moon,
     laptop: Laptop,
     phone: Phone,
@@ -60,6 +67,9 @@ import {
     mapPin: MapPin,
     facebook: Facebook,
     instagram: Instagram,
+    usersRound: UsersRound,
+    calendarDays: CalendarDays,
+    notebook:Notebook,
     gitHub: ({ ...props }: LucideProps) => (
       <svg
         aria-hidden="true"

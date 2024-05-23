@@ -15,8 +15,10 @@ import {
 import {
     Separator
 } from "@/components/ui/separator"
+import { usePathname } from 'next/navigation'
 
 export function DesktopNavbar() {
+  const currentPath = usePathname();
   return (
     <div className="fixed top-0 px-4 lg:px-44 pt-4 bg-background z-50 w-full">
       <div className="max-w-8xl pb-3 items-center justify-between text-sm lg:flex">
@@ -30,7 +32,7 @@ export function DesktopNavbar() {
           <NavigationMenuList>
             <NavigationMenuItem>
                 <Link href="/about-us" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink className={cn(currentPath === "/about-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto", navigationMenuTriggerStyle())}>
                         About Us
                     </NavigationMenuLink>
                 </Link>
@@ -50,7 +52,7 @@ export function DesktopNavbar() {
             <Separator orientation="vertical" className="h-6 bg-accent"/>
             <NavigationMenuItem>
                 <Link href="/scheduling" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink className={cn(currentPath === "/scheduling" ? "bg-accent mr-auto" : "bg-transparent mr-auto", navigationMenuTriggerStyle())}>
                       Schedule a Consultation
                     </NavigationMenuLink>
                 </Link>
@@ -58,7 +60,7 @@ export function DesktopNavbar() {
             <Separator orientation="vertical" className="h-6 bg-accent"/>
             <NavigationMenuItem>
                 <Link href="/contact-us" legacyBehavior>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink className={cn(currentPath === "/contact-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto", navigationMenuTriggerStyle())}>
                       Contact Us
                     </NavigationMenuLink>
                 </Link>

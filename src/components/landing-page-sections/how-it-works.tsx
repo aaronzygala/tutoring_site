@@ -42,7 +42,7 @@ export function HowItWorks() {
           <div className="mt-2 lg:text-lg text-muted-foreground">
             Explore our four step system.
           </div>
-          <div className="mt-12 w-full relative h-[1700px] lg:h-[375px]" ref={ref}>
+          <div className="mt-12 w-full relative h-[1750px] lg:h-[375px]" ref={ref}>
           <HowItWorksCard
               title={"Assessment and Goal Setting"}
               content={
@@ -125,21 +125,21 @@ function HowItWorksCard({
 
   const finalPositionsVertical = [
     "translate-y-0 z-10",
-    "translate-y-[110%] z-20",
-    "translate-y-[220%] z-30",
-    "translate-y-[330%] z-40",
+    "translate-y-[100%] z-20",
+    "translate-y-[200%] z-30",
+    "translate-y-[300%] z-40",
   ];
 
   const offsets = [
+    "rotate-[-1deg] translate-x-[-20px]",
     "rotate-[-1deg] translate-x-[-10px]",
-    "rotate-[-1deg] translate-x-[100px]",
-    "rotate-[1deg] translate-x-[200px]",
-    "rotate-[1deg] translate-x-[300px]",
+    "rotate-[1deg] translate-x-[0px]",
+    "rotate-[1deg] translate-x-[10px]",
   ];
 
   return (
     <div
-      className={`p-4 w-[350px] absolute transition-transform duration-700 ${
+      className={`p-4 w-[100%] absolute transition-transform duration-700 ${
         animate
           ? isMobile
             ? finalPositionsVertical[index - 1]
@@ -150,7 +150,7 @@ function HowItWorksCard({
         transitionDelay: `${delay}s`,
       }}
     >
-      <Card className="bg-card-foreground border-none shadow-2xl rounded-none h-[360px]">
+      <Card className="bg-card-foreground border-none shadow-2xl rounded-none h-[420px]">
         <CardHeader>
           <div className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}>
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />

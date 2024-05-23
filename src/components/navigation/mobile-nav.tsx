@@ -28,46 +28,60 @@ import { Label } from "@/components/ui/label"
 import {
     Separator
 } from "@/components/ui/separator"
+import { Icons } from "@/components/icons"
+import { usePathname } from 'next/navigation'
 
 export function MobileNavbar() {
+  const currentPath = usePathname();
+
   return (
     <div className="fixed top-0 px-4 lg:px-44 pt-4 bg-background z-50 min-w-full">
-      <div className="lg:max-w-8xl pb-3 items-center justify-between text-sm lg:flex">
+      <div className="pb-3 items-center  text-sm flex lg:flex-row">
         <Link
-          className="text-white flex place-items-center text-2xl lg:pointer-events-auto lg:p-0"
+          className="text-white place-items-center text-2xl lg:pointer-events-auto lg:p-0"
           href="/"
         >
           Axiom Test Prep
         </Link>
         <Sheet>
             <SheetTrigger asChild >
-                <Button variant="outline" className="absolute right-0">Open</Button>
+                <Button variant="ghost" className="ml-auto"><Icons.alignJustify size={24}/></Button>
             </SheetTrigger>
-            <SheetContent side={"left"} className="w-[250px]">
+            <SheetContent side={"right"} className="w-[200px]">
                 <SheetHeader>
-                    <SheetTitle>Directory</SheetTitle>
+                    <SheetTitle className="font-bold text-left">Directory</SheetTitle>
+                    <Separator/>
                 </SheetHeader>
-                <div className="flex flex-col gap-4 mt-12">
-                        <Button className="bg-accent">
-                            <Link href="/scheduling" legacyBehavior passHref>
+                <div className="flex flex-col mt-2 ">
+                        <Link href="/about-us" legacyBehavior passHref>
+
+                            <Button variant="ghost" className={currentPath === "/about-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                                <Icons.usersRound strokeWidth={0.8} size={16} className="mr-2"/>
                                 About Us
-                            </Link>
-                        </Button>
-                        <Button>
-                            <Link href="/programs" legacyBehavior passHref>
+                            </Button>
+                        </Link>
+                        <Link href="/programs" legacyBehavior passHref>
+
+                            <Button variant="ghost" className={currentPath === "/programs" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                                <Icons.notebook strokeWidth={0.8} size={16} className="mr-2"/>
                                 Programs
-                            </Link>
-                        </Button>                    
-                        <Button>
-                            <Link href="/scheduling" legacyBehavior passHref>
-                                Schedule a Consultation
-                            </Link>
-                        </Button>
-                        <Button>
-                            <Link href="/contact-us" legacyBehavior passHref>
+                            </Button>
+                        </Link>                
+                        <Link href="/scheduling" legacyBehavior passHref>
+
+                            <Button variant="ghost" className={currentPath === "/scheduling" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                                <Icons.calendarDays strokeWidth={0.8} size={16} className="mr-2"/>
+                                Scheduling
+                            </Button>
+                        </Link>
+                        <Link href="/contact-us" legacyBehavior passHref>
+
+                            <Button variant="ghost" className={currentPath === "/contact-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                                <Icons.send strokeWidth={0.8} size={16} className="mr-2" />
                                 Contact Us
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
+
                 </div>
             </SheetContent>
         </Sheet>

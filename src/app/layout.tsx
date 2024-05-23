@@ -1,3 +1,4 @@
+"use client"
 import "@/app/globals.css"
 import { Poppins as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
@@ -6,7 +7,7 @@ import Home from './page'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import AOSProvider from "@/components/aos-provider"
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { DesktopNavbar } from "@/components/navigation/desktop-nav"
 import { MobileNavbar } from "@/components/navigation/mobile-nav"
 import { Footer } from "@/components/landing-page-sections/footer"
@@ -18,6 +19,19 @@ const fontSans = FontSans({
 })
 
 export default function RootLayout({children } :{ children:React.ReactNode}) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <AOSProvider>
@@ -33,10 +47,8 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
               enableSystem
               disableTransitionOnChange
             >
-            <DesktopNavbar/>
-            {/* <span className="md:hidden">
-              <MobileNavbar/>
-            </span> */}
+            
+            {isMobile ? <MobileNavbar/> : <DesktopNavbar/>}
             {children}
             <Footer/>
 

@@ -18,7 +18,7 @@ export default function ContactUs() {
     <main className="overflow-clip">
         <div className="min-h-screen">
 
-        <div className="flex flex-col items-left z-10 px-44 pt-4">
+        <div className="flex flex-col items-left z-10 lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -28,8 +28,8 @@ export default function ContactUs() {
                   </div>
                   <span className="text-lg text-foreground">Feel free to leave any inquiries below, or give us a call to speak with our helpful sales team.</span>                   
                 </CardHeader>
-              <CardContent className="flex flex-row gap-12">
-                    <Card className="w-[900px]">
+              <CardContent className="flex flex-col lg:flex-row gap-12">
+                    <Card className="lg:w-[900px]">
                       <CardHeader >
                         <CardTitle>
                           Contact Details

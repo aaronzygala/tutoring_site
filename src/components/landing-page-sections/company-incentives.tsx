@@ -99,7 +99,7 @@ function CardTest({title, description, imageAltDescription, imageSrc}: {title:st
               {title}
         
           </CardTitle>
-          <CardDescription className="text-background text-center w-96 justify-center ml-auto mr-auto">
+          <CardDescription className="text-background text-center w-[80%] justify-center ml-auto mr-auto">
             {description}
           </CardDescription>
         </CardHeader>
