@@ -18,17 +18,17 @@ export function PricingSection() {
             <div className="text-4xl font-extrabold">
                 Our tutoring <span className="text-primary">plans</span>
             </div>
-            <div className="mt-2 text-xl text-muted-foreground">
+            <div className="mt-2 lg:text-lg text-muted-foreground">
                 Whether its group tutoring or one-on-one, we&apos;re here to help.
             </div>
         </div>
-        <div className="mt-12 flex flex-row">
-        <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-r-none transition-all ease-in-out delay-150 hover:shadow-2xl">
+        <div className="mt-12 flex flex-col lg:flex-row">
+        <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-b-none lg:rounded-r-none lg:rounded-bl-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
         <div className="grid gap-6">
-          <h3 className="text-xl font-bold sm:text-2xl">
+          <h3 className="text-xl font-bold">
             Group SAT Math Course
           </h3>
-          <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-rows-2">
+          <ul className="grid gap-3 text-sm text-muted-foreground">
             <li className="flex items-center">
                 <Icons.check className="mr-2 h-4 w-4" /> Small Groups of 6-8 students
             </li>
@@ -37,7 +37,7 @@ export function PricingSection() {
             </li>
             <li className="flex flex-col items-left">
                 <div className="flex items-center"><Icons.check className="mr-2 h-4 w-4" /> 40.5 Total Hours</div>
-                <ul className="ml-8 mt-4 grid gap-3 text-xs text-muted-foreground sm:grid-rows-2">
+                <ul className="ml-8 mt-4 grid gap-3 text-xs text-muted-foreground">
                     <li className="flex items-center">
                         <Icons.check className="mr-2 h-4 w-4" /> 4.5 Hours of Proctored Exams
                     </li>
@@ -64,14 +64,14 @@ export function PricingSection() {
       </div>
       <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-none transition-all ease-in-out delay-150 hover:shadow-2xl">
         <div className="grid gap-6">
-          <h3 className="text-xl font-bold sm:text-2xl">
+          <h3 className="text-xl font-bold">
             Private Tutoring Plan
             <div className="text-sm font-thin text-muted-foreground">
                 A completely personalized experience, designed to guide each student to achieve their goal SAT score.
             </div>
           </h3>
 
-          <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-rows-2">
+          <ul className="grid gap-3 text-sm text-muted-foreground">
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> An initial skill assessment.
             </li>
@@ -84,7 +84,7 @@ export function PricingSection() {
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> Access to unlimited study materials on our website.
             </li>
-            <li className="flex items-center text-nowrap">
+            <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> Unlimited weekly sessions, prioritized scheduling available on our website.
             </li>
           </ul>
@@ -96,7 +96,7 @@ export function PricingSection() {
               Per Session
             </p>
           </div>
-          <Link href="/" className="    ">
+          <Link href="/" className="">
             <Button className="">
                 Learn More
             </Button>
@@ -104,7 +104,7 @@ export function PricingSection() {
         </div>
         
       </div>
-      <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-l-none transition-all ease-in-out delay-150 hover:shadow-2xl">
+      <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-t-none lg:rounded-l-none lg:rounded-r-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold sm:text-2xl">
             Group CLT Math Course
@@ -154,28 +154,3 @@ export function PricingSection() {
     </main>
   );
 }
-
-
-function CardTest({title, description, imageAltDescription, imageSrc}: {title:string, description:string, imageAltDescription:string, imageSrc:StaticImageData}) {
-    return(
-      <Card className="w-96 h-[300px] bg-transparent border-none rounded-none shadow-none">
-        <CardHeader>
-          <CardTitle className="text-lg text-background text-center">
-            <div className="h-24 w-24 mb-6 ml-auto mr-auto ">
-              <Image
-                  src={imageSrc}
-                  alt={imageAltDescription}
-                  className=""
-                />
-            </div>
-
-              {title}
-        
-          </CardTitle>
-          <CardDescription className="text-background text-center">
-            {description}
-          </CardDescription>
-        </CardHeader>
-      </Card>
-    )
-  }

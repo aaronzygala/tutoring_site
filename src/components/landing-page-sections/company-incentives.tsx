@@ -17,11 +17,11 @@ export function IncentiveSection() {
             <div className="px-12 lg:px-52 text-4xl font-extrabold">
                 Why choose <span className="text-primary">Axiom Test Prep</span>?
             </div>
-            <div className="px-12 lg:px-52 mt-2 text-lg text-muted-foreground">
+            <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
               Check out the benefits of the education we offer.
             </div>
             <div 
-              className="grid lg:grid-cols-2 lg:px-24 mt-12 justify-evenly">
+              className="grid lg:grid-cols-2 mt-12 justify-center">
                 <div
                       data-aos="fade-up"
                       data-aos-once="true"
@@ -85,7 +85,7 @@ export function IncentiveSection() {
 
 function CardTest({title, description, imageAltDescription, imageSrc}: {title:string, description:string, imageAltDescription:string, imageSrc:StaticImageData}) {
     return(
-      <Card className="lg:w-96 lg:h-[300px] bg-transparent border-none rounded-none shadow-none">
+      <Card className="lg:h-[300px] bg-transparent border-none rounded-none shadow-none">
         <CardHeader>
           <CardTitle className="text-lg text-background text-center">
             <div className="h-24 w-24 mb-6 ml-auto mr-auto ">
@@ -99,7 +99,7 @@ function CardTest({title, description, imageAltDescription, imageSrc}: {title:st
               {title}
         
           </CardTitle>
-          <CardDescription className="text-background text-center">
+          <CardDescription className="text-background text-center w-96 justify-center ml-auto mr-auto">
             {description}
           </CardDescription>
         </CardHeader>

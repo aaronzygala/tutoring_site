@@ -8,7 +8,7 @@ export function CTASection() {
             <div className="text-4xl font-extrabold">
                 Ready to <span className="text-primary">learn</span>?
             </div>
-            <div className="mt-6 text-xl text-background">
+            <div className="mt-6 lg:text-xl text-background">
                 We know it&apos;s a big leap to take. The first one&apos;s on us.
             </div>
             <div 
