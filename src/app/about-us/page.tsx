@@ -10,14 +10,20 @@ import {
 } from "@/components/ui/card"
 import { Icons } from "@/components/icons";
 import tempImage from "@/app/favicon.ico";
+import booksImage from "@/assets/books.jpg";
 
 
 export default function ContactUs() {
   return (
     <main className="overflow-clip">
-        <div className="min-h-screen">
-
-        <div className="flex flex-col items-left z-10 lg:px-44 pt-4">
+        <Image
+          src={booksImage}
+          alt="Bookcase Image"
+          className="absolute top-0 w-full h-full object-fill z-0"
+          priority
+          quality={100}
+        />
+        <div className="relative backdrop-blur-sm bg-gradient-to-t from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -49,8 +55,7 @@ export default function ContactUs() {
               </div>
             </Card>
           </div>
-        </div>
-        </div>
+          </div>
     </main>
   );
 }

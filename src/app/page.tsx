@@ -10,6 +10,9 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import booksImage from "@/assets/books.jpg";
+import museumImage from "@/assets/museum.jpg";
+import libraryImage from "@/assets/library.jpg";
+
 import { IncentiveSection } from "@/components/landing-page-sections/company-incentives";
 import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
 import { Testimonials } from "@/components/landing-page-sections/testimonials";
@@ -18,13 +21,13 @@ import { PricingSection } from "@/components/landing-page-sections/pricing-secti
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="">
       <Image
-        src={booksImage}
+        src={museumImage}
         alt="Bookcase Image"
-        className="absolute top-0 w-full h-full object-cover z-0"
+        className="absolute top-0 w-full h-full object-none z-0"
         priority
-        quality={50}
+        quality={100}
       />
       <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10">
         <div className="flex flex-col items-left lg:px-44 pt-4">

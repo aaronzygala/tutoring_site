@@ -23,7 +23,7 @@ export function HowItWorks() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     handleResize();
@@ -139,7 +139,7 @@ function HowItWorksCard({
 
   return (
     <div
-      className={`p-4 w-[100%] absolute transition-transform duration-700 ${
+      className={`p-4 absolute transition-transform duration-700 ${
         animate
           ? isMobile
             ? finalPositionsVertical[index - 1]
@@ -147,10 +147,11 @@ function HowItWorksCard({
           : offsets[index - 1]
       }`}
       style={{
+        width: isMobile ? '100%' : '25%',
         transitionDelay: `${delay}s`,
       }}
     >
-      <Card className="bg-card-foreground border-none shadow-2xl rounded-none h-[420px]">
+      <Card className="bg-card-foreground border-none shadow-2xl rounded-none  h-[420px]">
         <CardHeader>
           <div className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}>
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />
