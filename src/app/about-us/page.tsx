@@ -19,11 +19,11 @@ export default function ContactUs() {
         <Image
           src={booksImage}
           alt="Bookcase Image"
-          className="absolute top-0 w-full h-full object-fill z-0"
-          priority
-          quality={100}
+          className="absolute top-0 w-full h-full object-cover z-0"
+          // priority
+          // quality={100}
         />
-        <div className="relative backdrop-blur-sm bg-gradient-to-t from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">

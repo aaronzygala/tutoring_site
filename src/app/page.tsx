@@ -9,9 +9,7 @@ import {
   CardDescription
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import booksImage from "@/assets/books.jpg";
 import museumImage from "@/assets/museum.jpg";
-import libraryImage from "@/assets/library.jpg";
 
 import { IncentiveSection } from "@/components/landing-page-sections/company-incentives";
 import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
@@ -21,39 +19,37 @@ import { PricingSection } from "@/components/landing-page-sections/pricing-secti
 
 export default function Home() {
   return (
-    <main className="">
-      <Image
-        src={museumImage}
-        alt="Bookcase Image"
-        className="absolute top-0 w-full h-full object-none z-0"
-        priority
-        quality={100}
-      />
-      <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10">
-        <div className="flex flex-col items-left lg:px-44 pt-4">
-          <div className="mt-80">
-            <Card className="border-none bg-transparent shadow-none">
-              <div className="flex flex-col items-left">
-                <CardHeader>
-                  <CardTitle className="text-3xl lg:text-7xl">
-                    <span className="text-primary hover:italic">SAT</span>, 
-                    <span className="text-primary hover:italic"> ACT </span>
-                    & <span className="text-primary hover:italic"> CLT</span> Prep
-                  </CardTitle>
-                  <CardDescription className="text-xl lg:text-4xl">
-                    Prepare for your future.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="bg-primary text-md py-4 animate-button-pulse">
-                    Get started today
-                  </Button>
-                  <Button className="text-foreground hover:text-foreground hover:bg-transparent hover:underline" variant="ghost">
-                    See more details
-                  </Button>
-                </CardContent>
-              </div>
-            </Card>
+    <main className="relative min-h-screen">
+      <div
+        className="relative min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${museumImage.src})` }}
+      >
+        <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
+          <div className="flex flex-col items-left lg:px-44 pt-4">
+            <div className="mt-80">
+              <Card className="border-none bg-transparent shadow-none">
+                <div className="flex flex-col items-left">
+                  <CardHeader>
+                    <CardTitle className="text-3xl lg:text-7xl">
+                      <span className="text-primary hover:italic">SAT</span>, 
+                      <span className="text-primary hover:italic"> ACT </span>
+                      & <span className="text-primary hover:italic"> CLT</span> Prep
+                    </CardTitle>
+                    <CardDescription className="text-xl lg:text-4xl">
+                      Prepare for your future.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="bg-primary text-md py-4 animate-button-pulse">
+                      Get started today
+                    </Button>
+                    <Button className="text-foreground hover:text-foreground hover:bg-transparent hover:underline" variant="ghost">
+                      See more details
+                    </Button>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
