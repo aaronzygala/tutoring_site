@@ -53,13 +53,17 @@ export function MobileNavbar() {
                     <Separator/>
                 </SheetHeader>
                 <div className="flex flex-col mt-2 ">
-                        <Link href="/about-us" legacyBehavior passHref>
+                        <SheetClose asChild> 
+                            <Link href="/about-us" legacyBehavior passHref>
 
                             <Button variant="ghost" className={currentPath === "/about-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
                                 <Icons.usersRound strokeWidth={0.8} size={16} className="mr-2"/>
                                 About Us
                             </Button>
-                        </Link>
+                            </Link>
+
+                        </SheetClose>
+
                         <Link href="/programs" legacyBehavior passHref>
 
                             <Button variant="ghost" className={currentPath === "/programs" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>

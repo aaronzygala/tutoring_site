@@ -24,8 +24,8 @@ export default function Home() {
           alt="Bookcase Image"
           className="z-0 absolute w-full h-full inset-0 object-cover"
         />
-        <div className="backdrop-blur bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
-          <div className="flex flex-col items-left z-10 lg:px-44 pt-4">
+        <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
+          <div className="flex flex-col items-left z-40 lg:px-44 pt-4">
             <div className="mt-80">
               <Card className="border-none bg-transparent shadow-none">
                   <div className="flex flex-col items-left">
