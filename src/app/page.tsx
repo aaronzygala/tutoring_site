@@ -23,6 +23,7 @@ export default function Home() {
           src={booksImage}
           alt="Bookcase Image"
           className="z-0 absolute w-full h-full inset-0 object-cover"
+          unoptimized
         />
         <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
           <div className="flex flex-col items-left z-40 lg:px-44 pt-4">
