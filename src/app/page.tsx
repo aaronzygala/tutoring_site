@@ -18,11 +18,12 @@ import { PricingSection } from "@/components/landing-page-sections/pricing-secti
 
 export default function Home() {
   return (
-    <main >
+    <main>
         <Image
           src={booksImage}
           alt="Bookcase Image"
-          className="z-0 absolute w-full h-full inset-0 object-cover"
+          className="z-0 absolute top-0 w-full h-full inset-0 object-cover"
+          priority
           unoptimized
         />
         <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
