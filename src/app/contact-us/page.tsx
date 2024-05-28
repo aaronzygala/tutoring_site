@@ -12,20 +12,35 @@ import {Button} from "@/components/ui/button"
 import {Input} from "@/components/ui/input"
 import { Icons } from "@/components/icons";
 import { Textarea } from "@/components/ui/textarea"
-import Image from "next/image";
-import libraryImage from "@/assets/library.jpg";
-import museumImage from "@/assets/museum.jpg";
+import museumImage from "@/assets/museum2.jpg";
+import React, { useState, useEffect } from "react";
 
 export default function ContactUs() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const parallaxStyle = {
+    backgroundImage: `url(${museumImage.src})`,
+    backgroundPosition: `center ${scrollY * 0.4}px`,
+  };
+
   return (
-    <main className="py-12">
-        {/* <Image
-          src={museumImage}
-          alt="Library Image"
-          className="absolute top- h-full object-none z-0"
-          // priority
-          // quality={100}
-        /> */}
+    <main>
+        <div
+          className="relative min-h-screen bg-cover bg-center"
+          style={parallaxStyle}
+        >
 
         <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
@@ -99,6 +114,7 @@ export default function ContactUs() {
               </div>
             </Card>
           </div>
+        </div>
         </div>
     </main>
   );

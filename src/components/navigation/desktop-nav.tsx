@@ -56,7 +56,7 @@ export function DesktopNavbar() {
             <Separator orientation="vertical" className="h-6 bg-accent"/>
             <NavigationMenuItem>
                 <Link href="/contact-us" legacyBehavior>
-                    <NavigationMenuLink className={cn(currentPath === "/contact-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto", navigationMenuTriggerStyle())}>
+                    <NavigationMenuLink className={cn(currentPath === "/contact-us" ? "bg-accent mr-auto cursor-pointer" : "bg-transparent mr-auto cursor-pointer", navigationMenuTriggerStyle())}>
                       Contact Us
                     </NavigationMenuLink>
                 </Link>
@@ -69,26 +69,3 @@ export function DesktopNavbar() {
 
   )
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
