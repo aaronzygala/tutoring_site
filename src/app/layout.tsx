@@ -43,6 +43,21 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
             href="/assets/museum.jpg"
             as="image"
           />
+          <link
+            rel="preload"
+            href="/assets/museum2.jpg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/library.jpg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/aaron.jpg"
+            as="image"
+          />
         </Head>
           <body
             className={cn(

@@ -23,7 +23,7 @@ export function PricingSection() {
             </div>
         </div>
         <div className="mt-12 flex flex-col lg:flex-row">
-        <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-b-none lg:rounded-r-none lg:rounded-bl-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
+        <div className="grid w-full items-start gap-10 rounded-lg border-2 border-b-0 lg:border-b-2 lg:border-r-0 p-10 md:grid-rows-[1fr_200px] rounded-b-none lg:rounded-r-none lg:rounded-bl-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold">
             Group SAT Math Course
@@ -104,7 +104,7 @@ export function PricingSection() {
         </div>
         
       </div>
-      <div className="grid w-full items-start gap-10 rounded-lg border-2 p-10 md:grid-rows-[1fr_200px] rounded-t-none lg:rounded-l-none lg:rounded-r-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
+      <div className="grid w-full items-start gap-10 rounded-lg border-2 border-t-0 lg:border-t-2 lg:border-l-0 p-10 md:grid-rows-[1fr_200px] rounded-t-none lg:rounded-l-none lg:rounded-r-lg transition-all ease-in-out delay-150 hover:shadow-2xl">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold sm:text-2xl">
             Group CLT Math Course
