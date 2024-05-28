@@ -11,6 +11,7 @@ import React, { useState, useEffect } from "react";
 import { DesktopNavbar } from "@/components/navigation/desktop-nav"
 import { MobileNavbar } from "@/components/navigation/mobile-nav"
 import { Footer } from "@/components/landing-page-sections/footer"
+import Head from "next/head";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     handleResize();
@@ -36,6 +37,13 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
     <html lang="en" suppressHydrationWarning>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <AOSProvider>
+        <Head>
+          <link
+            rel="preload"
+            href="/assets/museum.jpg"
+            as="image"
+          />
+        </Head>
           <body
             className={cn(
               "min-h-screen bg-background font-sans antialiased",
@@ -52,8 +60,6 @@ export default function RootLayout({children } :{ children:React.ReactNode}) {
             {isMobile ? <MobileNavbar/> : <DesktopNavbar/>}
             {children}
             <Footer/>
-
-            {/* <Toaster /> */}
             </ThemeProvider>
         </body>
       </AOSProvider>

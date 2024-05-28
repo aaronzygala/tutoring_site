@@ -39,15 +39,11 @@ export function DesktopNavbar() {
             </NavigationMenuItem>
             <Separator orientation="vertical" className="h-6 bg-accent"/>
             <NavigationMenuItem>
-              
-             <NavigationMenuTrigger>Programs</NavigationMenuTrigger>
-             <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[200px] justify-center">
-                  <ListItem href="/programs/groupSAT" title="Group SAT"/>
-                  <ListItem href="/programs/groupCLT" title="Group CLT"/>
-                  <ListItem href="/programs/privateTutor" title="Private Tutoring"/>
-                </ul>
-              </NavigationMenuContent>
+                <Link href="/programs" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(currentPath === "/scheduling" ? "bg-accent mr-auto" : "bg-transparent mr-auto", navigationMenuTriggerStyle())}>
+                      Programs
+                    </NavigationMenuLink>
+                </Link>
             </NavigationMenuItem>
             <Separator orientation="vertical" className="h-6 bg-accent"/>
             <NavigationMenuItem>

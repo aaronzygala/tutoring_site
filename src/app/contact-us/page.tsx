@@ -14,20 +14,20 @@ import { Icons } from "@/components/icons";
 import { Textarea } from "@/components/ui/textarea"
 import Image from "next/image";
 import libraryImage from "@/assets/library.jpg";
+import museumImage from "@/assets/museum.jpg";
 
 export default function ContactUs() {
   return (
-    <main className="overflow-clip">
-        <Image
-          src={libraryImage}
+    <main className="py-12">
+        {/* <Image
+          src={museumImage}
           alt="Library Image"
-          className="absolute top-0 w-full h-full object-none z-0"
+          className="absolute top- h-full object-none z-0"
           // priority
           // quality={100}
-        />
-        <div className="min-h-screen">
+        /> */}
 
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -96,12 +96,9 @@ export default function ContactUs() {
                       </CardFooter>
                     </Card>              
                   </CardContent>
-              <CardFooter>
-              </CardFooter>
               </div>
             </Card>
           </div>
-        </div>
         </div>
     </main>
   );

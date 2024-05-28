@@ -50,8 +50,6 @@ export default function ContactUs() {
                     />
        
                   </CardContent>
-              <CardFooter>
-              </CardFooter>
               </div>
             </Card>
           </div>
