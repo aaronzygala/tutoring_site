@@ -76,7 +76,7 @@ export default function ContactUs() {
 
 function InstructorCard ({imageSrc, imageAlt, instructorName, instructorBlurb, instructorDescription} : {imageSrc:StaticImageData, imageAlt: string, instructorName:string, instructorBlurb: string, instructorDescription: string}) {
     return(
-        <Card className="w-[50%]">
+        <Card className="w-full lg:w-[50%]">
             <CardHeader>
                 <Image
                     src={imageSrc}

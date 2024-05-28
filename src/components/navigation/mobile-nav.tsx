@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import {
@@ -33,6 +34,7 @@ import { usePathname } from 'next/navigation'
 
 export function MobileNavbar() {
   const currentPath = usePathname();
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   return (
     <div className="fixed top-0 px-4 lg:px-44 pt-4 bg-background z-50 min-w-full">
@@ -43,7 +45,7 @@ export function MobileNavbar() {
         >
           Axiom Test Prep
         </Link>
-        <Sheet>
+        <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild >
                 <Button variant="ghost" className="ml-auto"><Icons.alignJustify size={24}/></Button>
             </SheetTrigger>
@@ -53,46 +55,52 @@ export function MobileNavbar() {
                     <Separator/>
                 </SheetHeader>
                 <div className="flex flex-col mt-2 ">
-                        <SheetClose asChild> 
-                            <Link href="/about-us" legacyBehavior passHref>
-
-                            <Button variant="ghost" className={currentPath === "/about-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                        <Link href="/about-us" legacyBehavior passHref>
+                            <Button 
+                              variant="ghost" 
+                              className={currentPath === "/about-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}
+                              onClick={() => setSheetOpen(false)}
+                            >
                                 <Icons.usersRound strokeWidth={0.8} size={16} className="mr-2"/>
                                 About Us
                             </Button>
-                            </Link>
-
-                        </SheetClose>
-
+                        </Link>
                         <Link href="/programs" legacyBehavior passHref>
-
-                            <Button variant="ghost" className={currentPath === "/programs" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                            <Button 
+                              variant="ghost" 
+                              className={currentPath === "/programs" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}
+                              onClick={() => setSheetOpen(false)}
+                            >
                                 <Icons.notebook strokeWidth={0.8} size={16} className="mr-2"/>
                                 Programs
                             </Button>
-                        </Link>                
+                        </Link>
                         <Link href="/scheduling" legacyBehavior passHref>
-
-                            <Button variant="ghost" className={currentPath === "/scheduling" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                            <Button 
+                              variant="ghost" 
+                              className={currentPath === "/scheduling" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}
+                              onClick={() => setSheetOpen(false)}
+                            >
                                 <Icons.calendarDays strokeWidth={0.8} size={16} className="mr-2"/>
                                 Scheduling
                             </Button>
                         </Link>
                         <Link href="/contact-us" legacyBehavior passHref>
-
-                            <Button variant="ghost" className={currentPath === "/contact-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}>
+                            <Button 
+                              variant="ghost" 
+                              className={currentPath === "/contact-us" ? "bg-accent mr-auto" : "bg-transparent mr-auto"}
+                              onClick={() => setSheetOpen(false)}
+                            >
                                 <Icons.send strokeWidth={0.8} size={16} className="mr-2" />
                                 Contact Us
                             </Button>
                         </Link>
-
                 </div>
             </SheetContent>
         </Sheet>
       </div>
-    <Separator className=""/>
-  </div>
-
+      <Separator className=""/>
+    </div>
   )
 }
 
