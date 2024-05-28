@@ -14,15 +14,16 @@ import { Icons } from "@/components/icons";
 import { Textarea } from "@/components/ui/textarea"
 import museumImage from "@/assets/museum2.jpg";
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "@/lib/utils"
 
 export default function ContactUs() {
+  const isMobile = useMediaQuery('(max-width: 1024px)');
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -30,9 +31,12 @@ export default function ContactUs() {
     };
   }, []);
 
-  const parallaxStyle = {
+  const parallaxStyle = !isMobile ? {
     backgroundImage: `url(${museumImage.src})`,
-    backgroundPosition: `center ${scrollY * 0.4}px`,
+    backgroundPosition: `center ${scrollY * 0.5}px`,
+  } : {
+    backgroundImage: `url(${museumImage.src})`,
+    backgroundPosition: 'center center', // Static background position for mobile
   };
 
   return (
@@ -48,7 +52,7 @@ export default function ContactUs() {
               <div className="flex flex-col items-left">
               <CardHeader>
                   <div className="text-7xl text-white font-extrabold font-sans">
-                    <span className="text-primary hover:italic">Get In Touch</span>
+                    <span className="text-primary lg:hover:italic">Get In Touch</span>
                   </div>
                   <span className="text-lg text-foreground">Feel free to leave any inquiries below, or give us a call to speak with our helpful sales team.</span>                   
                 </CardHeader>

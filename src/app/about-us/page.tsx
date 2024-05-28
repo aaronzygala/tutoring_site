@@ -11,15 +11,16 @@ import tempImage from "@/app/favicon.ico";
 import libraryImage from "@/assets/library.jpg";
 import aaronImage from "@/assets/aaron.jpg";
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "@/lib/utils";
 
 export default function ContactUs() {
+  const isMobile = useMediaQuery('(max-width: 1024px)');
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -27,9 +28,12 @@ export default function ContactUs() {
     };
   }, []);
 
-  const parallaxStyle = {
+  const parallaxStyle = !isMobile ? {
     backgroundImage: `url(${libraryImage.src})`,
-    backgroundPosition: `center ${scrollY * 0.4}px`,
+    backgroundPosition: `center ${scrollY * 0.5}px`,
+  } : {
+    backgroundImage: `url(${libraryImage.src})`,
+    backgroundPosition: 'center center', // Static background position for mobile
   };
   return (
     <main className="overflow-clip">
@@ -43,7 +47,7 @@ export default function ContactUs() {
               <div className="flex flex-col items-left">
               <CardHeader>
                   <div className="text-7xl text-white font-extrabold font-sans">
-                    <span className="text-primary hover:italic">Meet the Team</span>
+                    <span className="text-primary lg:hover:italic">Meet the Team</span>
                   </div>
                   <span className="text-lg text-foreground">We are a small team of dedicated math-enthusiasts.</span>                   
                 </CardHeader>

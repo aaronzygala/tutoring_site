@@ -15,33 +15,29 @@ import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
 import { Testimonials } from "@/components/landing-page-sections/testimonials";
 import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
+import { useMediaQuery } from "@/lib/utils";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 1024px)');
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const parallaxStyle = {
+  const parallaxStyle = !isMobile ? {
     backgroundImage: `url(${museumImage.src})`,
-    backgroundPosition: `center ${scrollY * 0.4}px`,
+    backgroundPosition: `center ${scrollY * 0.5}px`,
+  } : {
+    backgroundImage: `url(${museumImage.src})`,
+    backgroundPosition: 'center center', // Static background position for mobile
   };
 
   return (
@@ -52,14 +48,14 @@ export default function Home() {
       >
         <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
           <div className="flex flex-col items-left lg:px-44 pt-4">
-            <div className="mt-[30%]">
+            <div className="mt-[60%] lg:mt-[30%]">
               <Card className="border-none bg-transparent shadow-none">
                 <div className="flex flex-col items-left">
                   <CardHeader>
                     <CardTitle className="text-4xl lg:text-7xl">
-                      <span className="text-primary hover:italic">SAT</span>, 
-                      <span className="text-primary hover:italic"> ACT </span>
-                      & <span className="text-primary hover:italic"> CLT</span> Prep
+                      <span className="text-primary lg:hover:italic">SAT</span>, 
+                      <span className="text-primary lg:hover:italic"> ACT </span>
+                      & <span className="text-primary lg:hover:italic"> CLT</span> Prep
                     </CardTitle>
                     <CardDescription className="text-xl lg:text-4xl text-white">
                       Prepare for your future.
