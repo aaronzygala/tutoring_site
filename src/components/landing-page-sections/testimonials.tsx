@@ -30,20 +30,6 @@ export function Testimonials() {
     }
   }, []);
 
-  useEffect(() => {
-    const ul = scrollRef.current;
-    if (ul) {
-      const handleScroll = () => {
-        console.log("Scroll position:", ul.scrollLeft);
-        if (ul.scrollLeft >= ul.scrollWidth / 2) {
-          ul.scrollLeft = 0;
-        }
-      };
-
-      ul.addEventListener("scroll", handleScroll);
-      return () => ul.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
 
   return (
     <main>
@@ -53,7 +39,7 @@ export function Testimonials() {
             What <span className="text-primary">everyone</span> is saying
           </div>
           <div
-            className="mt-12 w-full inline-flex flex-nowrap overflow-x-auto [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group"
+            className="mt-12 w-full inline-flex flex-nowrap overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >

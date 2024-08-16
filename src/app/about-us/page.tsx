@@ -10,6 +10,7 @@ import {
 // import tempImage from "/favicon.ico";
 import libraryImage from "@/assets/library.jpg";
 import aaronImage from "@/assets/aaron.jpg";
+import tempImage from "@/assets/axiom_logo.png";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 
@@ -59,7 +60,7 @@ export default function ContactUs() {
                 </CardHeader>
                 <CardContent className="flex flex-col lg:flex-row gap-12 w-full mt-6 justify-evenly">
                   <InstructorCard
-                    imageSrc={aaronImage}
+                    imageSrc={tempImage}
                     imageAlt={"A headshot of the instructor"}
                     instructorName={"Natalia Mercado"}
                     instructorBlurb={
