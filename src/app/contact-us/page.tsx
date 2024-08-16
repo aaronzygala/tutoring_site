@@ -14,7 +14,7 @@ import { Icons } from "@/components/icons";
 import { Textarea } from "@/components/ui/textarea";
 import museumImage from "@/assets/museum2.jpg";
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@/lib/utils";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 export default function ContactUs() {
   const isMobile = useMediaQuery("(max-width: 1024px)");

@@ -15,8 +15,9 @@ import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
 import { Testimonials } from "@/components/landing-page-sections/testimonials";
 import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
-import { useMediaQuery } from "@/lib/utils";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
@@ -45,6 +46,9 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen">
+      <Head>
+        <title>TEST</title>
+      </Head>
       <div
         className="relative min-h-screen bg-cover bg-center"
         style={parallaxStyle}

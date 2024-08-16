@@ -11,7 +11,7 @@ import {
 import libraryImage from "@/assets/library.jpg";
 import aaronImage from "@/assets/aaron.jpg";
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@/lib/utils";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 export default function ContactUs() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
