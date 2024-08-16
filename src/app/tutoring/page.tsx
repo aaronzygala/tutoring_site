@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import museumImage from "@/assets/museum.jpg";
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@/lib/utils";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 export default function ContactUs() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
