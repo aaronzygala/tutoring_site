@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ToastAction } from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
+import { Button } from "@/components/ui/button";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 
 export function CookieToast() {
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   return (
     <Button
@@ -16,10 +16,10 @@ export function CookieToast() {
           description: "Allow cookies?",
           className: "rounded-none",
           action: <ToastAction altText="Allow">Allow</ToastAction>,
-        })
+        });
       }}
     >
       Show Toast
     </Button>
-  )
+  );
 }

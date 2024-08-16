@@ -1,14 +1,14 @@
-import type { Config } from "tailwindcss"
-const { fontFamily } = require("tailwindcss/defaultTheme")
+import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       boxShadow: {
-        center: '0px 0px 5px 5px hsl(var(--primary)/0.1)',
+        center: "0px 0px 5px 5px hsl(var(--primary)/0.1)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -75,25 +75,34 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
-        'button-pulse': {
-          "0%" :{ transform: 'scale(.99)', boxShadow: "0 0 0 0 hsl(var(--primary) / 0.3)" },
-          "70%":{ transform: 'scale(1)', boxShadow: "0 0 0 20px hsl(var(--primary) / 0)"},
-          "100%": { transform: "scale(.99)", boxShadow: "0 0 0 0 hsl(var(--primary) / 0)"}
-        }
+        "button-pulse": {
+          "0%": {
+            transform: "scale(.99)",
+            boxShadow: "0 0 0 0 hsl(var(--primary) / 0.3)",
+          },
+          "70%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 0 20px hsl(var(--primary) / 0)",
+          },
+          "100%": {
+            transform: "scale(.99)",
+            boxShadow: "0 0 0 0 hsl(var(--primary) / 0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 30s linear infinite",
-        "button-pulse": "button-pulse 1.5s infinite;"
+        "button-pulse": "button-pulse 1.5s infinite;",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

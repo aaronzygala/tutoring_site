@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription
+  CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import museumImage from "@/assets/museum.jpg";
@@ -16,9 +16,10 @@ import { Testimonials } from "@/components/landing-page-sections/testimonials";
 import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
 import { useMediaQuery } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
-  const isMobile = useMediaQuery('(max-width: 1024px)');
+  const isMobile = useMediaQuery("(max-width: 1024px)");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -32,16 +33,18 @@ export default function Home() {
     };
   }, []);
 
-  const parallaxStyle = !isMobile ? {
-    backgroundImage: `url(${museumImage.src})`,
-    backgroundPosition: `center ${scrollY * 0.5}px`,
-  } : {
-    backgroundImage: `url(${museumImage.src})`,
-    backgroundPosition: 'center center', // Static background position for mobile
-  };
+  const parallaxStyle = !isMobile
+    ? {
+        backgroundImage: `url(${museumImage.src})`,
+        backgroundPosition: `center ${scrollY * 0.5}px`,
+      }
+    : {
+        backgroundImage: `url(${museumImage.src})`,
+        backgroundPosition: "center center", // Static background position for mobile
+      };
 
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen">
       <div
         className="relative min-h-screen bg-cover bg-center"
         style={parallaxStyle}
@@ -53,19 +56,33 @@ export default function Home() {
                 <div className="flex flex-col items-left">
                   <CardHeader>
                     <CardTitle className="text-4xl lg:text-7xl">
-                      <span className="text-primary lg:hover:italic">SAT</span>, 
-                      <span className="text-primary lg:hover:italic"> ACT </span>
-                      & <span className="text-primary lg:hover:italic"> CLT</span> Prep
+                      <span className="text-primary lg:hover:italic">SAT</span>,
+                      <span className="text-primary lg:hover:italic">
+                        {" "}
+                        ACT{" "}
+                      </span>
+                      &{" "}
+                      <span className="text-primary lg:hover:italic">
+                        {" "}
+                        CLT
+                      </span>{" "}
+                      Prep
                     </CardTitle>
                     <CardDescription className="text-xl lg:text-4xl text-white">
                       Prepare for your future.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
+                  <Link href="/tutoring">
                     <Button className="bg-primary text-md py-4 animate-button-pulse">
-                      Get started today
+                        Get started today
                     </Button>
-                    <Button className="text-foreground hover:text-foreground hover:bg-transparent hover:underline" variant="ghost">
+                  </Link>
+
+                    <Button
+                      className="text-foreground hover:text-foreground hover:bg-transparent hover:underline"
+                      variant="ghost"
+                    >
                       See more details
                     </Button>
                   </CardContent>
@@ -79,16 +96,17 @@ export default function Home() {
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
       <HowItWorks />
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
-      {!isMobile ? 
-          <>
-            <Testimonials />
-            <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
-          </>
-          : <></>
-      }
+      {!isMobile ? (
+        <>
+          <Testimonials />
+          <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
+        </>
+      ) : (
+        <></>
+      )}
       <PricingSection />
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
       <CTASection />
-    </main>
+    </div>
   );
 }

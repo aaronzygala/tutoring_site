@@ -1,38 +1,49 @@
-import React, { useRef, useEffect, Ref } from 'react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/components/ui/card";
+import React, { useRef, useEffect, Ref } from "react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function Testimonials() {
-    const scrollRef = useRef<HTMLUListElement>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    const handleMouseEnter = () => {
-        if (containerRef.current) {
-            containerRef.current.style.animationPlayState = 'paused';
-        }
-    };
+  const handleMouseEnter = () => {
+    if (containerRef.current) {
+      containerRef.current.style.animationPlayState = "paused";
+    }
+  };
 
-    const handleMouseLeave = () => {
-        if (containerRef.current) {
-            containerRef.current.style.animationPlayState = 'running';
-        }
-    };
+  const handleMouseLeave = () => {
+    if (containerRef.current) {
+      containerRef.current.style.animationPlayState = "running";
+    }
+  };
 
-    useEffect(() => {
-        const ul = scrollRef.current;
-        if (ul) {
-            const parent = ul.parentElement;
-            if (parent) {
-                const clone = ul.cloneNode(true) as HTMLUListElement; // Cast to HTMLUListElement
-                clone.classList.add('absolute', 'left-full');
-                parent.appendChild(clone);
-            }
+  useEffect(() => {
+    const ul = scrollRef.current;
+    if (ul) {
+      const parent = ul.parentElement;
+      if (parent) {
+        const clone = ul.cloneNode(true) as HTMLUListElement; // Cast to HTMLUListElement
+        clone.classList.add("absolute", "left-full");
+        parent.appendChild(clone);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const ul = scrollRef.current;
+    if (ul) {
+      const handleScroll = () => {
+        console.log("Scroll position:", ul.scrollLeft);
+        if (ul.scrollLeft >= ul.scrollWidth / 2) {
+          ul.scrollLeft = 0;
         }
-    }, []);
+      };
+
+      ul.addEventListener("scroll", handleScroll);
+      return () => ul.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
 
   return (
     <main>
@@ -42,12 +53,18 @@ export function Testimonials() {
             What <span className="text-primary">everyone</span> is saying
           </div>
           <div
-            className="mt-12 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group"
+            className="mt-12 w-full inline-flex flex-nowrap overflow-x-auto [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div ref={containerRef} className="flex items-center animate-infinite-scroll relative">
-              <ul ref={scrollRef} className="flex items-center [&_li]:mx-8 [&_img]:max-w-none">
+            <div
+              ref={containerRef}
+              className="flex items-center animate-infinite-scroll relative"
+            >
+              <ul
+                ref={scrollRef}
+                className="flex items-center [&_li]:mx-8 [&_img]:max-w-none"
+              >
                 <TestimonialList />
               </ul>
             </div>
@@ -57,7 +74,6 @@ export function Testimonials() {
     </main>
   );
 }
-
 function TestimonialList() {
   return (
     <>
@@ -121,7 +137,15 @@ function TestimonialList() {
   );
 }
 
-function TestimonialCard({ name, image_src, review }: {name:string, image_src:string, review:string}) {
+function TestimonialCard({
+  name,
+  image_src,
+  review,
+}: {
+  name: string;
+  image_src: string;
+  review: string;
+}) {
   return (
     <Card>
       <CardHeader className="flex flex-row w-96">
@@ -129,13 +153,9 @@ function TestimonialCard({ name, image_src, review }: {name:string, image_src:st
           <img src={image_src} className="w-12 h-12" />
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
-        <div className="pl-6 align-text-bottom font-extrabold">
-          {name}
-        </div>
+        <div className="pl-6 align-text-bottom font-extrabold">{name}</div>
       </CardHeader>
-      <CardContent>
-        &quot;{review}&quot;
-      </CardContent>
+      <CardContent>&quot;{review}&quot;</CardContent>
     </Card>
   );
 }

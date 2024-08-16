@@ -42,8 +42,11 @@ export function HowItWorks() {
           <div className="mt-2 lg:text-lg text-muted-foreground">
             Explore our four step system.
           </div>
-          <div className="mt-12 w-full relative h-[1750px] lg:h-[375px]" ref={ref}>
-          <HowItWorksCard
+          <div
+            className="mt-12 w-full relative h-[1750px] lg:h-[375px]"
+            ref={ref}
+          >
+            <HowItWorksCard
               title={"Assessment and Goal Setting"}
               content={
                 "We start by assessing each students' skills with carefully designed tests. Using the results, we set clear and measurable goals to achieve their target SAT scores."
@@ -93,7 +96,12 @@ export function HowItWorks() {
     </main>
   );
 }
-const iconBackgrounds = ["bg-amber-100", "bg-amber-100", "bg-amber-100", "bg-amber-100"];
+const iconBackgrounds = [
+  "bg-amber-100",
+  "bg-amber-100",
+  "bg-amber-100",
+  "bg-amber-100",
+];
 
 function HowItWorksCard({
   title,
@@ -103,16 +111,15 @@ function HowItWorksCard({
   index,
   animate,
   isMobile,
-}:
-  {title: string,
-  content: string,
-  imageAltDescription: string,
-  imageSrc: StaticImageData,
-  index: number,
-  animate: boolean,
-  isMobile: boolean
-  }
-) {
+}: {
+  title: string;
+  content: string;
+  imageAltDescription: string;
+  imageSrc: StaticImageData;
+  index: number;
+  animate: boolean;
+  isMobile: boolean;
+}) {
   const iconBackground = iconBackgrounds[index - 1];
   const delay = index * 0.075;
 
@@ -147,13 +154,15 @@ function HowItWorksCard({
           : offsets[index - 1]
       }`}
       style={{
-        width: isMobile ? '100%' : '25%',
+        width: isMobile ? "100%" : "25%",
         transitionDelay: `${delay}s`,
       }}
     >
       <Card className="bg-card-foreground border-none shadow-2xl rounded-none  h-[420px]">
         <CardHeader>
-          <div className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}>
+          <div
+            className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}
+          >
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />
           </div>
         </CardHeader>
