@@ -10,6 +10,7 @@ import { Footer } from "@/components/landing-page-sections/footer";
 import Head from "next/head";
 import type { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({
             <Footer />
           </ThemeProvider>
           <Analytics/>
+          <SpeedInsights/>
         </body>
       </AOSProvider>
     </html>
