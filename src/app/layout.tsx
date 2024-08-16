@@ -9,6 +9,7 @@ import { DesktopNavbar } from "@/components/navigation/desktop-nav";
 import { Footer } from "@/components/landing-page-sections/footer";
 import Head from "next/head";
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </ThemeProvider>
+          <Analytics/>
         </body>
       </AOSProvider>
     </html>
