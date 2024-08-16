@@ -60,12 +60,12 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
             {examInfo.description}
           </div>
           <div className="mt-8 text-4xl font-extrabold">
-            What's on the <span className="text-primary">{examInfo.name}</span>?
+            What&apos;s on the <span className="text-primary">{examInfo.name}</span>?
           </div>
           <div className="mt-4">
             {examInfo.examContent.map(examSection => 
-            <div>
-                <div className="font-bold">
+            <div key={examSection.sectionName}>
+                <div className="font-bold" >
                   {examSection.sectionName} Section: 
                 </div>
                 <ul className="list-disc ml-8 space-y-1.5">
@@ -73,7 +73,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
                   <li>Time Allotted: {examSection.timeAlloted}</li>
                   <ul className="list-disc ml-8">
                     {examSection.contentAreas.map(area => 
-                      <li> {area} </li>
+                      <li key={area}> {area} </li>
                     )}
                   </ul>
                 </ul>
@@ -93,7 +93,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
           </div>
           <ul className="list-disc ml-8 mt-4">
             {examInfo.registrationInfo.registrationDates.map(date => 
-              <li> {date} </li>
+              <li key={date}> {date} </li>
             )}
           </ul>
           <div className="text-sm tracking-tight mt-4">
@@ -111,7 +111,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
           </div>
           <Accordion type="single" collapsible className="w-full">
             {Object.entries(examInfo.faqs).map(([key, value]) => (
-              <AccordionItem value={key}>
+              <AccordionItem value={key} key={key}>
                 <AccordionTrigger>{key}</AccordionTrigger>
                 <AccordionContent>{value}</AccordionContent>
               </AccordionItem>
