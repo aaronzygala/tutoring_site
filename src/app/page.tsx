@@ -18,41 +18,17 @@ import { PricingSection } from "@/components/landing-page-sections/pricing-secti
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const parallaxStyle = !isMobile
-    ? {
-        backgroundImage: `url(${museumImage.src})`,
-        backgroundPosition: `center ${scrollY * 0.5}px`,
-      }
-    : {
-        backgroundImage: `url(${museumImage.src})`,
-        backgroundPosition: "center center", // Static background position for mobile
-      };
 
   return (
     <div className="relative min-h-screen">
-      <Head>
-        <title>TEST</title>
-      </Head>
       <div
         className="relative min-h-screen bg-cover bg-center"
-        style={parallaxStyle}
       >
+        <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen"/>
         <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
           <div className="flex flex-col items-left lg:px-44 pt-4">
             <div className="mt-[60%] lg:mt-[30%]">
@@ -60,17 +36,9 @@ export default function Home() {
                 <div className="flex flex-col items-left">
                   <CardHeader>
                     <CardTitle className="text-4xl lg:text-7xl">
-                      <span className="text-primary lg:hover:italic">SAT</span>,
-                      <span className="text-primary lg:hover:italic">
-                        {" "}
-                        ACT{" "}
-                      </span>
-                      &{" "}
-                      <span className="text-primary lg:hover:italic">
-                        {" "}
-                        CLT
-                      </span>{" "}
-                      Prep
+                      <Link href={"/exams#DSAT"}><span className="text-primary lg:hover:italic lg:hover:underline">SAT</span></Link>,
+                      {" "}<Link href={"/exams#ACT"}><span className="text-primary lg:hover:italic lg:hover:underline">ACT</span></Link>{" "}
+                      &{"  "}<Link href={"/exams#CLT"}><span className="text-primary lg:hover:italic lg:hover:underline">CLT</span></Link>{" "}Prep
                     </CardTitle>
                     <CardDescription className="text-xl lg:text-4xl text-white">
                       Prepare for your future.

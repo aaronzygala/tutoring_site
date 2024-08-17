@@ -35,13 +35,14 @@ export function HowItWorks() {
   return (
     <main>
       <div className="min-w-screen bg-foreground text-background">
-        <div className="px-12 lg:px-52 py-32">
-          <div className="text-4xl font-extrabold">
+        <div className="py-32">
+          <div className="px-12 lg:px-52 text-4xl font-extrabold">
             How it <span className="text-primary ">works</span>
           </div>
-          <div className="mt-2 lg:text-lg text-muted-foreground">
+          <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
             Explore our four step system.
           </div>
+          <div className="px-24 lg:px-8">
           <div
             className="mt-12 w-full relative h-[1750px] lg:h-[375px]"
             ref={ref}
@@ -91,6 +92,8 @@ export function HowItWorks() {
               isMobile={isMobile}
             />
           </div>
+          </div>
+
         </div>
       </div>
     </main>

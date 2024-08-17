@@ -1,8 +1,5 @@
-"use client";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import museumImage from "@/assets/museum.jpg";
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@/lib/useMediaQuery";
+import { Card, CardHeader } from "@/components/ui/card";
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -13,7 +10,6 @@ import { DSATInfo, ACTInfo, CLTInfo, ExamInfo } from "@/lib/exam_info";
 import Link from "next/link";
 
 export default function ContactUs() {
-
   return (
     <main>
       <div className="relative h-80 bg-cover bg-center" >
@@ -23,7 +19,7 @@ export default function ContactUs() {
               <div className="flex flex-col items-left">
                 <CardHeader>
                   <div className="text-7xl text-white font-extrabold font-sans">
-                    <span className="text-primary lg:hover:italic">
+                    <span className="text-primary">
                       The Exams
                     </span>
                   </div>

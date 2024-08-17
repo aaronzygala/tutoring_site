@@ -1,4 +1,3 @@
-"use client";
 import Image, { StaticImageData } from "next/image";
 import {
   Card,
@@ -7,50 +6,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import tempImage from "/favicon.ico";
 import libraryImage from "@/assets/library.jpg";
 import aaronImage from "@/assets/aaron.jpg";
 import tempImage from "@/assets/axiom_logo.png";
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@/lib/useMediaQuery";
+import React from "react";
 
 export default function ContactUs() {
-  const isMobile = useMediaQuery("(max-width: 1024px)");
-  const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const parallaxStyle = !isMobile
-    ? {
-        backgroundImage: `url(${libraryImage.src})`,
-        backgroundPosition: `center ${scrollY * 0.5}px`,
-      }
-    : {
-        backgroundImage: `url(${libraryImage.src})`,
-        backgroundPosition: "center center", // Static background position for mobile
-      };
   return (
     <main className="overflow-clip">
-      <div
-        className="relative min-h-screen bg-cover bg-center"
-        style={parallaxStyle}
-      >
+      <div className="relative min-h-screen bg-cover bg-center">
+      <Image src={libraryImage} alt={"A background image for the About Us page, depicting a beautiful library"} className="absolute top-0 z-0 h-screen"/>
         <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
                 <CardHeader>
                   <div className="text-7xl text-white font-extrabold font-sans">
-                    <span className="text-primary lg:hover:italic">
+                    <span className="text-primary">
                       Meet the Team
                     </span>
                   </div>

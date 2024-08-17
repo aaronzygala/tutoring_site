@@ -20,7 +20,8 @@ const fontSans = FontSans({
  
 export const metadata: Metadata = {
   title: 'Axiom Test Prep',
-  description: 'Achieve your academic goals with Axiom Test Prep. Expert tutoring services for standardized tests, including SAT, ACT, and CLT. Personalized strategies to maximize your scores and succeed.',
+  description: 'Achieve your academic goals with Axiom Test Prep. Expert tutoring services for standardized tests, including SAT, ACT, \
+                and CLT. Personalized strategies to maximize your scores and succeed.',
 }
  
 export default function RootLayout({

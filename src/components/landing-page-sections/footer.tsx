@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTiktok } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTiktok, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
 import { Input } from "../ui/input";
 
@@ -61,8 +60,8 @@ export function Footer() {
           <div className="flex flex-row col-span-2 justify-around lg:flex-col lg:col-span-1">
 
               <div className="flex-col">
-              <div className="text-left lg:text-xl text-primary font-bold pl-4">
-                Reach Out
+              <div className="text-left lg:text-xl text-primary font-bold pl-3">
+              Connect with Us
               </div>
                 <Link href="https://www.instagram.com/axiomtestprep" target="_blank">
 
@@ -81,23 +80,33 @@ export function Footer() {
                     <FontAwesomeIcon icon={faTiktok} width={18} className="hover:bg-text-200 delay-20 duration-100"/>
                   </Button>
                 </Link>
-                <Link href={"mailto:contact@axiomtestprep.com"} target="_blank">
+                <Link href="https://www.linkedin.com/company/axiom-test-prep" target="_blank">
                   <Button
-                    className="w-fit justify-start hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
+                    className="justify-start w-fit hover:bg-transparent hover:text-muted-foreground"
                     variant="ghost"
                   >
-                    <Icons.mail size={18}/>
+                    <FontAwesomeIcon icon={faLinkedin} width={18} className="hover:bg-text-200 delay-20 duration-100"/>
                   </Button>
                 </Link>
               </div>
 
             <div className="ml-28 lg:ml-0">
             <div className="text-left lg:text-xl text-primary font-bold ml-4 lg:mt-2">
-              Join our Newsletter
+              Contact Us
             </div>
-            <div className="flex flex-row ml-4">
-              <Input placeholder="Email" className="rounded-r-none focus-visible:ring-0"/>
-              <Button className="rounded-l-none"><Icons.send size={14}/></Button>
+            <div className="flex flex-col ml-4 mt-4 space-y-3">
+                <div className="flex">
+                  <Icons.mail className="text-white mt-auto mb-auto" size={18}/>
+                  <span className="mt-auto mb-auto ml-2 text-sm">
+                    contact@axiomtestprep.com
+                  </span>
+                </div>
+                <div className="flex">
+                  <Icons.phone className="text-white mt-auto mb-auto" size={18}/>
+                  <span className="mt-auto mb-auto ml-2 text-sm">
+                    +1 (555)-555-5555
+                  </span>
+                </div>
             </div>
           </div>
           </div>
