@@ -23,17 +23,7 @@ interface RegistrationInformation {
 const DSATInfo: ExamInfo = {
   name: "DSAT",
   description:
-    "At Axiom Test Prep, we understand that excelling on the SAT is essential for \
-    opening the doors to your dream college or university and unlocking a wealth \
-    of scholarship opportunities worldwide. A high score on the Digital SAT can \
-    be a transformative milestone for many families, and our comprehensive preparation \
-    program is designed to help you achieve that success. We provide personalized \
-    instruction, realistic mock practice tests (both adaptive and linear), and expert \
-    guidance from our dedicated team, who are deeply involved in every aspect of your \
-    learning journey. Additionally, our online platform offers access to an extensive \
-    video library and focused topic worksheets, ensuring you master every section of the \
-    Digital SAT. With Axiom Test Prep, you'll be fully equipped to reach your highest \
-    potential and turn your academic aspirations into reality.",
+    "At Axiom Test Prep, we know a high SAT score is key to getting into your dream college and unlocking scholarship opportunities. Our tailored prep program includes personalized instruction, realistic mock tests, and access to a vast video library and worksheets, all designed to help you master the Digital SAT. With our expert guidance, you'll be ready to achieve your academic goals.",
   examContent: [
     {
       sectionName: "Reading & Writing",
@@ -104,17 +94,7 @@ const DSATInfo: ExamInfo = {
 const ACTInfo: ExamInfo = {
     name: "ACT",
     description:
-      "At Axiom Test Prep, we understand that excelling on the SAT is essential for \
-      opening the doors to your dream college or university and unlocking a wealth \
-      of scholarship opportunities worldwide. A high score on the Digital SAT can \
-      be a transformative milestone for many families, and our comprehensive preparation \
-      program is designed to help you achieve that success. We provide personalized \
-      instruction, realistic mock practice tests (both adaptive and linear), and expert \
-      guidance from our dedicated team, who are deeply involved in every aspect of your \
-      learning journey. Additionally, our online platform offers access to an extensive \
-      video library and focused topic worksheets, ensuring you master every section of the \
-      Digital SAT. With Axiom Test Prep, you'll be fully equipped to reach your highest \
-      potential and turn your academic aspirations into reality.",
+      "At Axiom Test Prep, we know a high SAT score is key to getting into your dream college and unlocking scholarship opportunities. Our tailored prep program includes personalized instruction, realistic mock tests, and access to a vast video library and worksheets, all designed to help you master the Digital SAT. With our expert guidance, you'll be ready to achieve your academic goals.",
     examContent: [
       {
         sectionName: "Reading & Writing",
@@ -184,17 +164,7 @@ const ACTInfo: ExamInfo = {
   const CLTInfo: ExamInfo = {
     name: "CLT",
     description:
-      "At Axiom Test Prep, we understand that excelling on the SAT is essential for \
-      opening the doors to your dream college or university and unlocking a wealth \
-      of scholarship opportunities worldwide. A high score on the Digital SAT can \
-      be a transformative milestone for many families, and our comprehensive preparation \
-      program is designed to help you achieve that success. We provide personalized \
-      instruction, realistic mock practice tests (both adaptive and linear), and expert \
-      guidance from our dedicated team, who are deeply involved in every aspect of your \
-      learning journey. Additionally, our online platform offers access to an extensive \
-      video library and focused topic worksheets, ensuring you master every section of the \
-      Digital SAT. With Axiom Test Prep, you'll be fully equipped to reach your highest \
-      potential and turn your academic aspirations into reality.",
+      "At Axiom Test Prep, we know a high SAT score is key to getting into your dream college and unlocking scholarship opportunities. Our tailored prep program includes personalized instruction, realistic mock tests, and access to a vast video library and worksheets, all designed to help you master the Digital SAT. With our expert guidance, you'll be ready to achieve your academic goals.",
     examContent: [
       {
         sectionName: "Reading & Writing",

@@ -31,6 +31,8 @@ import {
   Mail,
   MapPin,
   UsersRound,
+  NotebookPen,
+  Calculator,
   Facebook,
   Instagram,
   type Icon as LucideIcon,
@@ -89,4 +91,6 @@ export const Icons = {
   ),
   twitter: Twitter,
   check: Check,
+  notebookPen: NotebookPen,
+  calculator: Calculator,
 };

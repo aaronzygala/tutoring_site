@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import { Poppins as FontSans } from "next/font/google";
+import { Montserrat as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import AOSProvider from "@/components/aos-provider";

@@ -57,3 +57,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* ArrowAnimation.css */
+.arrow-path {
+  stroke-dasharray: 120; /* Adjust based on the length of the new initial path */
+  stroke-dashoffset: 100; /* Match the stroke-dasharray for initial hidden state */
+  animation: draw 0.5s forwards ease-in-out; /* Animation for the initial path */
+}
+
+.split-path {
+  stroke-dasharray: 120; /* Adjust based on the length of the split paths */
+  stroke-dashoffset: 120; /* Match the stroke-dasharray for initial hidden state */
+  animation: draw-split 1s forwards ease-in-out; /* Animation for split paths */
+  animation-delay: 0.5s; /* Start after the initial path */
+}
+
+.arrow-head {
+  opacity: 0; /* Start hidden */
+  animation: show-head 0.2s forwards ease-in-out; /* Animation for arrowheads */
+  animation-delay: 1s; /* Delay to show after all paths are drawn */
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; /* Draw the initial path */
+  }
+}
+
+@keyframes draw-split {
+  to {
+    stroke-dashoffset: 0; /* Draw the split paths */
+  }
+}
+
+@keyframes show-head {
+  to {
+    opacity: 1; /* Show the arrowheads */
+  }
+}
