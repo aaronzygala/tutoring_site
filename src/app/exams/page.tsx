@@ -81,7 +81,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
               </div>
             </CardHeader>
             <CardContent className="flex flex-row w-full gap-4">
-            <Card className="w-full relative bg-foreground/90">
+            <Card className="w-full relative bg-[#fae9ab]">
                 <CardHeader className="flex flex-row text-black">
                     <Icons.notebookPen strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Reading & Writing</div>
@@ -144,7 +144,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
                   </Card>
                 </CardContent>
               </Card>
-              <Card className="w-full relative bg-foreground/90">
+              <Card className="w-full relative bg-[#fae9ab]">
                 <CardHeader className="flex flex-row text-black">
                     <Icons.calculator strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Math</div>
