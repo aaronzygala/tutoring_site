@@ -212,10 +212,10 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
               </Card>
             </CardContent>
           </Card>
-          <div className="flex flex-row mt-8 w-full">
+          <div className="flex flex-row mt-16 w-full">
 
           <div className="w-[50%]">
-            <div className="mt-8 text-4xl font-extrabold">
+            <div className="text-4xl font-extrabold">
               Registering for the <span className="text-primary">{examInfo.name}</span>
             </div>
             <div className="mt-4">
@@ -238,7 +238,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
             </div>
           </div>
           <div className="w-[40%] ml-auto">
-            <div className="mt-4 ml-auto text-left">
+            <div className="ml-auto text-left">
               <div className="lg:text-4xl text-background font-extrabold">
                 FAQs
               </div>

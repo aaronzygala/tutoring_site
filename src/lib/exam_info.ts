@@ -54,10 +54,9 @@ const DSATInfo: ExamInfo = {
     description:
       "To register for the Digital SAT: create a College Board account, select your test date and location, fill out the registration form, upload a photo, and pay the fee.",
     registrationDates: [
-      "August 24, 2024",
-      "October 5, 2024",
-      "November 2, 2024",
-      "December 7, 2024",
+      "September 20, 2024",
+      "October 18, 2024",
+      "November 22, 2024",
     ],
     officialLink: "https://satsuite.collegeboard.org/sat/registration",
   },
