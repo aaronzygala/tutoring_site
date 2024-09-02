@@ -81,7 +81,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
               </div>
             </CardHeader>
             <CardContent className="flex flex-row w-full gap-4">
-            <Card className="w-full relative bg-[#fae9ab]">
+            <Card className="w-full relative bg-card">
                 <CardHeader className="flex flex-row text-black">
                     <Icons.notebookPen strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Reading & Writing</div>
@@ -144,7 +144,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
                   </Card>
                 </CardContent>
               </Card>
-              <Card className="w-full relative bg-[#fae9ab]">
+              <Card className="w-full relative bg-card">
                 <CardHeader className="flex flex-row text-black">
                     <Icons.calculator strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Math</div>
@@ -267,7 +267,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
 const ArrowAnimation: React.FC = () => {
   return (
 <svg
-  className="animated-arrow absolute z-10 top-[233px] left-[220px]"
+  className="animated-arrow absolute z-10 top-1/2 left-[36%]"
   width="320" // Increased width for a better view
   height="200"
   viewBox="0 0 320 200" // Adjusted viewBox to fit the new path dimensions
