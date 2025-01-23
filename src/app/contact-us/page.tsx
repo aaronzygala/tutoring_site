@@ -34,7 +34,6 @@ export default function ContactUs() {
   const handleSubmit = async () => {
     'use server'
     console.log("Test");
-    const attachment = fs.readFileSync("public/logo_black.png").toString('base64');
 
     try {
       await resend.emails.send({
