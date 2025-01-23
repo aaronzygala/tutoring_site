@@ -7,8 +7,8 @@ export default function ContactUs() {
   return (
     <main>
       <div className="relative min-h-screen bg-cover bg-center">
-        <Image src={museumImage} alt={"Background image for tutoring page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen"/>
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+        <Image src={museumImage} alt={"Background image for tutoring page, depicting a lavishcxxcx museum"} className="absolute top-0 z-0 h-screen"/>
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">

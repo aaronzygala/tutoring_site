@@ -17,7 +17,7 @@ export default function ContactUs() {
     <main className="overflow-clip">
       <div className="relative min-h-screen bg-cover bg-center">
       <Image src={libraryImage} alt={"A background image for the About Us page, depicting a beautiful library"} className="absolute top-0 z-0 h-screen"/>
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -78,8 +78,8 @@ function InstructorCard({
   instructorDescription: string;
 }) {
   return (
-    <Card className="w-full lg:w-[50%]">
-      <CardHeader>
+    <Card className="w-full lg:w-[50%] bg-black border-none text-white">
+      <CardHeader className="">
         <Image
           src={imageSrc}
           alt={imageAlt}

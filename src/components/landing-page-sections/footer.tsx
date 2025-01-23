@@ -9,7 +9,7 @@ import { Input } from "../ui/input";
 export function Footer() {
   return (
     <main>
-      <div className="w-screen flex flex-col">
+      <div className="w-screen flex flex-col bg-foreground text-background">
         <div className="flex flex-row px-12 py-12 gap-12 ml-auto mr-auto grid grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col w-[96]">
             <div className="text-left lg:text-xl text-primary font-bold pl-4">

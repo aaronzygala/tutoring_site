@@ -14,11 +14,11 @@ import { Separator } from "@/components/ui/separator";
 export default function ContactUs() {
   return (
     <main>
-      <div className="relative h-80 bg-cover bg-center" >
+      <div className="relative h-80 bg-cover bg-center bg-foreground " >
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
-              <div className="flex flex-col items-left p-8">
-                  <div className="text-7xl text-white font-extrabold font-sans">
+              <div className="flex flex-col items-left p-8 text-background">
+                  <div className="text-7xl  font-extrabold font-sans">
                     <span className="text-primary">
                       The Exams
                     </span>
@@ -31,7 +31,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="min-w-screen bg-foreground text-background">
+      <div className="min-w-screen ">
         <Exam examInfo={DSATInfo} />
         <div className="bg-background">
           <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />

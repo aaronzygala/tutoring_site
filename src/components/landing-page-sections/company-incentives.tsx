@@ -12,12 +12,12 @@ import PrivateLessons from "@/assets/teaching-icon.png";
 export function IncentiveSection() {
   return (
     <main>
-      <div className="min-w-screen bg-foreground text-background">
+      <div className="min-w-screen">
         <div className="py-24">
           <div className="px-12 lg:px-52 text-4xl font-extrabold">
             Why choose <span className="text-primary">Axiom Test Prep</span>?
           </div>
-          <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
+          <div className="px-12 lg:px-52 mt-2 lg:text-lg">
             Check out the benefits of the education we offer.
           </div>
           <div className="flex justify-center mt-12">
@@ -110,13 +110,13 @@ function IncentiveCard({
   return (
     <Card className="bg-transparent border-none rounded-none shadow-none">
       <CardHeader>
-        <CardTitle className="text-lg text-background text-center">
+        <CardTitle className="text-lg text-center">
           <div className="h-24 w-24 mb-6 ml-auto mr-auto">
             <Image src={imageSrc} alt={imageAltDescription} className="" />
           </div>
           {title}
         </CardTitle>
-        <CardDescription className="text-background text-center w-[60%] lg:w-[80%] justify-center ml-auto mr-auto">
+        <CardDescription className="text-center w-[60%] lg:w-[80%] justify-center ml-auto mr-auto">
           {description}
         </CardDescription>
       </CardHeader>

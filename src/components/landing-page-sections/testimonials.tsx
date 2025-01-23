@@ -33,7 +33,7 @@ export function Testimonials() {
 
   return (
     <main>
-      <div className="min-w-screen bg-black">
+      <div className="min-w-screen">
         <div className="px-12 lg:px-52 py-24">
           <div className="text-4xl font-extrabold text-foreground">
             What <span className="text-primary">everyone</span> is saying
@@ -133,7 +133,7 @@ function TestimonialCard({
   review: string;
 }) {
   return (
-    <Card>
+    <Card className="bg-background border-none shadow-2xl">
       <CardHeader className="flex flex-row w-96">
         <Avatar>
           <img src={image_src} className="w-12 h-12" />

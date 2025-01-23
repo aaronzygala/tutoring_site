@@ -29,13 +29,13 @@ export default function Home() {
         className="relative min-h-screen bg-cover bg-center"
       >
         <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen"/>
-        <div className="backdrop-blur-0 bg-gradient-to-b from-background to-transparent min-h-screen overflow-hidden">
+        <div className="backdrop-blur-0 bg-gradient-to-b from-black to-transparent min-h-screen overflow-hidden">
           <div className="flex flex-col items-left lg:px-44 pt-4">
             <div className="mt-[60%] lg:mt-[30%]">
               <Card className="border-none bg-transparent shadow-none">
                 <div className="flex flex-col items-left">
                   <CardHeader>
-                    <CardTitle className="text-4xl lg:text-7xl">
+                    <CardTitle className="text-4xl lg:text-7xl text-white">
                       <Link href={"/exams#DSAT"}><span className="text-primary lg:hover:italic lg:hover:underline">SAT</span></Link>,
                       {" "}<Link href={"/exams#ACT"}><span className="text-primary lg:hover:italic lg:hover:underline">ACT</span></Link>{" "}
                       &{"  "}<Link href={"/exams#CLT"}><span className="text-primary lg:hover:italic lg:hover:underline">CLT</span></Link>{" "}Prep
@@ -68,14 +68,14 @@ export default function Home() {
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
       <HowItWorks />
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
-      {!isMobile ? (
+      {/* {!isMobile ? (
         <>
           <Testimonials />
           <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
         </>
       ) : (
         <></>
-      )}
+      )} */}
       <PricingSection />
       <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
       <CTASection />

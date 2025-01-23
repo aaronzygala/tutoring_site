@@ -34,7 +34,7 @@ export function HowItWorks() {
 
   return (
     <main>
-      <div className="min-w-screen bg-foreground text-background">
+      <div className="min-w-screen ">
         <div className="py-32">
           <div className="px-12 lg:px-52 text-4xl font-extrabold">
             How it <span className="text-primary ">works</span>
@@ -44,7 +44,7 @@ export function HowItWorks() {
           </div>
           <div className="px-24 lg:px-8">
           <div
-            className="mt-12 w-full relative h-[1750px] lg:h-[375px]"
+            className="mt-12 w-full relative h-[1750px] lg:h-[850px]"
             ref={ref}
           >
             <HowItWorksCard
@@ -127,10 +127,10 @@ function HowItWorksCard({
   const delay = index * 0.075;
 
   const finalPositionsHorizontal = [
-    "translate-x-[0%] z-10",
-    "translate-x-[100%] z-20",
-    "translate-x-[200%] z-30",
-    "translate-x-[300%] z-40",
+    "translate-x-[100%] z-10",
+    "translate-x-[200%] z-20",
+    "translate-x-[100%] z-30 translate-y-[100%]",
+    "translate-x-[200%] z-40 translate-y-[100%]",
   ];
 
   const finalPositionsVertical = [
@@ -161,7 +161,7 @@ function HowItWorksCard({
         transitionDelay: `${delay}s`,
       }}
     >
-      <Card className="bg-card-foreground border-none shadow-2xl rounded-none  h-[420px]">
+      <Card className="border-none shadow-2xl rounded-none  h-[420px]">
         <CardHeader>
           <div
             className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}
@@ -169,10 +169,10 @@ function HowItWorksCard({
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />
           </div>
         </CardHeader>
-        <CardContent className="text-background">
+        <CardContent className="">
           <div className="mt-2 text-md">Step {index}</div>
           <div className="mt-4 text-lg font-bold">{title}</div>
-          <div className="mt-4 text-sm text-muted">{content}</div>
+          <div className="mt-4 text-sm text-foreground">{content}</div>
         </CardContent>
       </Card>
     </div>

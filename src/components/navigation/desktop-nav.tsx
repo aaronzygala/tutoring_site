@@ -42,7 +42,7 @@ const exams: { title: string; href: string; description: string }[] = [
 export function DesktopNavbar() {
   const currentPath = usePathname();
   return (
-    <div className="fixed top-0 px-4 lg:px-44 pt-4 bg-background z-50 w-full">
+    <div className="fixed top-0 px-4 lg:px-44 pt-4 z-50 w-full bg-foreground">
       <div className="max-w-8xl pb-3 items-center justify-between text-sm lg:flex">
         <Link
           className="text-white flex place-items-center text-2xl lg:pointer-events-auto lg:p-0"
@@ -62,21 +62,23 @@ export function DesktopNavbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  About Us
+                  <span className="text-white">About Us</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <Separator orientation="vertical" className="h-6 bg-accent" />
+            <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
             <NavigationMenuItem>
                 <NavigationMenuTrigger                  
                   className={cn(
                     currentPath === "/exams"
                       ? "bg-accent mr-auto"
-                      : "bg-transparent mr-auto",
+                      : "bg-transparent mr-auto text-white",
                     navigationMenuTriggerStyle(),
-                  )}><Link href="/exams">Exams</Link></NavigationMenuTrigger>
+                  )}>
+                    <Link href="/exams" className="text-white">Exams</Link>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[100px] gap-3 p-4">
+                  <ul className="grid w-[100px] gap-3 p-4 bg-black text-white text-center">
                     {exams.map((exam) => (
                       <ListItem
                         key={exam.title}
@@ -89,7 +91,7 @@ export function DesktopNavbar() {
                   </ul>
                 </NavigationMenuContent>
             </NavigationMenuItem>
-            <Separator orientation="vertical" className="h-6 bg-accent" />
+            <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
             <NavigationMenuItem>
               <Link href="/tutoring" legacyBehavior passHref>
                 <NavigationMenuLink
@@ -100,11 +102,11 @@ export function DesktopNavbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  Tutoring Programs
+                  <span className="text-white">Tutoring Programs</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <Separator orientation="vertical" className="h-6 bg-accent" />
+            <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
             <NavigationMenuItem>
               <Link href="/contact-us" legacyBehavior>
                 <NavigationMenuLink
@@ -115,14 +117,14 @@ export function DesktopNavbar() {
                     navigationMenuTriggerStyle(),
                   )}
                 >
-                  Contact Us
+                  <span className="text-white">Contact Us</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <Separator className="" />
+      {/* <Separator className="" /> */}
     </div>
   );
 }
@@ -137,13 +139,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-900 hover:text-white",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>
