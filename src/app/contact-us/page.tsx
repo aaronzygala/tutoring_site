@@ -14,7 +14,7 @@ import { Icons } from "@/components/icons";
 import { Textarea } from "@/components/ui/textarea";
 import museumImage from "@/assets/museum2.jpg";
 import Image from "next/image"
-
+import fs from "fs";
 import { Resend } from 'resend';
 import { ContactUsAutoReplyEmail } from '../../components/emails/contact-us-autoreply';
 
@@ -33,19 +33,15 @@ export default function ContactUs() {
   // Function to handle form submission
   const handleSubmit = async () => {
     'use server'
-    console.log("Test")
+    console.log("Test");
+    const attachment = fs.readFileSync("public/logo_black.png").toString('base64');
+
     try {
       await resend.emails.send({
         from: 'onboarding@resend.dev',
         to: 'aaronzygala@gmail.com',
         subject: 'We Got Your Message!',
         react: <ContactUsAutoReplyEmail/>,
-        attachments: [
-          {
-            path: `${baseUrl}/logo_black.png`,
-            filename: 'logo_black.png',
-          },
-        ],
       });
       // Reset form after successful submission
       // setName('');
