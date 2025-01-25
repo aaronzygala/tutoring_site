@@ -1,3 +1,4 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import React from "react";
@@ -45,7 +46,7 @@ export function HowItWorks() {
       <div className="min-w-screen">
         <div className="py-32">
           <div className="px-12 lg:px-52 text-4xl font-extrabold">
-            How it <span className="text-primary">works</span>
+            How It <span className="text-primary">Works</span>
           </div>
           <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
             Explore our four-step system.

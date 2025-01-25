@@ -8,7 +8,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import museumImage from "@/assets/museum.jpg";
+import museumImage from "@/assets/museum copy.jpg";
 import React, { useState, useEffect } from "react";
 import { IncentiveSection } from "@/components/landing-page-sections/company-incentives";
 import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
@@ -17,21 +17,16 @@ import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
-  const isMobile = useMediaQuery("(max-width: 1024px)");
-
   return (
-    <div className="relative min-h-screen">
-      <div
-        className="relative min-h-screen bg-cover bg-center"
-      >
-        <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen"/>
-        <div className="backdrop-blur-0 bg-gradient-to-b from-black to-transparent min-h-screen overflow-hidden">
+    <div className="relative ">
+      <div className="relative bg-black h-screen">
+        <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen object-none"/>
+        <div className="backdrop-blur-0 bg-gradient-to-b from-black to-transparent z-20">
           <div className="flex flex-col items-left lg:px-44 pt-4">
-            <div className="mt-[60%] lg:mt-[30%]">
+            <div className="relative translate-y-[200%]">
               <Card className="border-none bg-transparent shadow-none">
                 <div className="flex flex-col items-left">
                   <CardHeader>
@@ -50,13 +45,6 @@ export default function Home() {
                         Get started today
                     </Button>
                   </Link>
-
-                    <Button
-                      className="text-foreground hover:text-foreground hover:bg-transparent hover:underline"
-                      variant="ghost"
-                    >
-                      See more details
-                    </Button>
                   </CardContent>
                 </div>
               </Card>

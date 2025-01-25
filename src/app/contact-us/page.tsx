@@ -20,7 +20,7 @@ export default async function ContactUs() {
         <Image 
           src={museumImage} 
           alt="Header image for landing page, depicting a lavish museum" 
-          className="absolute top-0 z-0 h-screen"
+          className="absolute top-0 z-0 h-screen object-none"
         />
         <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">

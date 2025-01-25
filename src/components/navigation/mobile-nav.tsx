@@ -29,6 +29,8 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Icons } from "@/components/icons";
 import { usePathname } from "next/navigation";
+import AxiomLogo from "@/assets/axiom_header_logo.png";
+import Image from "next/image";
 
 export function MobileNavbar() {
   const currentPath = usePathname();
@@ -37,11 +39,11 @@ export function MobileNavbar() {
   return (
     <div className="fixed top-0 px-4 lg:px-44 pt-4 z-50 w-screen bg-black">
       <div className="pb-3 items-center text-sm flex lg:flex-row">
-        <Link
-          className="text-white place-items-center text-2xl lg:pointer-events-auto lg:p-0"
+      <Link
+          className="text-white flex place-items-center text-2xl lg:pointer-events-auto lg:p-0"
           href="/"
         >
-          Axiom Test Prep
+          <Image src={AxiomLogo} alt="Axiom Test Prep Logo" width={200}/>
         </Link>
         <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild>

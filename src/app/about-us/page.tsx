@@ -14,10 +14,11 @@ import React from "react";
 export default function ContactUs() {
 
   return (
-    <main className="overflow-clip">
-      <div className="relative min-h-screen bg-cover bg-center bg-black">
-      <Image src={libraryImage} alt={"A background image for the About Us page, depicting a beautiful library"} className="absolute top-0 z-0 h-screen"/>
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent min-h-screen overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+    <main className="">
+      <div className="relative min-h-screen bg-black">
+      <Image src={libraryImage} alt={"Header image for About Us page, depicting a lavish museum"} 
+      className="absolute h-screen object-none"/>
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -27,7 +28,7 @@ export default function ContactUs() {
                       Meet the Team
                     </span>
                   </div>
-                  <span className="text-lg text-foreground">
+                  <span className="text-lg text-background">
                     We are a small team of dedicated math-enthusiasts.
                   </span>
                 </CardHeader>

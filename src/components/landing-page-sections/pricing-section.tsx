@@ -108,7 +108,7 @@ export function PricingSection() {
       <div className="min-w-screen px-12 lg:px-52 py-24">
         <div className="flex w-full flex-col mb-12">
           <div className="text-4xl font-extrabold">
-            Our tutoring <span className="text-primary">plans</span>
+            Our Tutoring <span className="text-primary">Plans</span>
           </div>
           <div className="mt-2 lg:text-lg text-muted-foreground">
             Whether its group tutoring or one-on-one, we&apos;re here to help.
