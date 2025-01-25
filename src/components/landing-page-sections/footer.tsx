@@ -98,7 +98,7 @@ export function Footer() {
                 <div className="flex">
                   <Icons.mail className="text-white mt-auto mb-auto" size={18}/>
                   <span className="mt-auto mb-auto ml-2 text-sm">
-                    contact@axiomtestprep.com
+                    info@axiomtestprep.com
                   </span>
                 </div>
                 <div className="flex">
@@ -113,7 +113,7 @@ export function Footer() {
 
         </div>
         <div className="text-xs text-muted-foreground ml-auto mr-auto pb-6">
-          &copy;2024 Axiom Test Prep. All rights reserved.
+          &copy;2025 Axiom Test Prep. All rights reserved.
         </div>
       </div>
     </main>

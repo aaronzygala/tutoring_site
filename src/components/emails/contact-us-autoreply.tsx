@@ -26,7 +26,7 @@ import {
             <Img
               src={`${baseUrl}/logo_black.png`}
               width="150"
-              height="106"
+              height="107"
               alt="Axiom Test Prep"
               style={image}
             />
@@ -63,9 +63,6 @@ import {
             </Text>
             <Text style={paragraph}>— The Axiom team</Text>
             <Hr style={hr} />
-            <Text style={footer}>
-              Axiom Test Prep, address
-            </Text>
           </Section>
         </Container>
       </Body>

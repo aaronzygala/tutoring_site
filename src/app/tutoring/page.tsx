@@ -1,34 +1,71 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import React from "react";
-import museumImage from "@/assets/museum.jpg";
-import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image, { StaticImageData } from "next/image";
+import SATImage from "@/assets/SAT_logo.png"
+import ACTImage from "@/assets/ACT_logo.png"
+import CLTImage from "@/assets/CLT_logo.png"
 
-export default function ContactUs() {
+export default function Tutoring() {
   return (
     <main>
-      <div className="relative min-h-screen bg-cover bg-center">
-        <Image src={museumImage} alt={"Background image for tutoring page, depicting a lavishcxxcx museum"} className="absolute top-0 z-0 h-screen"/>
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-foreground to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+      <div className="relative h-80 bg-cover bg-center bg-foreground " >
+        <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
-            <Card className="border-none bg-transparent shadow-none">
-              <div className="flex flex-col items-left">
-                <CardHeader>
-                  <div className="text-7xl text-white font-extrabold font-sans">
+              <div className="flex flex-col items-left p-8 text-background">
+                  <div className="sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Our Tutoring Programs
                     </span>
                   </div>
-                  <span className="text-lg text-foreground">
-                    Feel free to leave any inquiries below, or give us a call to
-                    speak with our helpful sales team.
+                  <span className="sm:text-xs md:text-sm lg:text-lg mt-8">
+                    Browse our programs, and schedule a time that works for you
                   </span>
-                </CardHeader>
-                <CardContent className="flex flex-col lg:flex-row gap-12"></CardContent>
               </div>
-            </Card>
           </div>
         </div>
       </div>
+      <div className="min-w-screen">
+        <Program image={SATImage} programName={"SAT Tutoring"}/>
+        <div className="bg-background">
+          <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
+        </div>
+        <Program image={ACTImage} programName={"ACT Tutoring"}/>
+        <div className="bg-background">
+          <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
+        </div>        
+        <Program image={CLTImage} programName={"CLT Tutoring"}/>
+      </div>
     </main>
+  );
+}
+function Program({ image, programName }: { image: StaticImageData, programName: string }) {
+  return (
+    <div
+      className={`lg:w-[80%] xl:w-[40%] ml-auto mr-auto p-8 border-border border-2 rounded-lg my-4 flex flex-col gap-3`}
+    >
+      <div className={`text-foreground text-3xl font-bold ml-auto mr-auto`}>
+        {programName}
+      </div>
+      <div className="flex flex-row gap-4">
+        <Image
+          src={image}
+          width={200}
+          alt={"Program Image"}
+          className="rounded-sm"
+        />
+        <div>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus nulla tellus eleifend eget eros vestibulum et dolor sit.
+        </div>
+      </div>
+
+
+    </div>
   );
 }

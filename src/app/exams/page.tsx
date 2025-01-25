@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 
-export default function ContactUs() {
+export default function Exams() {
   return (
     <main>
       <div className="relative h-80 bg-cover bg-center bg-foreground " >
@@ -23,7 +23,7 @@ export default function ContactUs() {
                       The Exams
                     </span>
                   </div>
-                  <span className="text-lg">
+                  <span className="text-lg mt-8">
                     We offer study programs for a few standardized tests. Scroll
                     down to see a breakdown of them.
                   </span>

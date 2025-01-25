@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function CTASection() {
   return (
@@ -12,9 +13,12 @@ export function CTASection() {
             We know it&apos;s a big leap to take. The first one&apos;s on us.
           </div>
           <div className="mt-6">
-            <Button className="bg-primary text-md py-4 animate-button-pulse">
-              Schedule a free consultation.
-            </Button>
+            <Link href="https://calendly.com/axiomtestprep/introductory-meeting" target="_blank">
+              <Button className="bg-primary text-md py-4 animate-button-pulse">
+                Schedule a free consultation.
+              </Button>
+            </Link>
+
           </div>
         </div>
       </div>

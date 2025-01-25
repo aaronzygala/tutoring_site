@@ -11,6 +11,7 @@ import Head from "next/head";
 import type { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Toaster } from "@/components/ui/sonner"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
           </ThemeProvider>
           <Analytics/>
           <SpeedInsights/>
+          <Toaster/>
         </body>
       </AOSProvider>
     </html>

@@ -166,9 +166,14 @@ export function PricingSection() {
                 <div>
                   <h4 className="text-7xl font-bold">$1200</h4>
                 </div>
-                <Link href="/" className="">
-                  <Button className="">Learn More</Button>
-                </Link>
+                <div className="flex flex-row gap-3">
+                  <Link href="/" className="">
+                    <Button className="">Learn More</Button>
+                  </Link>
+                  {/* <Link href="/" >
+                    <Button className="bg-primary/40 hover:bg-primary/60">Schedule Now</Button>
+                  </Link> */}
+                </div>
               </div>
             </div>
           </div>
