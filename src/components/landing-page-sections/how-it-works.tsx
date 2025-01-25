@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import ExamIcon from "@/assets/exam-icon.png";
 import GrowthIcon from "@/assets/growth-icon.png";
@@ -10,101 +10,64 @@ import PlanIcon from "@/assets/plan-icon.png";
 export function HowItWorks() {
   const { ref, inView } = useInView({
     threshold: 0.2,
+    triggerOnce: true, // Ensures animation triggers only once
   });
 
-  const [animate, setAnimate] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      setAnimate(true);
+  const cardData = [
+    {
+      title: "Assessment and Goal Setting",
+      content: "We start by assessing each student's skills with carefully designed tests. Using the results, we set clear and measurable goals to achieve their target SAT scores.",
+      imageSrc: ExamIcon,
+      imageAltDescription: "An icon of an exam"
+    },
+    {
+      title: "Customized Learning Plans",
+      content: "We use these goals to develop a personalized lesson plan in each field of mathematics.",
+      imageSrc: PlanIcon,
+      imageAltDescription: "An icon representing a lesson plan."
+    },
+    {
+      title: "Teaching and Adapting",
+      content: "With the plan guiding each lesson, we provide engaging and interactive instruction for the subjects the students struggle in. We consistently update the lesson plan based on student's performance.",
+      imageSrc: TeachingIcon,
+      imageAltDescription: "An icon showing a teacher and a class."
+    },
+    {
+      title: "Practice and Feedback",
+      content: "Offer ample opportunities for students to practice SAT math questions under timed conditions, simulating test-day pressure.",
+      imageSrc: GrowthIcon,
+      imageAltDescription: "An icon of a plant growing."
     }
-  }, [inView]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  ];
 
   return (
     <main>
-      <div className="min-w-screen ">
+      <div className="min-w-screen">
         <div className="py-32">
           <div className="px-12 lg:px-52 text-4xl font-extrabold">
-            How it <span className="text-primary ">works</span>
+            How it <span className="text-primary">works</span>
           </div>
           <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
-            Explore our four step system.
+            Explore our four-step system.
           </div>
-          <div className="px-24 lg:px-8">
-          <div
-            className="mt-12 w-full relative h-[1750px] lg:h-[850px]"
-            ref={ref}
+          <div 
+            ref={ref} 
+            className="place-items-center px-4 lg:px-8 mt-12 grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            <HowItWorksCard
-              title={"Assessment and Goal Setting"}
-              content={
-                "We start by assessing each students' skills with carefully designed tests. Using the results, we set clear and measurable goals to achieve their target SAT scores."
-              }
-              imageSrc={ExamIcon}
-              imageAltDescription={"An icon of an exam "}
-              index={1}
-              animate={animate}
-              isMobile={isMobile}
-            />
-            <HowItWorksCard
-              title={"Customized Learning Plans"}
-              content={
-                "We use these goals to develop a personalized lesson plan in each field of mathematics."
-              }
-              imageSrc={PlanIcon}
-              imageAltDescription={"An icon representing a lesson plan."}
-              index={2}
-              animate={animate}
-              isMobile={isMobile}
-            />
-            <HowItWorksCard
-              title={"Teaching and Adapting"}
-              content={
-                "With the plan guiding each lesson, we provide engaging and interactive instruction for the subjects the students struggle in. We consistently update the lesson plan based on student's performance."
-              }
-              imageSrc={TeachingIcon}
-              imageAltDescription={"An icon showing a teacher and a class."}
-              index={3}
-              animate={animate}
-              isMobile={isMobile}
-            />
-            <HowItWorksCard
-              title={"Practice and Feedback"}
-              content={
-                "Offer ample opportunities for students to practice SAT math questions under timed conditions, simulating test-day pressure."
-              }
-              imageSrc={GrowthIcon}
-              imageAltDescription={"An icon of a plant growing."}
-              index={4}
-              animate={animate}
-              isMobile={isMobile}
-            />
+              {cardData.map((card, index) => (
+                <HowItWorksCard
+                  key={index}
+                  {...card}
+                  index={index + 1}
+                  inView={inView}
+                />
+              ))}
           </div>
-          </div>
-
         </div>
       </div>
     </main>
   );
 }
-const iconBackgrounds = [
-  "bg-amber-100",
-  "bg-amber-100",
-  "bg-amber-100",
-  "bg-amber-100",
-];
 
 function HowItWorksCard({
   title,
@@ -112,64 +75,34 @@ function HowItWorksCard({
   imageAltDescription,
   imageSrc,
   index,
-  animate,
-  isMobile,
+  inView
 }: {
   title: string;
   content: string;
   imageAltDescription: string;
   imageSrc: StaticImageData;
   index: number;
-  animate: boolean;
-  isMobile: boolean;
+  inView: boolean;
 }) {
-  const iconBackground = iconBackgrounds[index - 1];
-  const delay = index * 0.075;
-
-  const finalPositionsHorizontal = [
-    "translate-x-[100%] z-10",
-    "translate-x-[200%] z-20",
-    "translate-x-[100%] z-30 translate-y-[100%]",
-    "translate-x-[200%] z-40 translate-y-[100%]",
-  ];
-
-  const finalPositionsVertical = [
-    "translate-y-0 z-10",
-    "translate-y-[100%] z-20",
-    "translate-y-[200%] z-30",
-    "translate-y-[300%] z-40",
-  ];
-
-  const offsets = [
-    "rotate-[-1deg] translate-x-[-20px]",
-    "rotate-[-1deg] translate-x-[-10px]",
-    "rotate-[1deg] translate-x-[0px]",
-    "rotate-[1deg] translate-x-[10px]",
-  ];
-
   return (
-    <div
-      className={`p-4 absolute transition-transform duration-700 ${
-        animate
-          ? isMobile
-            ? finalPositionsVertical[index - 1]
-            : finalPositionsHorizontal[index - 1]
-          : offsets[index - 1]
-      }`}
+    <div 
+      className={`
+        w-full max-w-md 
+        transition-all duration-700 ease-out
+        ${inView ? 'opacity-100' : 'opacity-0'}
+        ${(index % 2 !== 0) ? "md:ml-auto" : "md:mr-auto"}
+      `}
       style={{
-        width: isMobile ? "100%" : "25%",
-        transitionDelay: `${delay}s`,
+        transitionDelay: inView ? `${(index - 1) * 200}ms` : '0ms'
       }}
     >
-      <Card className="border-none shadow-2xl rounded-none  h-[420px]">
+      <Card className={`w-full border-none shadow-2xl rounded-lg h-fit`}>
         <CardHeader>
-          <div
-            className={`${iconBackgrounds[index - 1]} h-20 w-20 rounded-full`}
-          >
+          <div className={`bg-amber-100 h-20 w-20 rounded-full`}>
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />
           </div>
         </CardHeader>
-        <CardContent className="">
+        <CardContent>
           <div className="mt-2 text-md">Step {index}</div>
           <div className="mt-4 text-lg font-bold">{title}</div>
           <div className="mt-4 text-sm text-foreground">{content}</div>
