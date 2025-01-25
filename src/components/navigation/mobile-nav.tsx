@@ -60,7 +60,7 @@ export function MobileNavbar() {
                   variant="ghost"
                   className={
                     currentPath === "/about-us"
-                      ? "bg-accent mr-auto"
+                      ? "bg-primary/30 mr-auto"
                       : "bg-transparent mr-auto"
                   }
                   onClick={() => setSheetOpen(false)}
@@ -73,12 +73,12 @@ export function MobileNavbar() {
                   About Us
                 </Button>
               </Link>
-              <Link href="/programs" legacyBehavior passHref>
+              <Link href="/exams" legacyBehavior passHref>
                 <Button
                   variant="ghost"
                   className={
-                    currentPath === "/programs"
-                      ? "bg-accent mr-auto"
+                    currentPath === "/exams"
+                      ? "bg-primary/30 mr-auto"
                       : "bg-transparent mr-auto"
                   }
                   onClick={() => setSheetOpen(false)}
@@ -88,15 +88,15 @@ export function MobileNavbar() {
                     size={16}
                     className="mr-2"
                   />
-                  Programs
+                  Exams
                 </Button>
               </Link>
-              <Link href="/scheduling" legacyBehavior passHref>
+              <Link href="/tutoring" legacyBehavior passHref>
                 <Button
                   variant="ghost"
                   className={
-                    currentPath === "/scheduling"
-                      ? "bg-accent mr-auto"
+                    currentPath === "/tutoring"
+                      ? "bg-primary/30 mr-auto"
                       : "bg-transparent mr-auto"
                   }
                   onClick={() => setSheetOpen(false)}
@@ -106,7 +106,7 @@ export function MobileNavbar() {
                     size={16}
                     className="mr-2"
                   />
-                  Scheduling
+                  Tutoring
                 </Button>
               </Link>
               <Link href="/contact-us" legacyBehavior passHref>
@@ -114,7 +114,7 @@ export function MobileNavbar() {
                   variant="ghost"
                   className={
                     currentPath === "/contact-us"
-                      ? "bg-accent mr-auto"
+                      ? "bg-primary/30 mr-auto"
                       : "bg-transparent mr-auto"
                   }
                   onClick={() => setSheetOpen(false)}

@@ -21,8 +21,8 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
             ))}
           </ul>
           <div className="mt-12 grid gap-4">
-            <h4 className="text-7xl font-bold">${price}</h4>
-            <div className="flex justify-start gap-4">
+            <h4 className="text-5xl md:text-7xl font-bold">${price}</h4>
+            <div className="flex flex-col md:flex-row justify-start gap-4">
               <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
               </Link>
@@ -41,8 +41,8 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
             ))}
           </ul>
           <div className="mt-12 grid gap-4">
-            <h4 className="text-7xl font-bold">${price}</h4>
-            <div className="flex justify-start gap-4">
+            <h4 className="text-5xl md:text-7xl font-bold">${price}</h4>
+            <div className="flex flex-col md:flex-row justify-start gap-4">
               <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
               </Link>
@@ -114,7 +114,7 @@ export function PricingSection() {
             Whether its group tutoring or one-on-one, we&apos;re here to help.
           </div>
         </div>
-        <div className="mt-12 flex flex-col lg:flex-row gap-4">
+        <div className="mt-12 flex flex-col lg:flex-row gap-2 justify-center">
           {exams.map((exam) => (
             <ExamPricing 
               key={exam.name}
