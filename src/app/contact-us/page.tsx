@@ -27,12 +27,12 @@ export default async function ContactUs() {
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
                 <CardHeader>
-                  <div className="text-7xl text-white font-extrabold font-sans">
+                <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Get In Touch
                     </span>
                   </div>
-                  <span className="text-lg text-background">
+                  <span className="text-md xl:text-lg text-background">
                     Feel free to leave any inquiries below, or give us a call directly.
                   </span>
                 </CardHeader>

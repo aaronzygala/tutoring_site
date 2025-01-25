@@ -90,7 +90,7 @@ export function Footer() {
                 </Link>
               </div>
 
-            <div className="ml-28 lg:ml-0">
+            <div className=" lg:ml-0">
             <div className="text-left lg:text-xl text-primary font-bold ml-4 lg:mt-2">
               Contact Us
             </div>

@@ -22,7 +22,7 @@ export default function ContactUs() {
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
                 <CardHeader>
-                  <div className="text-7xl text-white font-extrabold font-sans">
+                  <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Meet the Team
                     </span>

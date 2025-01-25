@@ -18,12 +18,12 @@ export default function Exams() {
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
               <div className="flex flex-col items-left p-8 text-background">
-                  <div className="text-7xl  font-extrabold font-sans">
+                 <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       The Exams
                     </span>
                   </div>
-                  <span className="text-lg mt-8">
+                  <span className="text-md xl:text-lg mt-8">
                     We offer study programs for a few standardized tests. Scroll
                     down to see a breakdown of them.
                   </span>

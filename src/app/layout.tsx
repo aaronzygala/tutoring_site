@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import AOSProvider from "@/components/aos-provider";
 import React from "react";
-import { DesktopNavbar } from "@/components/navigation/desktop-nav";
-// import { MobileNavbar } from "@/components/navigation/mobile-nav";
+import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/landing-page-sections/footer";
 import Head from "next/head";
 import type { Metadata } from 'next'
@@ -56,9 +55,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {<DesktopNavbar />}
+            <Navbar/>
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </ThemeProvider>
           <Analytics/>
           <SpeedInsights/>

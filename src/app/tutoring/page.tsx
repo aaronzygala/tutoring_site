@@ -19,12 +19,12 @@ export default function Tutoring() {
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
               <div className="flex flex-col items-left p-8 text-background">
-                  <div className="sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl font-extrabold font-sans">
+                <div className="text-2xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Our Tutoring Programs
                     </span>
                   </div>
-                  <span className="sm:text-xs md:text-sm lg:text-lg mt-8">
+                  <span className="text-sm xl:text-lg mt-8">
                     Browse our programs, and schedule a time that works for you
                   </span>
               </div>

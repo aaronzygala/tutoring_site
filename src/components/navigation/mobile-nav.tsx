@@ -35,8 +35,8 @@ export function MobileNavbar() {
   const [sheetOpen, setSheetOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 px-4 lg:px-44 pt-4 bg-background z-50 min-w-full">
-      <div className="pb-3 items-center  text-sm flex lg:flex-row">
+    <div className="fixed top-0 px-4 lg:px-44 pt-4 z-50 w-screen bg-black">
+      <div className="pb-3 items-center text-sm flex lg:flex-row">
         <Link
           className="text-white place-items-center text-2xl lg:pointer-events-auto lg:p-0"
           href="/"
@@ -45,13 +45,13 @@ export function MobileNavbar() {
         </Link>
         <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" className="ml-auto">
+            <Button variant="ghost" className="ml-auto text-white">
               <Icons.alignJustify size={24} />
             </Button>
           </SheetTrigger>
-          <SheetContent side={"right"} className="w-[200px]">
+          <SheetContent side={"right"} className="w-[200px] bg-foreground text-white">
             <SheetHeader>
-              <SheetTitle className="font-bold text-left">Directory</SheetTitle>
+              <SheetTitle className="font-bold text-center text-white">Directory</SheetTitle>
               <Separator />
             </SheetHeader>
             <div className="flex flex-col mt-2 ">
@@ -127,7 +127,6 @@ export function MobileNavbar() {
           </SheetContent>
         </Sheet>
       </div>
-      <Separator className="" />
     </div>
   );
 }
