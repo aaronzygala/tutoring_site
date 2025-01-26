@@ -8,7 +8,7 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
     <div className="grid gap-2 w-full">
       <h3 className="text-3xl font-extrabold text-center w-full">{examName}</h3>
       <Tabs defaultValue="math" className="w-full justify-center items-center place-items-center">
-        <TabsList className="ml-auto mr-auto">
+        <TabsList className="justify-center">
           <TabsTrigger value="math">Math</TabsTrigger>
           <TabsTrigger value="reading">Reading</TabsTrigger>
         </TabsList>
