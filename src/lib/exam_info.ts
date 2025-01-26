@@ -21,7 +21,7 @@ interface RegistrationInformation {
 }
 
 const DSATInfo: ExamInfo = {
-  name: "DSAT",
+  name: "SAT",
   description:
     "At Axiom Test Prep, we know a high SAT score is key to getting into your dream college and unlocking scholarship opportunities. Our tailored prep program includes personalized instruction, realistic mock tests, and access to a vast video library and worksheets, all designed to help you master the Digital SAT. With our expert guidance, you'll be ready to achieve your academic goals.",
   examContent: [
