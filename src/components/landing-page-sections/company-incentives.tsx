@@ -14,10 +14,10 @@ export function IncentiveSection() {
     <main>
       <div className="min-w-screen bg-foreground text-background">
         <div className="py-24">
-          <div className="px-12 lg:px-52 text-4xl font-extrabold">
+          <div className="px-12 lg:px-52 text-2xl lg:text-4xl  font-extrabold">
             Why choose <span className="text-primary">Axiom Test Prep</span>?
           </div>
-          <div className="px-12 lg:px-52 mt-2 lg:text-lg">
+          <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
             Check out the benefits of the education we offer.
           </div>
           <div className="flex justify-center mt-12">

@@ -6,7 +6,7 @@ export function CTASection() {
     <main>
       <div className="min-w-screen bg-foreground text-background">
         <div className="px-12 lg:px-52 py-24 text-center">
-          <div className="text-4xl font-extrabold">
+          <div className="text-2xl lg:text-4xl font-extrabold">
             Ready to <span className="text-primary">learn</span>?
           </div>
           <div className="mt-6 lg:text-xl">

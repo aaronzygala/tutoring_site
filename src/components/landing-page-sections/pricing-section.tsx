@@ -13,13 +13,16 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
           <TabsTrigger value="reading">Reading</TabsTrigger>
         </TabsList>
         <TabsContent value="math">
-          <ul className="grid gap-3 text-sm text-muted-foreground">
-            {mathDetails.map((detail, index) => (
-              <li key={index} className="flex items-left">
-                <Icons.check className="mr-2 h-4 w-4" /> {detail}
-              </li>
-            ))}
-          </ul>
+        <ul className="grid gap-3 text-sm text-muted-foreground">
+          {mathDetails.map((detail, index) => (
+            <li key={index} className="flex items-center">
+              <div className="flex-shrink-0 mr-2 w-4 h-4">
+                <Icons.check className="w-full h-full" />
+              </div>
+              <span className="flex-1">{detail}</span>
+            </li>
+          ))}
+        </ul>
           <div className="mt-12 grid gap-4">
             <h4 className="text-5xl md:text-7xl font-bold">${price}</h4>
             <div className="flex flex-col md:flex-row justify-start gap-4">
@@ -34,9 +37,12 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
         </TabsContent>
         <TabsContent value="reading">
           <ul className="grid gap-3 text-sm text-muted-foreground">
-            {readingDetails.map((detail, index) => (
-              <li key={index} className="flex items-left">
-                <Icons.check className="mr-2 h-4 w-4" /> {detail}
+            {mathDetails.map((detail, index) => (
+              <li key={index} className="flex items-center">
+                <div className="flex-shrink-0 mr-2 w-4 h-4">
+                  <Icons.check className="w-full h-full" />
+                </div>
+                <span className="flex-1">{detail}</span>
               </li>
             ))}
           </ul>
@@ -62,42 +68,48 @@ export function PricingSection() {
     {
       name: 'SAT',
       mathDetails: [
-        'Small Groups of 3-5 students',
-        'One class every week for 10 weeks',
-        'Thursday or Sunday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       readingDetails: [
-        'Small Groups of 2-4 students',
-        'One class every week for 8 weeks',
-        'Wednesday or Saturday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       price: 1200
     },
     {
       name: 'ACT',
       mathDetails: [
-        'Small Groups of 3-5 students',
-        'One class every week for 9 weeks',
-        'Tuesday or Sunday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       readingDetails: [
-        'Small Groups of 2-4 students',
-        'One class every week for 9 weeks',
-        'Monday or Saturday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       price: 1200
     },
     {
       name: 'CLT',
       mathDetails: [
-        'Small Groups of 3-5 students',
-        'One class every week for 9 weeks',
-        'Tuesday or Sunday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       readingDetails: [
-        'Small Groups of 2-4 students',
-        'One class every week for 9 weeks',
-        'Monday or Saturday'
+        'Free intake meeting and student assessment',
+        'One-on-one, flexible tutoring sessions via Zoom',
+        'Customized study plan based on individual needs',
+        'No long term commitment required'
       ],
       price: 1200
     }
@@ -107,7 +119,7 @@ export function PricingSection() {
     <main>
       <div className="min-w-screen px-6 lg:px-52 py-24 bg-foreground text-background">
         <div className="flex w-full flex-col mb-12 px-12">
-          <div className="text-4xl font-extrabold">
+          <div className="text-2xl lg:text-4xl font-extrabold">
             Our Tutoring <span className="text-primary">Plans</span>
           </div>
           <div className="mt-2 lg:text-lg text-muted-foreground">

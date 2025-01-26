@@ -45,7 +45,7 @@ export function HowItWorks() {
     <main>
       <div className="min-w-screen bg-foreground">
         <div className="py-32">
-          <div className="px-12 lg:px-52 text-4xl font-extrabold text-background">
+          <div className="px-12 lg:px-52 text-2xl lg:text-4xl font-extrabold text-background">
             How It <span className="text-primary">Works</span>
           </div>
           <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
