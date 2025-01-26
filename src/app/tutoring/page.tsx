@@ -4,6 +4,8 @@ import Image, { StaticImageData } from "next/image";
 import SATImage from "@/assets/SAT_logo.png"
 import ACTImage from "@/assets/ACT_logo.png"
 import CLTImage from "@/assets/CLT_logo.png"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Tutoring() {
   return (
@@ -25,40 +27,104 @@ export default function Tutoring() {
         </div>
       </div>
       <div className="min-w-screen bg-foreground">
-        <Program image={SATImage} programName={"SAT Tutoring"}/>
-        <div className="">
-          <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
+        <div className="text-2xl xl:text-4xl text-background p-8 lg:px-52 flex flex-col gap-8">
+          <span className="font-bold">Private Tutoring</span>
+          <div className="text-sm lg:text-lg">
+            Our private tutoring services are designed to maximize student achievement through personalized, one-on-one virtual instruction that accommodates diverse schedules. 
+            We begin with complimentary consultations to evaluate each student's academic profile, including performance history, target institutions, and areas for development. 
+            These insights inform customized learning plans tailored to individual goals.
+          </div>
+          <div className="text-sm lg:text-lg">
+            Our flexible scheduling and no-commitment policy ensure students can focus entirely on their academic progress. 
+            Our methodology is grounded in the systematic analysis of standardized test patterns and question frameworks. 
+            By exposing students to comprehensive question banks and focusing intervention on identified challenge areas, 
+            we cultivate both technical mastery and confidence for examination day.
+          </div>
         </div>
-        <Program image={ACTImage} programName={"ACT Tutoring"}/>
-        <div className="">
-          <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
-        </div>        
-        <Program image={CLTImage} programName={"CLT Tutoring"}/>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 place-items-center">
+          <Program 
+                  image={SATImage} 
+                  programName={"SAT Private Tutoring"} 
+                  bulletPoints={[
+                    "Free initial intake meeting to assess goals and challenges",
+                    "One-on-one, flexible tutoring sessions via Zoom",
+                    "Customized study plan based on individual needs",
+                    "Focused review of frequently asked question types",
+                    "Emphasis on overcoming specific weaknesses",
+                    "No-commitment cancellations at any time",
+                  ]}
+                  readingPath="https://calendly.com/axiomtestprep/sat-reading-private-tutoring"
+                  mathPath="https://calendly.com/axiomtestprep/sat-math-private-tutoring"
+                  specialClass="ml-auto"
+                  />
+          <Program image={ACTImage} programName={"ACT Private Tutoring"} bulletPoints={[
+                    "Free initial intake meeting to assess goals and challenges",
+                    "One-on-one, flexible tutoring sessions via Zoom",
+                    "Customized study plan based on individual needs",
+                    "Focused review of frequently asked question types",
+                    "Emphasis on overcoming specific weaknesses",
+                    "No-commitment cancellations at any time",
+                  ]}
+                  readingPath="https://calendly.com/axiomtestprep/act-reading-private-tutoring"
+                  mathPath="https://calendly.com/axiomtestprep/act-math-private-tutoring"
+                  specialClass="mr-auto"
+                  />      
+          <Program image={CLTImage} programName={"CLT Private Tutoring"} bulletPoints={[
+                    "Free initial intake meeting to assess goals and challenges",
+                    "One-on-one, flexible tutoring sessions via Zoom",
+                    "Customized study plan based on individual needs",
+                    "Focused review of frequently asked question types",
+                    "Emphasis on overcoming specific weaknesses",
+                    "No-commitment cancellations at any time",
+                  ]}
+                  readingPath="https://calendly.com/axiomtestprep/clt-reading-private-tutoring"
+                  mathPath="https://calendly.com/axiomtestprep/clt-math-private-tutoring"
+                  specialClass="col-span-2 ml-auto mr-auto mb-8"
+                  />
+        </div>
+
       </div>
     </main>
   );
 }
-function Program({ image, programName }: { image: StaticImageData, programName: string }) {
+function Program({ image, programName, bulletPoints, readingPath, mathPath, specialClass }: { image: StaticImageData, programName: string, bulletPoints: string[], readingPath: string, mathPath: string, specialClass: string  }) {
   return (
-    <div
-      className={`lg:w-[80%] xl:w-[40%] ml-auto mr-auto p-8 border-accent/5 border-2 rounded-lg my-4 flex flex-col gap-3`}
-    >
+    <div className={`${specialClass} place-items-center`}>
+    <div className={`w-full lg:w-[80%] p-8 border-accent/5 border-2 rounded-lg flex flex-col gap-3 `}>
       <div className={`text-background text-3xl font-bold ml-auto mr-auto`}>
         {programName}
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-col lg:flex-row gap-4">
         <Image
           src={image}
           width={200}
           alt={"Program Image"}
-          className="rounded-sm"
+          className="rounded-sm object-contain mt-auto mb-auto ml-auto mr-auto"
         />
-        <div className="text-background">
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus nulla tellus eleifend eget eros vestibulum et dolor sit.
+        <div className="flex flex-col gap-4">
+          <ul className="list-disc ml-4 text-background text-sm lg:text-md">
+            {bulletPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
+      <div className="flex flex-row w-full gap-8 ">
+        <Link href={readingPath} target="_blank">
+          <Button className="w-full font-bold text-xs lg:text-sm">
+            Schedule Reading Tutoring
+          </Button>
+        </Link>
+        <Link href={mathPath} target="_blank">
+          <Button className="w-full font-bold text-xs lg:text-sm">
+            Schedule Math Tutoring
+          </Button>
+        </Link>
 
+      </div>
 
     </div>
+    </div>
+
   );
 }
