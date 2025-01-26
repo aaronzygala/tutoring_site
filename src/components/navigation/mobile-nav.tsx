@@ -65,7 +65,7 @@ export function MobileNavbar() {
   );
 }
 
-function SheetButton ({name, path, currentPath, onClickFunction} : {name: string, path: string, currentPath: string}){
+function SheetButton ({name, path, currentPath, onClickFunction} : {name: string, path: string, currentPath: string, onClickFunction: () => void;}){
   return (
           <Link href={path} legacyBehavior passHref>
             <Button
