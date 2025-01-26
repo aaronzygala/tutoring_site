@@ -51,14 +51,14 @@ export default function Exams() {
 
 function Exam({ examInfo }: { examInfo: ExamInfo }) {
   return (
-    <div id={examInfo.name} className="py-24 px-12 lg:px-52  text-background">
-      <div className="text-6xl font-extrabold">
+    <div id={examInfo.name} className="py-24 px-0 md:px-12 lg:px-52  text-background">
+      <div className="text-6xl font-extrabold px-8 md:px-0">
         The <span className="text-primary">{examInfo.name}</span>
       </div>
 
       <div className="flex flex-row w-full">
         <div className="flex flex-col">
-          <div className="mt-4">
+          <div className="mt-4 px-8 md:px-0">
             {examInfo.description}
           </div>
           <Card className="mt-4 bg-background">
@@ -84,7 +84,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
                 <div>Max Score</div>
               </div>
             </CardHeader>
-            <CardContent className="flex flex-col 2xl:flex-row w-full gap-8">
+            <CardContent className="flex flex-col 2xl:flex-row w-full gap-8 p-0">
                 <div className="w-full relative aspect-[3/2]">
                   <Image
                     src={ReadingSAT}
@@ -107,7 +107,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
           </Card>
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 w-full">
 
-          <div className="">
+          <div className="px-12 md:px-0">
             <div className="text-2xl lg:text-4xl font-extrabold">
               Registering for the <span className="text-primary">{examInfo.name}</span>
             </div>
@@ -130,7 +130,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
               </Link> 
             </div>
           </div>
-          <div className="mt-12 lg:mt-0 lg:pl-8">
+          <div className="mt-12 lg:mt-0 lg:pl-8 px-12 md:px-0">
             <div className="ml-auto text-left ">
               <div className="text-2xl lg:text-4xl text-background font-extrabold">
                 FAQs
