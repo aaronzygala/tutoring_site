@@ -78,7 +78,7 @@ function SheetButton ({name, path, currentPath, onClickFunction} : {name: string
               variant="ghost"
               className={`text-2xl ml-auto mr-auto font-thin
                 ${currentPath === path
-                  ? "text-accent/30 mr-auto"
+                  ? "text-accent-foreground/40 mr-auto"
                   : "bg-transparent mr-auto"}`
               }
               onClick={onClickFunction}

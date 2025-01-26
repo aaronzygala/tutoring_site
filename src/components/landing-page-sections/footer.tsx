@@ -10,24 +10,24 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
           {/* Programs Section */}
-          <div className="space-y-2">
+          <div className="space-y-2  text-center">
             <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Programs</h3>
             <nav className="flex flex-col space-y-2">
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 Private Tutoring
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 CLT Math Group
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 SAT Math Group
               </Button>
@@ -35,24 +35,24 @@ export function Footer() {
           </div>
 
           {/* Legal Section */}
-          <div className="space-y-2">
-            <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Legal</h3>
+          <div className="space-y-2 text-center">
+            <h3 className="text-primary font-bold text-sm lg:text-lg mb-4  ">Legal</h3>
             <nav className="flex flex-col space-y-2">
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 Privacy Policy
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 Terms of Service
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
               >
                 Responsible Disclosure
               </Button>
@@ -61,7 +61,7 @@ export function Footer() {
 
           {/* Connect & Contact Section */}
             {/* Social Media Links */}
-            <div className="h-full">
+            <div className="h-full text-center">
               <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Connect with Us</h3>
               <div className="flex">
                 <Link href="https://www.instagram.com/axiomtestprep" target="_blank">
@@ -83,7 +83,7 @@ export function Footer() {
             </div>
 
             {/* Contact Information */}
-            <div className="h-full">
+            <div className="h-full text-center">
               <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-1">
