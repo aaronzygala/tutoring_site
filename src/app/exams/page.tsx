@@ -14,7 +14,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Exams() {
   return (
     <main>
-      <div className="relative h-80 bg-cover bg-center bg-foreground " >
+      <div className="relative h-80 bg-cover bg-center bg-background" >
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
               <div className="flex flex-col items-left p-8 text-background">
@@ -23,7 +23,7 @@ export default function Exams() {
                       The Exams
                     </span>
                   </div>
-                  <span className="text-md xl:text-lg mt-8">
+                  <span className="text-md xl:text-lg mt-8 text-foreground">
                     We offer study programs for a few standardized tests. Scroll
                     down to see a breakdown of them.
                   </span>
@@ -31,13 +31,13 @@ export default function Exams() {
           </div>
         </div>
       </div>
-      <div className="min-w-screen ">
+      <div className="min-w-screen bg-foreground">
         <Exam examInfo={DSATInfo} />
-        <div className="bg-background">
+        <div className="bg-foreground">
           <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
         </div>
         <Exam examInfo={ACTInfo} />
-        <div className="bg-background">
+        <div className="bg-foreground">
           <Separator className="bg-primary h-1 w-[80%] ml-auto mr-auto" />
         </div>        
         <Exam examInfo={CLTInfo} />
@@ -48,7 +48,7 @@ export default function Exams() {
 
 function Exam({ examInfo }: { examInfo: ExamInfo }) {
   return (
-    <div id={examInfo.name} className="py-24 px-12 lg:px-52">
+    <div id={examInfo.name} className="py-24 px-12 lg:px-52  text-background">
       <div className="text-6xl font-extrabold">
         The <span className="text-primary">{examInfo.name}</span>
       </div>
@@ -60,7 +60,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
           </div>
           <Card className="mt-4 bg-background">
             <CardHeader className="flex flex-row w-full justify-around">
-              <div className="text-white text-4xl mt-auto mb-auto font-bold">
+              <div className="text-foreground text-4xl mt-auto mb-auto font-bold">
                   <span className="text-primary">{examInfo.name}</span> Structure
               </div>
               <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
@@ -82,7 +82,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
             </CardHeader>
             <CardContent className="flex flex-row w-full gap-4">
             <Card className="w-full relative bg-card">
-                <CardHeader className="flex flex-row text-black">
+                <CardHeader className="flex flex-row text-foreground">
                     <Icons.notebookPen strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Reading & Writing</div>
                 </CardHeader>
@@ -145,7 +145,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
                 </CardContent>
               </Card>
               <Card className="w-full relative bg-card">
-                <CardHeader className="flex flex-row text-black">
+                <CardHeader className="flex flex-row text-foreground">
                     <Icons.calculator strokeWidth={1.2} className="h-8 w-8 mt-auto mb-auto"/>
                     <div className="text-2xl mt-auto mb-auto pb-1 pl-4">Math</div>
                 </CardHeader>

@@ -43,9 +43,9 @@ export function HowItWorks() {
 
   return (
     <main>
-      <div className="min-w-screen">
+      <div className="min-w-screen bg-foreground">
         <div className="py-32">
-          <div className="px-12 lg:px-52 text-4xl font-extrabold">
+          <div className="px-12 lg:px-52 text-4xl font-extrabold text-background">
             How It <span className="text-primary">Works</span>
           </div>
           <div className="px-12 lg:px-52 mt-2 lg:text-lg text-muted-foreground">
@@ -97,7 +97,7 @@ function HowItWorksCard({
         transitionDelay: inView ? `${(index - 1) * 200}ms` : '0ms'
       }}
     >
-      <Card className={`w-full border-none shadow-2xl rounded-lg h-fit`}>
+      <Card className={`w-full border-none shadow-2xl rounded-lg h-fit bg-foreground text-background`}>
         <CardHeader>
           <div className={`bg-amber-100 h-20 w-20 rounded-full`}>
             <Image src={imageSrc} alt={imageAltDescription} className="p-6" />
@@ -106,7 +106,7 @@ function HowItWorksCard({
         <CardContent>
           <div className="mt-2 text-md">Step {index}</div>
           <div className="mt-4 text-lg font-bold">{title}</div>
-          <div className="mt-4 text-sm text-foreground">{content}</div>
+          <div className="mt-4 text-sm">{content}</div>
         </CardContent>
       </Card>
     </div>

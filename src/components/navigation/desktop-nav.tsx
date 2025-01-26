@@ -42,7 +42,7 @@ const exams: { title: string; href: string; description: string }[] = [
 export function DesktopNavbar() {
   const currentPath = usePathname();
   return (
-    <div className="fixed top-0 px-4 lg:px-44 pt-4 z-50 w-full bg-foreground">
+    <div className="fixed top-0 px-4 lg:px-44 pt-4 z-50 w-full bg-background">
       <div className="max-w-8xl pb-3 items-center justify-between text-sm lg:flex">
         <Link
           className="text-white flex place-items-center text-2xl lg:pointer-events-auto lg:p-0"

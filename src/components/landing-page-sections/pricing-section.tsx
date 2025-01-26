@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons";
 import Link from "next/link";
 
 const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examName: string, mathDetails: string[], readingDetails: string[], price: number}) => (
-  <div className="grid w-full items-start rounded-lg border-2 p-10 lg:hover:shadow-2xl transition-all">
+  <div className="grid w-full items-start rounded-lg border-accent/20 border-2 p-10 lg:hover:shadow-2xl transition-all">
     <div className="grid gap-2 w-full">
       <h3 className="text-3xl font-extrabold text-center w-full">{examName}</h3>
       <Tabs defaultValue="math" className="w-full justify-center items-center place-items-center">
@@ -105,7 +105,7 @@ export function PricingSection() {
 
   return (
     <main>
-      <div className="min-w-screen px-6 lg:px-52 py-24">
+      <div className="min-w-screen px-6 lg:px-52 py-24 bg-foreground text-background">
         <div className="flex w-full flex-col mb-12 px-12">
           <div className="text-4xl font-extrabold">
             Our Tutoring <span className="text-primary">Plans</span>

@@ -12,7 +12,7 @@ import PrivateLessons from "@/assets/teaching-icon.png";
 export function IncentiveSection() {
   return (
     <main>
-      <div className="min-w-screen">
+      <div className="min-w-screen bg-foreground text-background">
         <div className="py-24">
           <div className="px-12 lg:px-52 text-4xl font-extrabold">
             Why choose <span className="text-primary">Axiom Test Prep</span>?
@@ -108,7 +108,7 @@ function IncentiveCard({
   imageSrc: StaticImageData;
 }) {
   return (
-    <Card className="bg-transparent border-none rounded-none shadow-none">
+    <Card className="bg-transparent border-none rounded-none shadow-none text-background">
       <CardHeader>
         <CardTitle className="text-lg text-center">
           <div className="h-24 w-24 mb-6 ml-auto mr-auto">
@@ -116,7 +116,7 @@ function IncentiveCard({
           </div>
           {title}
         </CardTitle>
-        <CardDescription className="text-center w-[60%] lg:w-[80%] justify-center ml-auto mr-auto">
+        <CardDescription className="text-center w-[60%] lg:w-[80%] justify-center ml-auto mr-auto ">
           {description}
         </CardDescription>
       </CardHeader>

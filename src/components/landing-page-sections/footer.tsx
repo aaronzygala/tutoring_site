@@ -3,119 +3,104 @@ import { Icons } from "@/components/icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTiktok, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
-import { Input } from "../ui/input";
-
 
 export function Footer() {
   return (
-    <main>
-      <div className="w-screen flex flex-col bg-foreground text-background">
-        <div className="flex flex-row px-12 py-12 gap-12 ml-auto mr-auto grid grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col w-[96]">
-            <div className="text-left lg:text-xl text-primary font-bold pl-4">
-              Programs
-            </div>
-            <Button
-              className="w-fit justify-start mt-2 hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              Private Tutoring
-            </Button>
-            <Button
-              className="w-fit justify-start hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              CLT Math Group
-            </Button>
-            <Button
-              className="w-fit justify-start hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              SAT Math Group
-            </Button>
+    <footer className="w-full bg-background text-foreground">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Programs Section */}
+          <div className="space-y-2">
+            <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Programs</h3>
+            <nav className="flex flex-col space-y-2">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                Private Tutoring
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                CLT Math Group
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                SAT Math Group
+              </Button>
+            </nav>
           </div>
-          <div className="flex flex-col">
-            <div className="text-left lg:text-xl text-primary font-bold pl-4">
-              Legal
-            </div>
-            <Button
-              className="w-fit justify-start mt-2 hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              Privacy Policy
-            </Button>
-            <Button
-              className="w-fit justify-start hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              Terms of Service
-            </Button>
-            <Button
-              className="w-fit justify-start hover:bg-transparent hover:text-muted-foreground text-xs lg:text-sm"
-              variant="ghost"
-            >
-              Responsible Disclosure
-            </Button>
-          </div>
-          <div className="flex flex-row col-span-2 justify-around lg:flex-col lg:col-span-1">
 
-              <div className="flex-col">
-              <div className="text-left lg:text-xl text-primary font-bold pl-3">
-              Connect with Us
-              </div>
+          {/* Legal Section */}
+          <div className="space-y-2">
+            <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Legal</h3>
+            <nav className="flex flex-col space-y-2">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                Privacy Policy
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                Terms of Service
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+              >
+                Responsible Disclosure
+              </Button>
+            </nav>
+          </div>
+
+          {/* Connect & Contact Section */}
+            {/* Social Media Links */}
+            <div>
+              <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Connect with Us</h3>
+              <div className="flex">
                 <Link href="https://www.instagram.com/axiomtestprep" target="_blank">
-
-                  <Button
-                    className="justify-start hover:bg-transparent hover:text-muted-foreground"
-                    variant="ghost"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} width={18} className="hover:bg-text-200 delay-20 duration-100"/>
+                  <Button variant="ghost" className="hover:bg-transparent">
+                    <FontAwesomeIcon icon={faInstagram} width={18} className="hover:text-primary" />
                   </Button>
                 </Link>
                 <Link href="https://www.tiktok.com/@axiomtestprep" target="_blank">
-                  <Button
-                    className="justify-start w-fit hover:bg-transparent hover:text-muted-foreground"
-                    variant="ghost"
-                  >
-                    <FontAwesomeIcon icon={faTiktok} width={18} className="hover:bg-text-200 delay-20 duration-100"/>
+                  <Button variant="ghost" className="hover:bg-transparent">
+                    <FontAwesomeIcon icon={faTiktok} width={18} className="hover:text-primary" />
                   </Button>
                 </Link>
                 <Link href="https://www.linkedin.com/company/axiom-test-prep" target="_blank">
-                  <Button
-                    className="justify-start w-fit hover:bg-transparent hover:text-muted-foreground"
-                    variant="ghost"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} width={18} className="hover:bg-text-200 delay-20 duration-100"/>
+                  <Button variant="ghost" className="hover:bg-transparent">
+                    <FontAwesomeIcon icon={faLinkedin} width={18} className="hover:text-primary" />
                   </Button>
                 </Link>
               </div>
-
-            <div className=" lg:ml-0">
-            <div className="text-left lg:text-xl text-primary font-bold ml-4 lg:mt-2">
-              Contact Us
             </div>
-            <div className="flex flex-col ml-4 mt-4 space-y-3">
-                <div className="flex">
-                  <Icons.mail className="text-white mt-auto mb-auto" size={18}/>
-                  <span className="mt-auto mb-auto ml-2 text-sm">
-                    info@axiomtestprep.com
-                  </span>
-                </div>
-                <div className="flex">
-                  <Icons.phone className="text-white mt-auto mb-auto" size={18}/>
-                  <span className="mt-auto mb-auto ml-2 text-sm">
-                    +1 (555)-555-5555
-                  </span>
-                </div>
-            </div>
-          </div>
-          </div>
 
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Contact Us</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-1">
+                  <span className="text-xs">info@axiomtestprep.com</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <span className="text-xs">+1 (555)-555-5555</span>
+                </div>
+              </div>
+          </div>
         </div>
-        <div className="text-xs text-muted-foreground ml-auto mr-auto pb-6">
+
+        {/* Copyright */}
+        <div className="text-center text-xs text-muted-foreground mt-8">
           &copy;2025 Axiom Test Prep. All rights reserved.
         </div>
       </div>
-    </main>
+    </footer>
   );
 }

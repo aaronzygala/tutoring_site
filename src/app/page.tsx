@@ -1,4 +1,3 @@
-"use client";
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -9,13 +8,11 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import museumImage from "@/assets/museum copy.jpg";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { IncentiveSection } from "@/components/landing-page-sections/company-incentives";
 import { HowItWorks } from "@/components/landing-page-sections/how-it-works";
-import { Testimonials } from "@/components/landing-page-sections/testimonials";
 import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
-import { useMediaQuery } from "@/lib/useMediaQuery";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,7 +23,7 @@ export default function Home() {
         <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen object-none"/>
         <div className="backdrop-blur-0 bg-gradient-to-b from-black to-transparent z-20">
           <div className="flex flex-col items-left lg:px-44 pt-4">
-            <div className="relative translate-y-[200%]">
+            <div className="relative translate-y-[150%]">
               <Card className="border-none bg-transparent shadow-none">
                 <div className="flex flex-col items-left">
                   <CardHeader>
