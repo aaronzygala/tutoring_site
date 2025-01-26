@@ -31,7 +31,7 @@ export default function Tutoring() {
           <span className="font-bold">Private Tutoring</span>
           <div className="text-sm lg:text-lg">
             Our private tutoring services are designed to maximize student achievement through personalized, one-on-one virtual instruction that accommodates diverse schedules. 
-            We begin with complimentary consultations to evaluate each student's academic profile, including performance history, target institutions, and areas for development. 
+            We begin with complimentary consultations to evaluate each student&apos;s academic profile, including performance history, target institutions, and areas for development. 
             These insights inform customized learning plans tailored to individual goals.
           </div>
           <div className="text-sm lg:text-lg">
