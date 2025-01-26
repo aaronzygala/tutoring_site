@@ -12,6 +12,7 @@ import { Icons } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import MathSAT from "@/assets/Math SAT.png"
 import ReadingSAT from "@/assets/Reading:Writing SAT.png"
+import ACTStructure from "@/assets/ACT_Structure.png"
 import Image from "next/image";
 
 export default function Exams() {
@@ -49,6 +50,60 @@ export default function Exams() {
   );
 }
 
+function SATStructure({examInfo}: {examInfo: ExamInfo}) {
+  return(
+    <div>
+      <div className="mt-4 px-8 md:px-0">
+        {examInfo.description}
+      </div>
+      <Card className="mt-4 bg-background">
+        <CardHeader className="grid grid-cols-2 lg:grid-cols-6 w-full">
+          <div className="text-foreground text-4xl mt-auto mb-auto font-bold col-span-2 mb-8 lg:mb-auto ">
+              <span className="text-primary">{examInfo.name}</span> Structure
+          </div>
+
+          <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
+            <div className="text-lg lg:text-3xl">4</div>
+            <div className="">Modules</div>
+          </div>
+          <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
+            <div className="text-lg lg:text-3xl">98</div>
+            <div>Questions</div>
+          </div>
+          <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
+            <div className="text-lg lg:text-3xl">2hr 14min</div>
+            <div>Duration</div>
+          </div>
+          <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
+            <div className="text-lg lg:text-3xl">1600</div>
+            <div>Max Score</div>
+          </div>
+        </CardHeader>
+        <CardContent className="flex flex-col 2xl:flex-row w-full gap-8 p-0">
+            <div className="w-full relative aspect-[3/2]">
+              <Image
+                src={ReadingSAT}
+                alt="Diagram for Reading section of SAT"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="w-full relative aspect-[3/2]">
+              <Image
+                src={MathSAT}
+                alt="Diagram for Math section of SAT"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </CardContent>
+      </Card>
+  </div>
+  )
+}
+
 function Exam({ examInfo }: { examInfo: ExamInfo }) {
   return (
     <div id={examInfo.name} className="py-24 px-0 md:px-12 lg:px-52  text-background">
@@ -58,55 +113,11 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
 
       <div className="flex flex-row w-full">
         <div className="flex flex-col">
-          <div className="mt-4 px-8 md:px-0">
-            {examInfo.description}
-          </div>
-          <Card className="mt-4 bg-background">
-            <CardHeader className="grid grid-cols-2 lg:grid-cols-6 w-full">
-              <div className="text-foreground text-4xl mt-auto mb-auto font-bold col-span-2 mb-8 lg:mb-auto ">
-                  <span className="text-primary">{examInfo.name}</span> Structure
-              </div>
-
-              <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
-                <div className="text-lg lg:text-3xl">4</div>
-                <div className="">Modules</div>
-              </div>
-              <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
-                <div className="text-lg lg:text-3xl">98</div>
-                <div>Questions</div>
-              </div>
-              <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
-                <div className="text-lg lg:text-3xl">2hr 14min</div>
-                <div>Duration</div>
-              </div>
-              <div className="text-md p-4 bg-background border-[1px] border-border rounded-lg text-center">
-                <div className="text-lg lg:text-3xl">1600</div>
-                <div>Max Score</div>
-              </div>
-            </CardHeader>
-            <CardContent className="flex flex-col 2xl:flex-row w-full gap-8 p-0">
-                <div className="w-full relative aspect-[3/2]">
-                  <Image
-                    src={ReadingSAT}
-                    alt="Diagram for Reading section of SAT"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-                <div className="w-full relative aspect-[3/2]">
-                  <Image
-                    src={MathSAT}
-                    alt="Diagram for Math section of SAT"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </CardContent>
-          </Card>
+          {examInfo.name === "SAT" ? 
+            <SATStructure examInfo={examInfo}/> : 
+            <Image src={examInfo.image!} alt={"Exam Info Structure"}/>
+          }
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 w-full">
-
           <div className="px-12 md:px-0">
             <div className="text-2xl lg:text-4xl font-extrabold">
               Registering for the <span className="text-primary">{examInfo.name}</span>

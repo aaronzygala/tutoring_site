@@ -1,9 +1,13 @@
+import { StaticImageData } from "next/image";
+import ACT_Structure from "@/assets/ACT_Structure.png";
+import CLT_Structure from "@/assets/CLT_Structure.png";
 interface ExamInfo {
   name: string;
   description: string;
   examContent: ExamSection[];
   registrationInfo: RegistrationInformation;
   faqs: { [key: string]: string };
+  image?: StaticImageData;
 }
 
 interface ExamSection {
@@ -159,6 +163,7 @@ const ACTInfo: ExamInfo = {
       "How much does the ACT cost?":
         "As of 2024, the standard ACT costs $63 without the Writing section and $88 with it, with additional fees for late registration, changing test dates, or sending scores to extra colleges.",
     },    
+    image: ACT_Structure,
   };
 
   const CLTInfo: ExamInfo = {
@@ -229,6 +234,7 @@ const ACTInfo: ExamInfo = {
       "Can I use a calculator on the Digital SAT?":
         "Yes a calculator is provided in the BlueBook app during the Math sections, but you may also use an external one that is accepted by this board.",
     },
+    image: CLT_Structure,
   };
 
 export { DSATInfo, ACTInfo, CLTInfo };
