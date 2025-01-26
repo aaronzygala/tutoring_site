@@ -51,80 +51,12 @@ export function MobileNavbar() {
               <Icons.alignJustify size={24} />
             </Button>
           </SheetTrigger>
-          <SheetContent side={"right"} className="w-[200px] bg-foreground text-white">
-            <SheetHeader>
-              <SheetTitle className="font-bold text-center text-white">Directory</SheetTitle>
-              <Separator />
-            </SheetHeader>
-            <div className="flex flex-col mt-2 ">
-              <Link href="/about-us" legacyBehavior passHref>
-                <Button
-                  variant="ghost"
-                  className={
-                    currentPath === "/about-us"
-                      ? "bg-primary/30 mr-auto"
-                      : "bg-transparent mr-auto"
-                  }
-                  onClick={() => setSheetOpen(false)}
-                >
-                  <Icons.usersRound
-                    strokeWidth={0.8}
-                    size={16}
-                    className="mr-2"
-                  />
-                  About Us
-                </Button>
-              </Link>
-              <Link href="/exams" legacyBehavior passHref>
-                <Button
-                  variant="ghost"
-                  className={
-                    currentPath === "/exams"
-                      ? "bg-primary/30 mr-auto"
-                      : "bg-transparent mr-auto"
-                  }
-                  onClick={() => setSheetOpen(false)}
-                >
-                  <Icons.notebook
-                    strokeWidth={0.8}
-                    size={16}
-                    className="mr-2"
-                  />
-                  Exams
-                </Button>
-              </Link>
-              <Link href="/tutoring" legacyBehavior passHref>
-                <Button
-                  variant="ghost"
-                  className={
-                    currentPath === "/tutoring"
-                      ? "bg-primary/30 mr-auto"
-                      : "bg-transparent mr-auto"
-                  }
-                  onClick={() => setSheetOpen(false)}
-                >
-                  <Icons.calendarDays
-                    strokeWidth={0.8}
-                    size={16}
-                    className="mr-2"
-                  />
-                  Tutoring
-                </Button>
-              </Link>
-              <Link href="/contact-us" legacyBehavior passHref>
-                <Button
-                  variant="ghost"
-                  className={
-                    currentPath === "/contact-us"
-                      ? "bg-primary/30 mr-auto"
-                      : "bg-transparent mr-auto"
-                  }
-                  onClick={() => setSheetOpen(false)}
-                >
-                  <Icons.send strokeWidth={0.8} size={16} className="mr-2" />
-                  Contact Us
-                </Button>
-              </Link>
+          <SheetContent side={"right"} className="w-[200px] bg-foreground text-white border-none">
+            <div className="flex flex-col mt-36 gap-8">
+              <SheetButton name={"About Us"} path={"/about-us"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
+              <SheetButton name={"Exams"} path={"/exams"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
+              <SheetButton name={"Tutoring"} path={"/tutoring"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
+              <SheetButton name={"Contact Us"} path={"/contact-us"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
             </div>
           </SheetContent>
         </Sheet>
@@ -133,25 +65,20 @@ export function MobileNavbar() {
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, ...props }, ref) => {
+function SheetButton ({name, path, currentPath, onClickFunction} : {name: string, path: string, currentPath: string}){
   return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className,
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
+          <Link href={path} legacyBehavior passHref>
+            <Button
+              variant="ghost"
+              className={`text-2xl ml-auto mr-auto font-thin
+                ${currentPath === path
+                  ? "text-accent/30 mr-auto"
+                  : "bg-transparent mr-auto"}`
+              }
+              onClick={onClickFunction}
+            >
+              {name}
+            </Button>
+          </Link>
+    );
+}
