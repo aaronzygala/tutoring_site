@@ -2,7 +2,7 @@
 import { MetadataRoute } from "next";
    
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const defaultPages = [
+    const defaultPages : MetadataRoute.Sitemap = [
         {
             url: "https://www.axiomtestprep.com",
             lastModified: new Date(),
@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.9
         }
         // other pages
-    ];
+    ]; 
 
     return defaultPages;
 };
