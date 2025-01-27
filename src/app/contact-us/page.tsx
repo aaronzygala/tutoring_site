@@ -22,7 +22,7 @@ export default async function ContactUs() {
           alt="Header image for landing page, depicting a lavish museum" 
           className="absolute top-0 z-0 h-screen object-none"
         />
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-black overflow-hidden z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
@@ -36,7 +36,7 @@ export default async function ContactUs() {
                     Feel free to leave any inquiries below, or give us a call directly.
                   </span>
                 </CardHeader>
-                <CardContent className="flex flex-col lg:flex-row gap-12">
+                <CardContent className="flex flex-col xl:flex-row gap-12">
                 <Card className="w-full bg-black border-none text-white">
                     <CardHeader className="text-2xl">
                       <CardTitle>Send us a Message</CardTitle>

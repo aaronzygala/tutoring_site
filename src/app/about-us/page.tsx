@@ -18,7 +18,7 @@ export default function ContactUs() {
       <div className="relative min-h-screen bg-black">
       <Image src={libraryImage} alt={"Header image for About Us page, depicting a lavish museum"} 
       className="absolute h-screen object-none"/>
-        <div className="relative backdrop-blur-0 bg-gradient-to-b from-background to-transparent z-10 flex flex-col items-left lg:px-44 pt-4">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-black z-10 flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
