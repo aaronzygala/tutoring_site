@@ -24,7 +24,10 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
           ))}
         </ul>
           <div className="mt-12 grid gap-4">
-            <h4 className="text-5xl md:text-7xl font-bold">${price}</h4>
+            <h4 className="text-5xl md:text-6xl font-bold">
+              ${price} 
+              <span className="text-lg md:text-2xl">/hr</span>
+            </h4>
             <div className="flex flex-col md:flex-row justify-start gap-4">
               <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
@@ -79,7 +82,7 @@ export function PricingSection() {
         'Customized study plan based on individual needs',
         'No long term commitment required'
       ],
-      price: 1200
+      price: 40
     },
     {
       name: 'ACT',
@@ -95,7 +98,7 @@ export function PricingSection() {
         'Customized study plan based on individual needs',
         'No long term commitment required'
       ],
-      price: 1200
+      price: 40
     },
     {
       name: 'CLT',
@@ -111,7 +114,7 @@ export function PricingSection() {
         'Customized study plan based on individual needs',
         'No long term commitment required'
       ],
-      price: 1200
+      price: 40
     }
   ];
 
