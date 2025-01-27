@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/card";
 import CustomLessonPlans from "@/assets/plan-icon.png";
 import GradedExams from "@/assets/exam-icon.png";
-import PrivateLessons from "@/assets/teaching-icon.png";
+import PrivateLessons from "@/assets/private_tutoring_icon.png";
+import ExperiencedTeachers from "@/assets/experienced_teachers_icon.png";
 
 export function IncentiveSection() {
   return (
@@ -82,7 +83,7 @@ export function IncentiveSection() {
                   description={
                     "We have a team of experienced math instructors with 99th-percentile SAT scores. Our students will be personally guided by the best possible teachers."
                   }
-                  imageSrc={CustomLessonPlans}
+                  imageSrc={ExperiencedTeachers}
                   imageAltDescription={
                     "An image showing an agenda for a tutor's student."
                   }

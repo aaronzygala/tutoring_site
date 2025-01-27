@@ -8,33 +8,39 @@ export function Footer() {
   return (
     <footer className="w-full bg-background text-foreground ">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
           {/* Programs Section */}
           <div className="text-center">
             <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Programs</h3>
             <nav className="flex flex-col">
-              <Button 
-                variant="ghost" 
-                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
-              >
-                Private Tutoring
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
-              >
-                CLT Math Group
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
-              >
-                SAT Math Group
-              </Button>
+              <Link href="/tutoring">
+                <Button 
+                  variant="ghost" 
+                  className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                >
+                  SAT Private Tutoring
+                </Button>
+              </Link>
+              <Link href="/tutoring">
+                <Button 
+                  variant="ghost" 
+                  className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                >
+                  ACT Private Tutoring
+                </Button>
+              </Link>
+              <Link href="/tutoring">
+                <Button 
+                  variant="ghost" 
+                  className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
+                >
+                  CLT Private Tutoring
+                </Button>
+              </Link>
             </nav>
           </div>
 
-          {/* Legal Section */}
+          {/* Legal Section
           <div className="text-center">
             <h3 className="text-primary font-bold text-sm lg:text-lg mb-4  ">Legal</h3>
             <nav className="flex flex-col">
@@ -57,7 +63,7 @@ export function Footer() {
                 Responsible Disclosure
               </Button>
             </nav>
-          </div>
+          </div> */}
 
           {/* Connect & Contact Section */}
             {/* Social Media Links */}
@@ -90,7 +96,7 @@ export function Footer() {
                   <span className="text-xs lg:text-sm">info@axiomtestprep.com</span>
                 </div>
                 <div className="">
-                  <span className="text-xs lg:text-sm">+1 (555)-555-5555</span>
+                  <span className="text-xs lg:text-sm">+1 (786)-474-6936</span>
                 </div>
               </div>
           </div>

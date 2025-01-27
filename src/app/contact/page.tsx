@@ -59,7 +59,7 @@ export default async function ContactUs() {
                             <Icons.phone className="text-black" />
                           </span>
                           <span className="mt-auto mb-auto ml-4">
-                            +1 (555)-555-5555
+                            +1 (786)-474-6936
                           </span>
                         </li>
                         <li className="flex my-4">

@@ -37,22 +37,23 @@ export default function ContactUs() {
                     imageSrc={tempImage}
                     imageAlt={"A headshot of the instructor"}
                     instructorName={"Natalia Mercado"}
-                    instructorBlurb={
-                      "Short blurb on the instructor's qualifications, etc."
+                    instructorRole={
+                      "Reading & Writing Tutor, Math Tutor"
                     }
                     instructorDescription={
-                      "Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?"
+                      ["B.A. Anthropology from the University of Florida"]
                     }
                   />
                   <InstructorCard
                     imageSrc={aaronImage}
                     imageAlt={"A headshot of the instructor"}
                     instructorName={"Aaron Zygala"}
-                    instructorBlurb={
-                      "Short blurb on the instructor's qualifications, etc."
+                    instructorRole={
+                      "Math Tutor"
                     }
                     instructorDescription={
-                      "Longer explanation of why the instructor tutors, any fun facts, etc. Maybe LinkedIn link?"
+                      ["M.S. Computer Science from the University of Florida", 
+                      "B.S. Computer Science from the University of Florida"]
                     }
                   />
                 </CardContent>
@@ -69,14 +70,14 @@ function InstructorCard({
   imageSrc,
   imageAlt,
   instructorName,
-  instructorBlurb,
+  instructorRole,
   instructorDescription,
 }: {
   imageSrc: StaticImageData;
   imageAlt: string;
   instructorName: string;
-  instructorBlurb: string;
-  instructorDescription: string;
+  instructorRole: string;
+  instructorDescription: string[];
 }) {
   return (
     <Card className="w-full lg:w-[50%] bg-black border-none text-white">
@@ -84,12 +85,16 @@ function InstructorCard({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          className="w-[60%] object-fit ml-auto mr-auto py-6"
+          className="h-96 object-contain ml-auto mr-auto py-6"
         />
         <CardTitle>{instructorName}</CardTitle>
-        <CardDescription>{instructorBlurb}</CardDescription>
+        <CardDescription className="text-lg">{instructorRole}</CardDescription>
       </CardHeader>
-      <CardContent>{instructorDescription}</CardContent>
+      <CardContent className="justify-left">{instructorDescription.map((description, index) => (
+        <div key={index}>
+          {description}
+        </div>
+      ))}</CardContent>
     </Card>
   );
 }
