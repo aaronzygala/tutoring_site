@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     description:
       "Achieve your academic goals with Axiom Test Prep. Expert tutoring services for standardized tests, \
       with personalized strategies to maximize your scores.",
-    // images: [
-    //   {
-    //     url: "https://www.axiomtestprep.com/images/home/thumbnail.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "dminhvu"
-    //   }
-    // ]
+    images: [
+      {
+        url: "https://www.axiomtestprep.com/thumbnails/landing.png",
+        width: 1200,
+        height: 630,
+        alt: "Axiom Test Page Landing Page"
+      }
+    ]
   },
   alternates: {
     canonical: "https://www.axiomtestprep.com"

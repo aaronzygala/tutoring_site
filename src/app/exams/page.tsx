@@ -8,12 +8,36 @@ import {
 } from "@/components/ui/accordion";
 import { DSATInfo, ACTInfo, CLTInfo, ExamInfo } from "@/lib/exam_info";
 import Link from "next/link";
-import { Icons } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import MathSAT from "@/assets/Math SAT.png"
 import ReadingSAT from "@/assets/Reading:Writing SAT.png"
-import ACTStructure from "@/assets/ACT_Structure.png"
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Exams - Axiom Test Prep",
+  description:
+    "Axiom Test Prep offers private tutoring programs for the SAT, ACT, and CLT exams. Learn more about the exams we offer, and register for them here.",
+  keywords: ["SAT", "ACT", "CLT", "prep", "standardized tests", "Axiom", "test prep", "private tutor", "private tutoring", "tutoring programs"],
+  openGraph: {
+    url: "https://www.axiomtestprep.com/exams",
+    type: "website",
+    title: "Exams - Axiom Test Prep",
+    description:
+      "Axiom Test Prep offers private tutoring programs for the SAT, ACT, and CLT exams. Learn more about the exams we offer, and register for them here.",
+    images: [
+      {
+        url: "https://www.axiomtestprep.com/thumbnails/exams.png",
+        width: 1200,
+        height: 630,
+        alt: "Axiom Test Page Exams Page"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://www.axiomtestprep.com/exams"
+  }
+};
 
 export default function Exams() {
   return (

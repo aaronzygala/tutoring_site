@@ -1,11 +1,37 @@
 import React from "react";
-import { Separator } from "@/components/ui/separator";
 import Image, { StaticImageData } from "next/image";
 import SATImage from "@/assets/SAT_logo.png"
 import ACTImage from "@/assets/ACT_logo.png"
 import CLTImage from "@/assets/CLT_logo.png"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Tutoring Programs - Axiom Test Prep",
+  description:
+    "Axiom Test Prep offers private tutoring programs for the SAT, ACT, and CLT exams. Browse our selection of programs and schedule one that works for you.",
+  keywords: ["SAT", "ACT", "CLT", "prep", "standardized tests", "tutor", "tutoring", "study", "Axiom", "test prep", "private tutor", "private tutoring", "tutoring programs"],
+  openGraph: {
+    url: "https://www.axiomtestprep.com/tutoring",
+    type: "website",
+    title: "Tutoring Programs - Axiom Test Prep",
+    description:
+      "Axiom Test Prep offers private tutoring programs for the SAT, ACT, and CLT exams. Browse our selection of programs and schedule one that works for you.",
+    images: [
+      {
+        url: "https://www.axiomtestprep.com/thumbnails/tutoring.png",
+        width: 1200,
+        height: 630,
+        alt: "Axiom Test Page Tutoring Page"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://www.axiomtestprep.com/tutoring"
+  }
+};
 
 export default function Tutoring() {
   return (

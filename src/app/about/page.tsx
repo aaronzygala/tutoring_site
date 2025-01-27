@@ -10,6 +10,32 @@ import libraryImage from "@/assets/library.jpg";
 import aaronImage from "@/assets/aaron.jpg";
 import tempImage from "@/assets/axiom_logo.png";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Axiom Test Prep",
+  description:
+    "Axiom Test Prep is comprised of a small team of dedicated educators. Our mission is to help our students achieve their academic goals. Learn more about our tutors here.",
+  keywords: ["SAT", "ACT", "CLT", "prep", "about", "Axiom", "about us", "tutors", "private tutoring", "Axiom tutors", "team members"],
+  openGraph: {
+    url: "https://www.axiomtestprep.com/about",
+    type: "website",
+    title: "About Us - Axiom Test Prep",
+    description:
+      "Axiom Test Prep is comprised of a small team of dedicated educators. Our mission is to help our students achieve their academic goals. Learn more about our tutors here.",
+    images: [
+      {
+        url: "https://www.axiomtestprep.com/thumbnails/about.png",
+        width: 1200,
+        height: 630,
+        alt: "Axiom Test Page Tutoring Page"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://www.axiomtestprep.com/about"
+  }
+};
 
 export default function ContactUs() {
 

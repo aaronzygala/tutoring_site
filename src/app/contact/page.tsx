@@ -12,6 +12,32 @@ import { Icons } from "@/components/icons";
 import museumImage from "@/assets/museum2.jpg";
 import Image from "next/image"
 import { ContactUsForm } from '@/components/forms/contact-us-form';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact Us - Axiom Test Prep",
+  description:
+    "Have any questions about the private tutoring programs that Axiom Test Prep offers? Please contact us using our contact form, or directly with our phone number and email.",
+  keywords: ["SAT", "ACT", "CLT", "prep", "contact", "Axiom", "contact information", "email", "private tutoring", "Axiom contact", "phone number"],
+  openGraph: {
+    url: "https://www.axiomtestprep.com/contact",
+    type: "website",
+    title: "Contact Us - Axiom Test Prep",
+    description:
+      "Have any questions about the private tutoring programs that Axiom Test Prep offers? Please contact us using our contact form, or directly with our phone number and email.",
+    images: [
+      {
+        url: "https://www.axiomtestprep.com/thumbnails/contact.png",
+        width: 1200,
+        height: 630,
+        alt: "Axiom Test Page Tutoring Page"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://www.axiomtestprep.com/contact"
+  }
+};
 
 export default async function ContactUs() {
   return (
