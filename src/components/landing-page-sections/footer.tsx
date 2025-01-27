@@ -13,7 +13,7 @@ export function Footer() {
           <div className="text-center">
             <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Programs</h3>
             <nav className="flex flex-col">
-              <Link href="/tutoring">
+              <Link href="/tutoring#SAT">
                 <Button 
                   variant="ghost" 
                   className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
@@ -21,7 +21,7 @@ export function Footer() {
                   SAT Private Tutoring
                 </Button>
               </Link>
-              <Link href="/tutoring">
+              <Link href="/tutoring#ACT">
                 <Button 
                   variant="ghost" 
                   className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"
@@ -29,7 +29,7 @@ export function Footer() {
                   ACT Private Tutoring
                 </Button>
               </Link>
-              <Link href="/tutoring">
+              <Link href="/tutoring#CLT">
                 <Button 
                   variant="ghost" 
                   className="w-full text-xs md:text-sm hover:bg-transparent hover:text-muted-foreground"

@@ -82,6 +82,7 @@ export default function Tutoring() {
                   readingPath="https://calendly.com/axiomtestprep/sat-reading-private-tutoring"
                   mathPath="https://calendly.com/axiomtestprep/sat-math-private-tutoring"
                   specialClass="xl:ml-auto"
+                  id="SAT"
                   />
           <Program image={ACTImage} programName={"ACT Private Tutoring"} bulletPoints={[
                     "Free initial intake meeting to assess goals and challenges",
@@ -94,6 +95,8 @@ export default function Tutoring() {
                   readingPath="https://calendly.com/axiomtestprep/act-reading-private-tutoring"
                   mathPath="https://calendly.com/axiomtestprep/act-math-private-tutoring"
                   specialClass="xl:mr-auto"
+                  id="ACT"
+
                   />      
           <Program image={CLTImage} programName={"CLT Private Tutoring"} bulletPoints={[
                     "Free initial intake meeting to assess goals and challenges",
@@ -106,6 +109,8 @@ export default function Tutoring() {
                   readingPath="https://calendly.com/axiomtestprep/clt-reading-private-tutoring"
                   mathPath="https://calendly.com/axiomtestprep/clt-math-private-tutoring"
                   specialClass="xl:col-span-2 xl:ml-auto xl:mr-auto mb-8"
+                  id="CLT"
+
                   />
         </div>
 
@@ -113,9 +118,9 @@ export default function Tutoring() {
     </main>
   );
 }
-function Program({ image, programName, bulletPoints, readingPath, mathPath, specialClass }: { image: StaticImageData, programName: string, bulletPoints: string[], readingPath: string, mathPath: string, specialClass: string  }) {
+function Program({ image, programName, bulletPoints, readingPath, mathPath, specialClass, id }: { image: StaticImageData, programName: string, bulletPoints: string[], readingPath: string, mathPath: string, specialClass: string, id: string  }) {
   return (
-    <div className={`${specialClass} place-items-center`}>
+    <div id={id} className={`${specialClass} place-items-center`}>
     <div className={`w-full lg:w-[80%] p-8 border-accent/5 border-2 rounded-lg flex flex-col gap-3 `}>
       <div className={`text-background text-2xl xl:text-4xl font-bold ml-auto mr-auto`}>
         {programName}

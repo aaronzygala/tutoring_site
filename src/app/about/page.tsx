@@ -79,7 +79,7 @@ export default function ContactUs() {
                     }
                     instructorDescription={
                       ["M.S. Computer Science from the University of Florida", 
-                      "B.S. Computer Science from the University of Florida"]
+                      "B.S. Computer Science from Florida Atlantic University"]
                     }
                   />
                 </CardContent>
