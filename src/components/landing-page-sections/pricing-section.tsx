@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examName: string, mathDetails: string[], readingDetails: string[], price: number}) => (
   <div className="grid w-full items-start rounded-lg border-accent/20 border-2 p-10 lg:hover:shadow-2xl transition-all">
-    <div className="grid gap-2 w-full">
-      <h3 className="text-3xl font-extrabold text-center w-full">{examName}</h3>
-      <Tabs defaultValue="math" className="w-full justify-center items-center place-items-center">
-        <TabsList className="justify-center">
+    <div className="grid gap-2 w-full h-fit">
+      <h3 className="text-3xl font-extrabold text-center w-full ">{examName}</h3>
+      <Tabs defaultValue="math" className="flex flex-col w-full">
+        <TabsList className="justify-center w-fit ml-auto mr-auto">
           <TabsTrigger value="math">Math</TabsTrigger>
           <TabsTrigger value="reading">Reading</TabsTrigger>
         </TabsList>
