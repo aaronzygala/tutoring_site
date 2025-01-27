@@ -26,8 +26,8 @@ export default async function ContactUs() {
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
-                <CardHeader>
-                <div className="text-4xl xl:text-7xl font-extrabold font-sans">
+                <h1 className='px-8 mb-4'>
+                  <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Get In Touch
                     </span>
@@ -35,7 +35,7 @@ export default async function ContactUs() {
                   <span className="text-md xl:text-lg text-foreground">
                     Feel free to leave any inquiries below, or give us a call directly.
                   </span>
-                </CardHeader>
+                </h1>
                 <CardContent className="flex flex-col xl:flex-row gap-12">
                 <Card className="w-full bg-black border-none text-white">
                     <CardHeader className="text-2xl">

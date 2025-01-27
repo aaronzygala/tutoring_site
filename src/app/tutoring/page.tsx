@@ -13,8 +13,8 @@ export default function Tutoring() {
       <div className="relative h-80 bg-cover bg-center bg-background " >
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
-              <div className="flex flex-col items-left p-8 text-background">
-                <div className="text-4xl xl:text-7xl font-extrabold font-sans">
+              <h1 className="flex flex-col items-left p-8 text-background">
+                  <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Our Tutoring Programs
                     </span>
@@ -22,7 +22,7 @@ export default function Tutoring() {
                   <span className="text-sm xl:text-lg mt-2 text-foreground">
                     Browse our programs, and schedule a time that works for you
                   </span>
-              </div>
+              </h1>
           </div>
         </div>
       </div>

@@ -15,6 +15,35 @@ import { CTASection } from "@/components/landing-page-sections/cta-section";
 import { PricingSection } from "@/components/landing-page-sections/pricing-section";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+ 
+export const metadata: Metadata = {
+  title: "Axiom Test Prep - Private Tutoring for SAT, ACT, and CLT",
+  description:
+    "Achieve your academic goals with Axiom Test Prep. Expert tutoring services for standardized tests, \
+    with personalized strategies to maximize your scores.",
+  keywords: ["SAT", "ACT", "CLT", "prep", "standardized tests", "tutor", "tutoring", "study", "Axiom", "test prep", "private tutor", "private tutoring"],
+  openGraph: {
+    url: "https://www.axiomtestprep.com",
+    type: "website",
+    title: "Axiom Test Prep - Private Tutoring for SAT, ACT, and CLT",
+    description:
+      "Achieve your academic goals with Axiom Test Prep. Expert tutoring services for standardized tests, \
+      with personalized strategies to maximize your scores.",
+    // images: [
+    //   {
+    //     url: "https://www.axiomtestprep.com/images/home/thumbnail.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "dminhvu"
+    //   }
+    // ]
+  },
+  alternates: {
+    canonical: "https://www.axiomtestprep.com"
+  }
+};
 
 export default function Home() {
   return (
@@ -23,15 +52,15 @@ export default function Home() {
         <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen object-none"/>
         <div className="relative backdrop-blur-0 bg-gradient-to-b from-black z-10 h-screen">
           <div className="flex flex-col items-left lg:px-44 pt-4">
-            <div className="relative translate-y-[100%]">
+            <div className="relative top-96">
               <Card className="border-none bg-transparent shadow-none">
                 <div className="flex flex-col items-left">
                   <CardHeader>
-                    <CardTitle className="text-4xl lg:text-7xl text-white">
-                      <Link href={"/exams#DSAT"}><span className="text-primary lg:hover:italic lg:hover:underline">SAT</span></Link>,
-                      {" "}<Link href={"/exams#ACT"}><span className="text-primary lg:hover:italic lg:hover:underline">ACT</span></Link>{" "}
-                      &{"  "}<Link href={"/exams#CLT"}><span className="text-primary lg:hover:italic lg:hover:underline">CLT</span></Link>{" "}Prep
-                    </CardTitle>
+                    <h1 className="text-4xl lg:text-7xl text-white font-bold">
+                          <Link href={"/exams#DSAT"}><span className="text-primary lg:hover:italic lg:hover:underline">SAT</span></Link>,
+                          {" "}<Link href={"/exams#ACT"}><span className="text-primary lg:hover:italic lg:hover:underline">ACT</span></Link>{" "}
+                          &{"  "}<Link href={"/exams#CLT"}><span className="text-primary lg:hover:italic lg:hover:underline">CLT</span></Link>{" "}Prep
+                    </h1>
                     <CardDescription className="text-xl lg:text-4xl text-white">
                       Prepare for your future.
                     </CardDescription>

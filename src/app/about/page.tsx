@@ -22,16 +22,16 @@ export default function ContactUs() {
           <div className="mt-24">
             <Card className="border-none bg-transparent shadow-none">
               <div className="flex flex-col items-left">
-                <CardHeader>
+                <h1 className='px-8 mb-4'>
                   <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Meet the Team
                     </span>
                   </div>
                   <span className="text-lg text-foreground">
-                    We are a small team of dedicated math-enthusiasts.
+                    We are a small team of dedicated academic enthusiasts.
                   </span>
-                </CardHeader>
+                </h1>
                 <CardContent className="flex flex-col lg:flex-row gap-12 w-full mt-6 justify-evenly">
                   <InstructorCard
                     imageSrc={tempImage}

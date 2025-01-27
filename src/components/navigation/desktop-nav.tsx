@@ -53,10 +53,10 @@ export function DesktopNavbar() {
         <NavigationMenu className="lg:ml-auto">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/about-us" legacyBehavior passHref>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
-                    currentPath === "/about-us"
+                    currentPath === "/about"
                       ? "bg-accent mr-auto"
                       : "bg-transparent mr-auto",
                     navigationMenuTriggerStyle(),
@@ -108,10 +108,10 @@ export function DesktopNavbar() {
             </NavigationMenuItem>
             <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
             <NavigationMenuItem>
-              <Link href="/contact-us" legacyBehavior>
+              <Link href="/contact" legacyBehavior>
                 <NavigationMenuLink
                   className={cn(
-                    currentPath === "/contact-us"
+                    currentPath === "/contact"
                       ? "bg-accent mr-auto cursor-pointer"
                       : "bg-transparent mr-auto cursor-pointer",
                     navigationMenuTriggerStyle(),

@@ -21,7 +21,7 @@ export default function Exams() {
       <div className="relative h-80 bg-cover bg-center bg-background" >
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
-              <div className="flex flex-col items-left p-8 text-background">
+              <h1 className="flex flex-col items-left p-8 text-background">
                  <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       The Exams
@@ -31,7 +31,7 @@ export default function Exams() {
                     We offer study programs for a few standardized tests. Scroll
                     down to see a breakdown of them.
                   </span>
-              </div>
+              </h1>
           </div>
         </div>
       </div>
