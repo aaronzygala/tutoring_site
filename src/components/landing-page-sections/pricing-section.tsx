@@ -116,7 +116,7 @@ export function PricingSection() {
         'Customized study plan based on individual needs',
         'No long term commitment required'
       ],
-      price: 40
+      price: 35
     }
   ];
 
