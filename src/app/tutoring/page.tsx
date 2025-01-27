@@ -14,12 +14,12 @@ export default function Tutoring() {
         <div className="flex flex-col items-left lg:px-44 pt-4">
           <div className="mt-24">
               <div className="flex flex-col items-left p-8 text-background">
-                <div className="text-2xl xl:text-7xl font-extrabold font-sans">
+                <div className="text-4xl xl:text-7xl font-extrabold font-sans">
                     <span className="text-primary">
                       Our Tutoring Programs
                     </span>
                   </div>
-                  <span className="text-sm xl:text-lg mt-8 text-foreground">
+                  <span className="text-sm xl:text-lg mt-2 text-foreground">
                     Browse our programs, and schedule a time that works for you
                   </span>
               </div>
@@ -29,12 +29,12 @@ export default function Tutoring() {
       <div className="min-w-screen bg-foreground">
         <div className="text-2xl xl:text-4xl text-background p-8 lg:px-52 flex flex-col gap-8">
           <span className="font-bold">Private Tutoring</span>
-          <div className="text-xs md:text-sm lg:text-lg">
+          <div className="text-xs md:text-sm ">
             Our private tutoring services are designed to maximize student achievement through personalized, one-on-one virtual instruction that accommodates diverse schedules. 
             We begin with complimentary consultations to evaluate each student&apos;s academic profile, including performance history, target institutions, and areas for development. 
             These insights inform customized learning plans tailored to individual goals.
           </div>
-          <div className="text-xs md:text-sm lg:text-lg">
+          <div className="text-xs md:text-sm ">
             Our flexible scheduling and no-commitment policy ensure students can focus entirely on their academic progress. 
             Our methodology is grounded in the systematic analysis of standardized test patterns and question frameworks. 
             By exposing students to comprehensive question banks and focusing intervention on identified challenge areas, 
@@ -91,7 +91,7 @@ function Program({ image, programName, bulletPoints, readingPath, mathPath, spec
   return (
     <div className={`${specialClass} place-items-center`}>
     <div className={`w-full lg:w-[80%] p-8 border-accent/5 border-2 rounded-lg flex flex-col gap-3 `}>
-      <div className={`text-background text-3xl font-bold ml-auto mr-auto`}>
+      <div className={`text-background text-2xl xl:text-4xl font-bold ml-auto mr-auto`}>
         {programName}
       </div>
       <div className="flex flex-col lg:flex-row gap-4">
@@ -102,14 +102,14 @@ function Program({ image, programName, bulletPoints, readingPath, mathPath, spec
           className="rounded-sm object-contain mt-auto mb-auto ml-auto mr-auto"
         />
         <div className="flex flex-col gap-4">
-          <ul className="list-disc ml-4 text-background text-sm lg:text-md">
+          <ul className="list-disc ml-4 text-background text-xs md:text-sm ">
             {bulletPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-8 ">
+      <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-8 ml-auto mr-auto mt-4">
         <Link href={readingPath} target="_blank">
           <Button className="w-full font-bold text-xs lg:text-sm">
             Schedule Reading Tutoring

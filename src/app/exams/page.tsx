@@ -27,7 +27,7 @@ export default function Exams() {
                       The Exams
                     </span>
                   </div>
-                  <span className="text-md xl:text-lg mt-8 text-foreground">
+                  <span className="text-sm xl:text-lg mt-2 text-foreground">
                     We offer study programs for a few standardized tests. Scroll
                     down to see a breakdown of them.
                   </span>
@@ -107,7 +107,7 @@ function SATStructure({examInfo}: {examInfo: ExamInfo}) {
 function Exam({ examInfo }: { examInfo: ExamInfo }) {
   return (
     <div id={examInfo.name} className="py-24 px-0 md:px-12 lg:px-52  text-background">
-      <div className="text-6xl font-extrabold px-8 md:px-0">
+      <div className="text-4xl font-extrabold px-8 md:px-0">
         The <span className="text-primary">{examInfo.name}</span>
       </div>
 
@@ -115,7 +115,7 @@ function Exam({ examInfo }: { examInfo: ExamInfo }) {
         <div className="flex flex-col">
           {examInfo.name === "SAT" ? 
             <SATStructure examInfo={examInfo}/> : 
-            <Image src={examInfo.image!} alt={"Exam Info Structure"}/>
+            <Image src={examInfo.image!} alt={"Exam Info Structure"} className="ml-auto mr-auto"/>
           }
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 w-full">
           <div className="px-12 md:px-0">

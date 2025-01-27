@@ -37,32 +37,7 @@ export default async function ContactUs() {
                   </span>
                 </CardHeader>
                 <CardContent className="flex flex-col lg:flex-row gap-12">
-                  <Card className="bg-black border-none text-white w-full">
-                    <CardHeader>
-                      <CardTitle>Contact Details</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul>
-                        <li className="flex my-4">
-                          <span className="bg-yellow-400 p-3 rounded-full">
-                            <Icons.phone className="text-black" />
-                          </span>
-                          <span className="w-96 mt-auto mb-auto ml-4">
-                            +1 (555)-555-5555
-                          </span>
-                        </li>
-                        <li className="flex my-4">
-                          <span className="bg-yellow-400 p-3 rounded-full">
-                            <Icons.mail className="text-black" />
-                          </span>
-                          <span className="w-96 mt-auto mb-auto ml-4">
-                            info@axiomtestprep.com
-                          </span>
-                        </li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  <Card className="w-full bg-black border-none text-white">
+                <Card className="w-full bg-black border-none text-white">
                     <CardHeader className="text-2xl">
                       <CardTitle>Send us a Message</CardTitle>
                       <CardDescription>
@@ -73,6 +48,32 @@ export default async function ContactUs() {
                       <ContactUsForm/>
                     </CardContent>
                   </Card>
+                  <Card className="bg-black border-none text-white">
+                    <CardHeader>
+                      <CardTitle>Contact Details</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul>
+                        <li className="flex my-4">
+                          <span className="bg-yellow-400 p-3 rounded-full">
+                            <Icons.phone className="text-black" />
+                          </span>
+                          <span className="mt-auto mb-auto ml-4">
+                            +1 (555)-555-5555
+                          </span>
+                        </li>
+                        <li className="flex my-4">
+                          <span className="bg-yellow-400 p-3 rounded-full">
+                            <Icons.mail className="text-black" />
+                          </span>
+                          <span className="mt-auto mb-auto ml-4">
+                            info@axiomtestprep.com
+                          </span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+
                 </CardContent>
               </div>
             </Card>

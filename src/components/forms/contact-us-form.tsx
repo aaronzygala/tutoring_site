@@ -32,7 +32,7 @@ export function ContactUsForm() {
                 id="name" 
                 name="name"
                 placeholder="Full Name" 
-                className="text-black" 
+                className="text-white" 
                 required
             />
             </div>
@@ -42,7 +42,7 @@ export function ContactUsForm() {
                 id="email" 
                 name="email"
                 placeholder="email@address.com" 
-                className="text-black"
+                className="text-white"
                 type="email"
                 required
             />
@@ -54,7 +54,7 @@ export function ContactUsForm() {
             <Textarea 
                 id="message"
                 name="message"
-                className="text-black"
+                className="text-white"
                 required
             />
             </div>
