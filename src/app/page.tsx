@@ -21,7 +21,7 @@ export default function Home() {
     <div className="relative ">
       <div className="relative bg-black h-screen">
         <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen object-none"/>
-        <div className="backdrop-blur-0 bg-gradient-to-b from-black h-screen z-20">
+        <div className="relative backdrop-blur-0 bg-gradient-to-b from-black z-10 h-screen">
           <div className="flex flex-col items-left lg:px-44 pt-4">
             <div className="relative translate-y-[100%]">
               <Card className="border-none bg-transparent shadow-none">
