@@ -23,7 +23,7 @@ export function HowItWorks() {
     },
     {
       title: "Customized Learning Plans",
-      content: "We use these goals to develop a personalized lesson plan in each field of mathematics.",
+      content: "We use these goals to develop a personalized lesson plan for both the math and reading sections of the exam.",
       imageSrc: PlanIcon,
       imageAltDescription: "An icon representing a lesson plan."
     },
@@ -35,7 +35,7 @@ export function HowItWorks() {
     },
     {
       title: "Practice and Feedback",
-      content: "Offer ample opportunities for students to practice SAT math questions under timed conditions, simulating test-day pressure.",
+      content: "Offer ample opportunities for students to practice real questions under timed conditions, simulating test-day pressure.",
       imageSrc: GrowthIcon,
       imageAltDescription: "An icon of a plant growing."
     }
