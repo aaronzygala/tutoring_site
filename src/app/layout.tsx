@@ -107,6 +107,7 @@ export default function RootLayout({
 
       <AOSProvider>
         <Head>
+          <title>Axiom Test Prep</title>
           <link rel="preload" href="/assets/museum.jpg" as="image" />
           <link rel="preload" href="/assets/museum2.jpg" as="image" />
           <link rel="preload" href="/assets/library.jpg" as="image" />
