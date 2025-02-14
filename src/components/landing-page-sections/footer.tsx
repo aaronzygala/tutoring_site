@@ -8,9 +8,9 @@ export function Footer() {
   return (
     <footer className="w-full bg-background text-foreground ">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center">
           {/* Programs Section */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <h3 className="text-primary font-bold text-sm lg:text-lg mb-4">Programs</h3>
             <nav className="flex flex-col">
               <Link href="/tutoring#SAT">
@@ -38,7 +38,7 @@ export function Footer() {
                 </Button>
               </Link>
             </nav>
-          </div>
+          </div> */}
 
           {/* Legal Section
           <div className="text-center">

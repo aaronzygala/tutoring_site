@@ -29,11 +29,11 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
               <span className="text-lg md:text-2xl">/hr</span>
             </h4>
             <div className="flex flex-col md:flex-row justify-start gap-4">
-              <Link href={`/tutoring#${examName}`}>
+              {/* <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
-              </Link>
+              </Link> */}
               <Link href={`https://calendly.com/axiomtestprep/${examName.toLowerCase()}-math-private-tutoring`} target={"_blank"}>
-                <Button className="bg-primary/20 hover:bg-primary/40">Schedule Now</Button>
+                <Button className="">Schedule Now</Button>
               </Link>
             </div>
           </div>
@@ -54,11 +54,11 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
               ${price} 
               <span className="text-lg md:text-2xl">/hr</span>
             </h4>            <div className="flex flex-col md:flex-row justify-start gap-4">
-              <Link href={`/tutoring#${examName}`}>
+              {/* <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
-              </Link>
+              </Link> */}
               <Link href={`https://calendly.com/axiomtestprep/${examName.toLowerCase()}-reading-private-tutoring`} target={"_blank"}>
-                <Button className="bg-primary/20 hover:bg-primary/40">Schedule Now</Button>
+                <Button className="">Schedule Now</Button>
               </Link>
             </div>
           </div>
@@ -122,7 +122,7 @@ export function PricingSection() {
 
   return (
     <main>
-      <div className="min-w-screen px-6 lg:px-52 py-24 bg-foreground text-background">
+      <div id="pricing" className="min-w-screen px-6 lg:px-52 py-24 bg-foreground text-background">
         <div className="flex w-full flex-col mb-12 px-12">
           <div className="text-2xl lg:text-4xl font-extrabold">
             Our Tutoring <span className="text-primary">Plans</span>

@@ -67,7 +67,7 @@ export function DesktopNavbar() {
               </Link>
             </NavigationMenuItem>
             <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
                 <NavigationMenuTrigger                  
                   className={cn(
                     currentPath === "/exams"
@@ -91,8 +91,8 @@ export function DesktopNavbar() {
                   </ul>
                 </NavigationMenuContent>
             </NavigationMenuItem>
-            <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
-            <NavigationMenuItem>
+            <Separator orientation="vertical" className="h-6 bg-muted-foreground" /> */}
+            {/* <NavigationMenuItem>
               <Link href="/tutoring" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
@@ -106,7 +106,7 @@ export function DesktopNavbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <Separator orientation="vertical" className="h-6 bg-muted-foreground" />
+            <Separator orientation="vertical" className="h-6 bg-muted-foreground" /> */}
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior>
                 <NavigationMenuLink

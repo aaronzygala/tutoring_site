@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="relative bg-black h-screen">
         <Image src={museumImage} alt={"Header image for landing page, depicting a lavish museum"} className="absolute top-0 z-0 h-screen object-none"/>
         <div className="relative backdrop-blur-0 bg-gradient-to-b from-black z-10 h-screen">
@@ -57,20 +57,20 @@ export default function Home() {
                 <div className="flex flex-col items-left">
                   <CardHeader>
                     <h1 className="text-4xl lg:text-7xl text-white font-bold">
-                          <Link href={"/exams#DSAT"}><span className="text-primary lg:hover:italic lg:hover:underline">SAT</span></Link>,
-                          {" "}<Link href={"/exams#ACT"}><span className="text-primary lg:hover:italic lg:hover:underline">ACT</span></Link>{" "}
-                          &{"  "}<Link href={"/exams#CLT"}><span className="text-primary lg:hover:italic lg:hover:underline">CLT</span></Link>{" "}Prep
+                          <span className="text-primary lg:hover:italic lg:hover:underline">SAT</span>,
+                          {" "}<span className="text-primary lg:hover:italic lg:hover:underline">ACT</span>{" "}
+                          &{"  "}<span className="text-primary lg:hover:italic lg:hover:underline">CLT</span>{" "}Prep
                     </h1>
                     <CardDescription className="text-xl lg:text-4xl text-white">
                       Prepare for your future.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                  <Link href="/tutoring">
+                  <a href="#pricing">
                     <Button className="bg-primary text-md py-4 animate-button-pulse">
                         Get started today
                     </Button>
-                  </Link>
+                  </a>
                   </CardContent>
                 </div>
               </Card>
