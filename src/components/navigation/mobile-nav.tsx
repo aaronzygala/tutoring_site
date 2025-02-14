@@ -60,8 +60,8 @@ export function MobileNavbar() {
             <div className="flex flex-col mt-36 gap-8">
 
               <SheetButton name={"About Us"} path={"/about"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
-              <SheetButton name={"Exams"} path={"/exams"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
-              <SheetButton name={"Tutoring"} path={"/tutoring"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
+              {/* <SheetButton name={"Exams"} path={"/exams"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/> */}
+              {/* <SheetButton name={"Tutoring"} path={"/tutoring"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/> */}
               <SheetButton name={"Contact Us"} path={"/contact"} currentPath={currentPath} onClickFunction={() => setSheetOpen(false)}/>
             </div>
           </SheetContent>
