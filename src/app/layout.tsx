@@ -102,8 +102,10 @@ export default function RootLayout({
 }) {
   // const isMobile = useMediaQuery("(max-width: 1024px)");
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth" style={{backgroundColor: 'black'}}>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
 
       <AOSProvider>
         <Head>
