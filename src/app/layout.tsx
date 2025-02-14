@@ -102,7 +102,7 @@ export default function RootLayout({
 }) {
   // const isMobile = useMediaQuery("(max-width: 1024px)");
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning className="scroll-smooth" style={{backgroundColor: 'black'}}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <AOSProvider>
