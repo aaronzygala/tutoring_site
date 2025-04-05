@@ -13,7 +13,7 @@ export function CTASection() {
             We know it&apos;s a big leap to take. The first one&apos;s on us.
           </div>
           <div className="mt-6">
-            <Link href="https://calendly.com/axiomtestprep/introductory-meeting" target="_blank">
+            <Link href={`${process.env.SCHEDULING_BASE_URL}/introductory-meeting-sat-act-clt`} target="_blank">
               <Button className="bg-primary text-md py-4 animate-button-pulse">
                 Schedule a free consultation.
               </Button>

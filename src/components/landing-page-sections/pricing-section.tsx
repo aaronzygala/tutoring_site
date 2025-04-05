@@ -32,7 +32,7 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
               {/* <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
               </Link> */}
-              <Link href={`https://calendly.com/axiomtestprep/${examName.toLowerCase()}-math-private-tutoring`} target={"_blank"}>
+              <Link href={`${process.env.SCHEDULING_BASE_URL}/${examName.toLowerCase()}-math-private-tutoring`} target={"_blank"}>
                 <Button className="">Schedule Now</Button>
               </Link>
             </div>
@@ -57,7 +57,7 @@ const ExamPricing = ({ examName, mathDetails, readingDetails, price } : {examNam
               {/* <Link href={`/tutoring#${examName}`}>
                 <Button>Learn More</Button>
               </Link> */}
-              <Link href={`https://calendly.com/axiomtestprep/${examName.toLowerCase()}-reading-private-tutoring`} target={"_blank"}>
+              <Link href={`${process.env.SCHEDULING_BASE_URL}/${examName.toLowerCase()}-${examName.toLowerCase() == "sat" ? "reading" : examName.toLowerCase() == "act" ? "english-reading" : "english"}-private-tutoring`} target={"_blank"}>
                 <Button className="">Schedule Now</Button>
               </Link>
             </div>
